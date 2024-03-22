@@ -1,17 +1,27 @@
 #include <iostream>
-#include "logger.h"
+#include "communication_system.h"
 
-int main()
-{
-	std::cout << "hello world from the client";
+int main() {
 
-    logs::Logger logger("log.txt", true); // true means log to stdout as well
+    // Just testing the communication system. 
+    aircraft::CommunicationSystem comms;
 
-    // Test logging with different levels and messages
-    logger.log("This is an informational message.", logs::Logger::LogLevel::Info);
-    logger.log("This is a warning message.", logs::Logger::LogLevel::Warning);
-    logger.log("This is an error message.", logs::Logger::LogLevel::Error);
+    comms.setFrequency("127.0.0.1");
+    comms.setChannel(12345);
 
+    if (comms.connect()) {
+        std::cout << "Connected to the server." << std::endl;
+        if (comms.sendMessage("Hello from C++ client!")) {
+            std::cout << "Message sent." << std::endl;
+        }
 
-	return 0;
+        if (comms.receiveMessage()) {
+            std::cout << "Message received." << std::endl;
+        }
+    }
+    else {
+        std::cout << "Failed to connect to the server." << std::endl;
+    }
+
+    return 0;
 }
