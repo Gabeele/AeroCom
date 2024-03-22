@@ -6,3 +6,7 @@ int main()
 
 	return 0;
 }
+
+int test4test() {
+	return 2;
+}
