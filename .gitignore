@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 /client/client.vcxproj
 /client/client.vcxproj.filters
+/client/client.vcxproj
+/client/client.vcxproj.filters
