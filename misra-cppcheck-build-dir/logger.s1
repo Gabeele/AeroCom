@@ -1,0 +1,4 @@
+Logger call:[empty,is_open,open]
+Logger call:[close,is_open] noreturn:[close]
+log call:[localtime_s,logLevelToString,setfill,setw,str,time]
+logLevelToString

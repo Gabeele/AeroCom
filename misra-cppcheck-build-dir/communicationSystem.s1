@@ -1,0 +1,8 @@
+CommunicationSystem call:[MAKEWORD,WSAStartup,c_str,htons,inet_addr,log,setCommunicationType] noreturn:[htons,log]
+CommunicationSystem call:[WSACleanup,closesocket,log] noreturn:[log]
+connect call:[WSACleanup,WSAGetLastError,closesocket,connect,log,sizeof,socket,to_string] noreturn:[log]
+setFrequency call:[c_str,inet_addr] noreturn:[inet_addr]
+receiveMessage call:[WSAGetLastError,log,memset,receivedMessage,recv,sizeof,to_string] noreturn:[log]
+sectorHandoff
+sendMessage call:[c_str,length,log,send]
+setCommunicationType

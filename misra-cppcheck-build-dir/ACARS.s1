@@ -1,0 +1,12 @@
+ACARS
+ACARS
+generateChecksum call:[str] noreturn:[str]
+serializePacket call:[generateChecksum,str] noreturn:[str]
+setTransmissionNumber
+setIsPriority
+setFlag
+setAircraftID
+setGroundStationID
+setFlightInformation
+setLocationDetails
+setTimestamp

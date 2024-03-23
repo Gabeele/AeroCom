@@ -24,7 +24,7 @@
     <ClCompile Include="aircraft.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="communication_system.cpp">
+    <ClCompile Include="communicationSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ACARS.cpp">
@@ -38,7 +38,7 @@
     <ClInclude Include="aircraft.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="communication_system.h">
+    <ClInclude Include="communicationSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ACARS.h">

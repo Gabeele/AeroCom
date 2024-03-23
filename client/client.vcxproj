@@ -129,14 +129,14 @@
   <ItemGroup>
     <ClCompile Include="ACARS.cpp" />
     <ClCompile Include="aircraft.cpp" />
-    <ClCompile Include="communication_system.cpp" />
+    <ClCompile Include="communicationSystem.cpp" />
     <ClCompile Include="logger.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ACARS.h" />
     <ClInclude Include="aircraft.h" />
-    <ClInclude Include="communication_system.h" />
+    <ClInclude Include="communicationSystem.h" />
     <ClInclude Include="logger.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

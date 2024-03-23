@@ -1,13 +1,12 @@
-#include "communication_system.h"
+#include "communicationSystem.h"
 
 namespace aircraft {
 
 #pragma comment(lib, "ws2_32.lib")
 
 
-    CommunicationSystem::CommunicationSystem() : socketFD(INVALID_SOCKET), type(CommunicationType::VHF), logger("communications.txt", true) {
+    CommunicationSystem::CommunicationSystem() : socketFD(INVALID_SOCKET), logger("communications.txt", true) {
 
-        setChannel(DEFAULT_CHANNEL);
         setCommunicationType(CommunicationType::VHF);
 
         WSADATA wsaData;
@@ -18,7 +17,7 @@ namespace aircraft {
 
         frequency.sin_family = AF_INET;
         frequency.sin_addr.s_addr = inet_addr(DEFAULT_FREQUENCY.c_str()); 
-        frequency.sin_port = htons(static_cast<u_short>(channel)); 
+        frequency.sin_port = htons(static_cast<u_short>(this->channel));
 
     }
 
@@ -66,12 +65,6 @@ namespace aircraft {
         }
 
         return returnFlag;
-    }
-
-
-    void CommunicationSystem::setChannel(unsigned int newChannel) {
-        this->channel = newChannel;
-        this->frequency.sin_port = htons(static_cast<u_short>(this->channel));
     }
 
     void CommunicationSystem::setFrequency(const std::string& ipAddress) {
@@ -123,7 +116,7 @@ namespace aircraft {
 
 
     void CommunicationSystem::setCommunicationType(CommunicationType type) {
-        this->type = type;
+        this->channel = type;
     }
 
 }

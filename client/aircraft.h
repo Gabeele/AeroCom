@@ -1,40 +1,68 @@
 #pragma once
 
 #include <string>
-#include "communications.h"
+#include <thread>
+#include "CommunicationSystem.h"
+#include "ACARS.h"
 
 namespace aircraft {
+
+    enum class AircraftState { Idle, InFlight, Takeoff, Landing };
+    enum class SystemState { ON, OFF };
+    enum class FlightType { Cargo, Commercial, Private };
+
+
+
     class Aircraft {
     public:
-        /*enum class AircraftState { InFlight, Takeoff, Landing };*/
-
         Aircraft(const std::string& identifier);
-        void initiateCommunication(CommunicationSystem type);
-        void ACARS();
-        //void updateAircraftState(AircraftState newState);
+        Aircraft(const std::string& identifier, AircraftState state, SystemState commsState, SystemState acarsState,
+            unsigned int flightNumber, FlightType flightType, const std::string& departureAirport, const std::string& arrivalAirport,
+            float latitude, float longitude, float altitude, float speed, unsigned int heading);
+        void updateAircraftState(AircraftState newState);
+        void toggleCommunicationSystem(); 
+        void toggleACARSSystem(); 
+
+        void dashboard();
+        void input();
+
+
 
     private:
-        //std::string identifier;
-        //AircraftState state;
-        CommunicationSystem comms; 
 
-        //struct flightInformation {
-        //    unsigned int number; 
-        //    enum class type { Cargo, Commercial, Private};
-        //    std::string departureAirport;
-        //    std::string arrivalAirport;
-        //};
+        void acarsOperation();
 
-        //struct telemetry {
-        //    float latitude; 
-        //    float longitude;
-        //    float alititude;
-        //    float speed; 
-        //    unsigned int heading;
-        //};
+        std::thread acarsThread;
+        std::atomic<bool> acarsActive{ false };
+
+        std::string identifier;
+        AircraftState state;
+        CommunicationSystem comms;
+        ACARS acars;
+        SystemState commsState;
+        SystemState acarsState;
+
+        struct flightInformation {
+
+            unsigned int number;
+            FlightType type;
+            std::string departureAirport;
+            std::string arrivalAirport;
+        } flightInfo;
+
+        struct telemetry {
+            float latitude;
+            float longitude;
+            float altitude;
+            float speed;
+            unsigned int heading;
+        } flightTelemetry;
+
+
 
         // Helper functions
-        void generateACARS();
-
+        void simulateFlightData();
+        void simulateTelemetry();
     };
+
 }

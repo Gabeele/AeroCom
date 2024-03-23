@@ -1,5 +1,5 @@
 #include <iostream>
-#include "communication_system.h"
+#include "communicationSystem.h"
 
 int main() {
 
@@ -7,7 +7,7 @@ int main() {
     aircraft::CommunicationSystem comms;
 
     comms.setFrequency("127.0.0.1");
-    comms.setChannel(12345);
+    comms.setCommunicationType(aircraft::CommunicationType::VHF);
 
     if (comms.connect()) {
         std::cout << "Connected to the server." << std::endl;
