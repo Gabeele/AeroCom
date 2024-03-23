@@ -32,10 +32,7 @@ namespace aircraft {
     private:
         SOCKET socketFD;
         struct sockaddr_in frequency;
-        unsigned int channel;
-        CommunicationType type;
-        logs::Logger logger;
-
+        CommunicationType channel;
 
 
 
