@@ -1,6 +1,0 @@
-ACARS.a1::client/ACARS.cpp
-aircraft.a1::client/aircraft.cpp
-communicationSystem.a1::client/communicationSystem.cpp
-logger.a1::client/logger.cpp
-main.a1::client/main.cpp
-vhf.a1::client/vhf.cpp
