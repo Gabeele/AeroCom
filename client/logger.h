@@ -17,27 +17,22 @@ namespace logs {
             Error
         };
 
-        // Constructor
         Logger(const std::string& logFile, bool logToStdout);
 
-        // Destructor
         ~Logger();
 
-        // Deleted copy constructor and assignment operator to prevent copying
-        Logger(const Logger&) = delete;
-        Logger& operator=(const Logger&) = delete;
-
-        // Public logging methods
         void log(const std::string& message, LogLevel level);
 
     private:
-        std::ofstream logStream; // File stream for logging
-        bool logToStdout;        // Flag for logging to stdout
-        bool isStreamValid;      // Flag indicating if the logStream is valid for writing
+        std::ofstream logStream;
+        bool logToStdout;
+        bool isStreamValid;
 
-        // Utility method for converting log levels to string
         std::string logLevelToString(LogLevel level) const;
     };
 
-#endif // LOGGER_H
+    extern Logger logger;
+
+
 }
+#endif 

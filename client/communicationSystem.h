@@ -6,14 +6,16 @@
 #include <sys/types.h>
 #include <winsock.h>
 #include <string> 
-
 #include "logger.h"
+
+
+
 
 namespace aircraft {
 
     const std::string DEFAULT_FREQUENCY = "127.0.0.1";
 
-    enum class CommunicationType : u_short { VHF = 5555 , HF = 4444 };
+    enum class CommunicationType : u_short { VHF = 5555, HF = 4444 };
 
     class CommunicationSystem {
     public:
@@ -31,12 +33,8 @@ namespace aircraft {
         SOCKET socketFD;
         struct sockaddr_in frequency;
         CommunicationType channel;
-        logs::Logger logger;
-
-
 
 
     };
-}
-
 #endif 
+}

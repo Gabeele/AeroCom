@@ -1,9 +1,15 @@
-#pragma once
+#ifndef AIRCRAFT_H
+#define AIRCRAFT_H
 
 #include <string>
 #include <thread>
-#include "CommunicationSystem.h"
+#include <iostream>
+#include <math.h>
+
+#include "logger.h"
+#include "communicationSystem.h"
 #include "ACARS.h"
+
 
 namespace aircraft {
 
@@ -12,33 +18,37 @@ namespace aircraft {
     enum class FlightType { Cargo, Commercial, Private };
 
 
-
     class Aircraft {
     public:
-        Aircraft(const std::string& identifier);
+        explicit Aircraft(const std::string& identifier);
         Aircraft(const std::string& identifier, AircraftState state, SystemState commsState, SystemState acarsState,
             unsigned int flightNumber, FlightType flightType, const std::string& departureAirport, const std::string& arrivalAirport,
             float latitude, float longitude, float altitude, float speed, unsigned int heading);
         void updateAircraftState(AircraftState newState);
-        void toggleCommunicationSystem(); 
-        void toggleACARSSystem(); 
+        void toggleCommunicationSystem();
+        void toggleACARSSystem();
+        void loadFlightPlan(const std::string& filepath);
+        void toggleSimulateTelemetry();
 
         void dashboard();
         void input();
 
-
-
     private:
-
         void acarsOperation();
+        void simulateTelemetryOperation();
 
         std::thread acarsThread;
         std::atomic<bool> acarsActive{ false };
 
-        std::string identifier;
-        AircraftState state;
+        std::thread simulateTelemetryThread;
+        std::atomic<bool> simulateTelemetryActive{ false };
+
         CommunicationSystem comms;
         ACARS acars;
+
+        std::string identifier;
+        AircraftState state;
+        SystemState simulateState;
         SystemState commsState;
         SystemState acarsState;
 
@@ -59,10 +69,6 @@ namespace aircraft {
         } flightTelemetry;
 
 
-
-        // Helper functions
-        void simulateFlightData();
-        void simulateTelemetry();
     };
-
+#endif
 }

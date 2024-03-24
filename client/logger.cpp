@@ -1,4 +1,4 @@
-#include "Logger.h"
+#include "logger.h"
 
 namespace logs {
 
@@ -11,6 +11,7 @@ namespace logs {
 
         if (!logFile.empty()) {
             logStream.open(logFile, std::ios::out | std::ios::app);
+            isStreamValid = logStream.is_open();
             isStreamValid = logStream.is_open();
             if (!isStreamValid) {
                 // Handle the case where the file could not be opened.
@@ -32,10 +33,9 @@ namespace logs {
         bool exitFlag = false;
         std::time_t t = std::time(nullptr);
         std::tm tm;
-        errno_t localtimeResult = localtime_s(&tm, &t); // Check the return value of localtime_s
+        errno_t localtimeResult = localtime_s(&tm, &t);
 
         if (localtimeResult != 0) {
-            std::cerr << "Failed to get local time." << std::endl;
             exitFlag = true;
         }
 
@@ -61,13 +61,14 @@ namespace logs {
             if (logToStdout) {
                 std::cout << logMessage << std::endl;
             }
-        
+
         }
     }
 
 
     std::string Logger::logLevelToString(LogLevel level) const {
-        std::string levelString; // Single exit point modification
+        std::string levelString;
+
         switch (level) {
         case LogLevel::Info:
             levelString = "INFO";
@@ -84,4 +85,6 @@ namespace logs {
         }
         return levelString;
     }
+
+    Logger logger("log.txt", true);
 }

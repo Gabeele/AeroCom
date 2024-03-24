@@ -1,12 +1,16 @@
-#pragma once
+#ifndef ACARS_H
+#define ACARS_H
 
 #include <string>
 #include <sstream>
 #include <iomanip>
+#include <chrono>
+#include "logger.h"
+
 
 namespace aircraft {
 
-    enum class ACARSFlag { Handoff, Data, Message, Acknowledge, Request};
+    enum class ACARSFlag { Handoff, Data, Message, Acknowledge, Request };
 
     class ACARS {
     public:
@@ -17,7 +21,7 @@ namespace aircraft {
             const std::string& flightNumber, const std::string& aircraftType,
             const std::string& departureAirport, const std::string& destinationAirport,
             float latitude, float longitude, float altitude,
-            float speed, unsigned int heading, const std::string& timestamp);
+            float speed, unsigned int heading);
 
         void setTransmissionNumber(unsigned int number);
         void setIsPriority(bool priority);
@@ -25,8 +29,7 @@ namespace aircraft {
         void setAircraftID(const std::string& id);
         void setGroundStationID(const std::string& id);
         void setFlightInformation(const std::string& flightNumber, const std::string& aircraftType, const std::string& departureAirport, const std::string& destinationAirport);
-        void setLocationDetails(float latitude, float longitude, float altitude, float speed, unsigned int heading);
-        void setTimestamp(const std::string& timestamp);
+        void setTelemetryData(float latitude, float longitude, float altitude, float speed, unsigned int heading);
 
         std::string generateChecksum(const std::string& packetContent) const;
         std::string serializePacket();
@@ -34,7 +37,7 @@ namespace aircraft {
     private:
         unsigned int transmissionNumber;
         bool isPriority;
-        ACARSFlag flag; 
+        ACARSFlag flag;
         std::string aircraftID;
         std::string groundStationID;
         std::string message;
@@ -50,6 +53,9 @@ namespace aircraft {
         std::string aircraftType;
         std::string departureAirport;
         std::string destinationAirport;
+
+        std::string getFormattedTimestamp();
     };
 
-} 
+#endif
+}

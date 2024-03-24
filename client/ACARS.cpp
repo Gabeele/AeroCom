@@ -1,7 +1,4 @@
-#pragma once
-// ACARS.cpp
 #include "ACARS.h"
-
 
 namespace aircraft {
 
@@ -16,13 +13,13 @@ namespace aircraft {
         const std::string& flNumber, const std::string& acType,
         const std::string& depAirport, const std::string& destAirport,
         float lat, float lon, float alt,
-        float spd, unsigned int hdg, const std::string& time)
+        float spd, unsigned int hdg)
         : transmissionNumber(transNum), isPriority(priority), flag(flg),
         aircraftID(acID), groundStationID(gsID),
         flightNumber(flNumber), aircraftType(acType),
         departureAirport(depAirport), destinationAirport(destAirport),
         latitude(lat), longitude(lon), altitude(alt),
-        speed(spd), heading(hdg), timestamp(time) {}
+        speed(spd), heading(hdg) {}
 
 
     std::string ACARS::generateChecksum(const std::string& packetContent) const {
@@ -31,7 +28,7 @@ namespace aircraft {
             checksum += static_cast<unsigned int>(c);
         }
         std::stringstream ss;
-        ss << std::hex << checksum; 
+        ss << std::hex << checksum;
         return ss.str();
     }
 
@@ -47,7 +44,7 @@ namespace aircraft {
         packet << "Transmission Number: " << transmissionNumber << "\n";
         packet << "Message Priority: " << (isPriority ? "Yes" : "No") << "\n";
 
-        char flagChar = ' '; 
+        char flagChar = ' ';
 
         switch (flag) {
         case ACARSFlag::Handoff: flagChar = 'H'; break;
@@ -100,9 +97,9 @@ namespace aircraft {
 
     void ACARS::setFlag(ACARSFlag flag) {
 
-      
-            this->flag = flag;
-        
+
+        this->flag = flag;
+
     }
 
     void ACARS::setAircraftID(const std::string& id) {
@@ -121,7 +118,7 @@ namespace aircraft {
         this->destinationAirport = destinationAirport;
     }
 
-    void ACARS::setLocationDetails(float latitude, float longitude, float altitude,
+    void ACARS::setTelemetryData(float latitude, float longitude, float altitude,
         float speed, unsigned int heading) {
         this->latitude = latitude;
         this->longitude = longitude;
@@ -130,8 +127,29 @@ namespace aircraft {
         this->heading = heading;
     }
 
-    void ACARS::setTimestamp(const std::string& timestamp) {
-        this->timestamp = timestamp;
+    std::string ACARS::getFormattedTimestamp() {
+        std::string timestamp;
+        std::time_t t = std::time(nullptr);
+        std::tm tm;
+        errno_t localtimeResult = localtime_s(&tm, &t);
+        std::ostringstream timestampStream;
+
+        if (localtimeResult == 0) {  // If no error
+            timestampStream << std::setfill('0')
+                << std::setw(4) << tm.tm_year + 1900 << "-"
+                << std::setw(2) << tm.tm_mon + 1 << "-"
+                << std::setw(2) << tm.tm_mday << " "
+                << std::setw(2) << tm.tm_hour << ":"
+                << std::setw(2) << tm.tm_min << ":"
+                << std::setw(2) << tm.tm_sec;
+            timestamp = timestampStream.str();
+        }
+        else {
+            logs::logger.log("Error getting the timestamp.", logs::Logger::LogLevel::Error);
+        }
+
+        return timestamp; // Single return statement as required
     }
 
-} 
+
+}
