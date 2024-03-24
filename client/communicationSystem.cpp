@@ -1,4 +1,4 @@
-#include "communication_system.h"
+#include "communicationSystem.h"
 
 namespace aircraft {
 
@@ -7,7 +7,6 @@ namespace aircraft {
 
     CommunicationSystem::CommunicationSystem() : socketFD(INVALID_SOCKET) {
 
-        setChannel(DEFAULT_CHANNEL);
         setCommunicationType(CommunicationType::VHF);
 
         WSADATA wsaData;
@@ -17,8 +16,8 @@ namespace aircraft {
         }
 
         frequency.sin_family = AF_INET;
-        frequency.sin_addr.s_addr = inet_addr(DEFAULT_FREQUENCY.c_str()); 
-        frequency.sin_port = htons(static_cast<u_short>(channel)); 
+        frequency.sin_addr.s_addr = inet_addr(DEFAULT_FREQUENCY.c_str());
+        frequency.sin_port = htons(static_cast<u_short>(channel));
 
     }
 
@@ -49,7 +48,7 @@ namespace aircraft {
             }
             else {
                 logs::logger.log("Connected to the server.", logs::Logger::LogLevel::Info);
-                returnFlag = true; 
+                returnFlag = true;
             }
 
             if (!returnFlag) {
@@ -69,11 +68,6 @@ namespace aircraft {
     }
 
 
-    void CommunicationSystem::setChannel(unsigned int newChannel) {
-        this->channel = newChannel;
-        this->frequency.sin_port = htons(static_cast<u_short>(this->channel));
-    }
-
     void CommunicationSystem::setFrequency(const std::string& ipAddress) {
         frequency.sin_addr.s_addr = inet_addr(ipAddress.c_str());
     }
@@ -81,9 +75,9 @@ namespace aircraft {
     bool CommunicationSystem::receiveMessage() {
         bool success = false;
         char buffer[1024];
-        (void)memset(&buffer[0], 0, sizeof(buffer));  
+        (void)memset(&buffer[0], 0, sizeof(buffer));
 
-        int bytesReceived = recv(socketFD, &buffer[0], sizeof(buffer), 0);  
+        int bytesReceived = recv(socketFD, &buffer[0], sizeof(buffer), 0);
         if (bytesReceived > 0) {
             std::string receivedMessage(buffer, bytesReceived);
             logs::logger.log("Received message: " + receivedMessage, logs::Logger::LogLevel::Info);
@@ -102,7 +96,7 @@ namespace aircraft {
 
     bool CommunicationSystem::sectorHandoff() {
 
-        return true; 
+        return true;
     }
 
     bool CommunicationSystem::sendMessage(const std::string& message) {
@@ -117,7 +111,7 @@ namespace aircraft {
             logs::logger.log("Message sent successfully.", logs::Logger::LogLevel::Info);
             returnFlag = true;
         }
-        
+
         return returnFlag;
     }
 

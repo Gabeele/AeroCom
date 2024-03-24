@@ -1,4 +1,4 @@
-#include "Aircraft.h"
+#include "aircraft.h"
 
 namespace aircraft {
 
@@ -232,7 +232,7 @@ namespace aircraft {
             }
 
             // Update at a fixed time interval
-            std::this_thread::sleep_for(std::chrono::seconds(1)); // Simulate real-time progression
+            std::this_thread::sleep_for(std::chrono::seconds(1)); 
         }
     }
 

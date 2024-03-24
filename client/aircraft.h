@@ -5,11 +5,16 @@
 #include <iostream>
 #include <math.h>
 #include "logger.h"
-#include "CommunicationSystem.h"
 #include "ACARS.h"
 #include "communicationSystem.h"
 
 namespace aircraft {
+
+    enum class AircraftState { Idle, InFlight, Takeoff, Landing };
+    enum class SystemState { ON, OFF };
+    enum class FlightType { Cargo, Commercial, Private };
+
+
     class Aircraft {
     public:
         explicit Aircraft(const std::string& identifier);
@@ -33,11 +38,12 @@ namespace aircraft {
         std::thread simulateTelemetryThread;
         std::atomic<bool> simulateTelemetryActive{ false };
 
+        CommunicationSystem comms;
+        ACARS acars;
+
         std::string identifier;
         AircraftState state;
-        CommunicationSystem comms;
         SystemState simulateState;
-        ACARS acars;
         SystemState commsState;
         SystemState acarsState;
 
