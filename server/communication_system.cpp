@@ -60,21 +60,46 @@ namespace GroundControl {
         return true;
     }
 
-
-    bool GroundControl::SendMessage(const std::string& message) 
-    { // no idea what this looks like atm
-        if (message == SWITCH_CHANNEL_COMMAND) 
+    bool GroundControl::SwitchFrequency(int newPort) // should take a port number which can be changed to the HF or VHF enum to change between port 4444 or 5555
+    {
+        SOCKET newSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+        if (newSocket == INVALID_SOCKET) 
         {
-            std::string channelSwitchMessage = "Please switch to channel X"; 
-            // Send the channel switch message to the client
-            return true; 
-        } else 
-        {
-            // Message is not a channel switch command, send it normally
-            return false; 
+            std::cerr << "Error creating socket for new frequency." << std::endl;
+            return false;
         }
-    }
 
+        sockaddr_in serverAddr;
+        serverAddr.sin_family = AF_INET;
+        serverAddr.sin_addr.s_addr = INADDR_ANY;
+        serverAddr.sin_port = htons(static_cast<u_short>(newPort));
+
+
+        // binds new socket and listens for new connection without dropping until it connects
+        if (bind(newSocket, reinterpret_cast<sockaddr*>(&serverAddr), sizeof(serverAddr)) == SOCKET_ERROR) 
+        {
+            std::cerr << "Bind failed with error: " << WSAGetLastError() << std::endl;
+            closesocket(newSocket);
+            return false;
+        }
+
+        if (listen(newSocket, SOMAXCONN) == SOCKET_ERROR) 
+        {
+            std::cerr << "Listen failed with error: " << WSAGetLastError() << std::endl;
+            closesocket(newSocket);
+            return false;
+        }
+
+        if (listenSocket_ != INVALID_SOCKET) 
+        {
+            closesocket(listenSocket_);
+        }
+
+        // Assign the new socket to the client socket member variable
+        listenSocket_ = newSocket;
+
+        return true;
+    }
 
 
     std::string GroundControl::ReceiveMessage() 
@@ -99,18 +124,65 @@ namespace GroundControl {
         buffer[bytesReceived] = '\0';
         std::string receivedMessage(buffer);
 
-        // do something with the message, ig log it
+        // do something with the message, ig log it or parse for whatever use it has
+        // if from other GC get we can get ip and then tell the 
 
         closesocket(clientSocket);
         return receivedMessage;
     }
 
-    void GroundControl::HandleATCToATCHandoffRequest(GroundControl* requestingServer, GroundControl* targetServer)
+    int GroundControl::GetPort() const 
     {
+        return port_;
     }
 
-    void GroundControl::HandleATCToAircraftHandoffRequest(GroundControl* requestingServer, char* targetAircraft)
+    void GroundControl::HandleATCToAircraftHandoffRequest(GroundControl* targetServer, char* targetAircraft)
     {
+
+        if (targetServer == nullptr) {
+            std::cerr << "Invalid servers for handoff request." << std::endl;
+            return;
+        }
+
+        int newPort = targetServer->GetPort();
+
+        if (targetServer->SwitchFrequency(newPort)) 
+        {
+            SOCKET aircraftSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+            if (aircraftSocket == INVALID_SOCKET) 
+            {
+                std::cerr << "Error creating socket for aircraft." << std::endl;
+                return;
+            }
+
+            sockaddr_in aircraftAddr;
+            aircraftAddr.sin_family = AF_INET;
+            aircraftAddr.sin_addr.s_addr = inet_addr(targetAircraft); 
+            aircraftAddr.sin_port = htons(static_cast<u_short>(newPort));
+
+            if (connect(aircraftSocket, reinterpret_cast<sockaddr*>(&aircraftAddr), sizeof(aircraftAddr)) == SOCKET_ERROR) 
+            {
+                std::cerr << "Failed to connect to aircraft." << std::endl;
+                closesocket(aircraftSocket);
+                return;
+            }
+
+            // send message to the aircraft to swap, hence PACKETTHING
+            if (send(aircraftSocket, PACKETTHING.c_str(), PACKETTHING.length(), 0) == SOCKET_ERROR) 
+            {
+                std::cerr << "Failed to send handoff message to aircraft." << std::endl;
+            }
+            else 
+            {
+                std::cout << "Handoff message sent to aircraft successfully." << std::endl;
+            }
+
+            closesocket(aircraftSocket);
+        }
+        else {
+            std::cerr << "Failed to switch frequency on the requesting server." << std::endl;
+        }
     }
+
 
 }

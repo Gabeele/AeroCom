@@ -20,16 +20,21 @@ namespace GroundControl {
     public:
         GroundControl(); // constructor wit da parameters
         ~GroundControl(); // deconstructor
+
         bool Initialize();
         bool Connect(int port);
-        bool SendMessage(const std::string& message); // might not actually be used
         std::string ReceiveMessage();
 
+        int GetPort() const;
+
         // maybe should be broken down into a function that requests a hand off and one that accepts it
-        void HandleATCToATCHandoffRequest(GroundControl* requestingServer, GroundControl* targetServer); 
-        void HandleATCToAircraftHandoffRequest(GroundControl* requestingServer, char* targetAircraft);
+        // /03/24 edit,i have no idea what i was thinking above
+        void HandleATCToAircraftHandoffRequest(GroundControl* targetServer, char* targetAircraft);
+
+        bool SwitchFrequency(int newPort);
     private:
         int port_;
+        char* ip;
         SOCKET listenSocket_;
         std::vector<GroundControl*> connectedATCServers;
         std::vector<char*> connectedAircrafts; // this will be an ip that represents each of the aircrafts in flight
