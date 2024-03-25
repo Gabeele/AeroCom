@@ -30,9 +30,6 @@ namespace aircraft {
         void loadFlightPlan(const std::string& filepath);
         void toggleSimulateTelemetry();
 
-        void dashboard();
-        void input();
-
     private:
         void acarsOperation();
         void simulateTelemetryOperation();
@@ -44,13 +41,15 @@ namespace aircraft {
         std::atomic<bool> simulateTelemetryActive{ false };
 
         CommunicationSystem comms;
-        ACARS acars;
 
         std::string identifier;
         AircraftState state;
         SystemState simulateState;
         SystemState commsState;
         SystemState acarsState;
+
+        bool flightPlanLoaded ;
+        bool communicationReady;
 
         struct flightInformation {
 

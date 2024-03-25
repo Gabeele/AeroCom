@@ -27,15 +27,34 @@ namespace aircraft {
     }
 
     void Aircraft::toggleCommunicationSystem() {
-        commsState = (commsState == SystemState::ON) ? SystemState::OFF : SystemState::ON;
+        if (commsState == SystemState::ON) {
+            commsState = SystemState::OFF;
+            if (!comms.disconnect()) {
+                logs::logger.log("Failed to disconnect communication system.", logs::Logger::LogLevel::Error);
+            }
+        }
+        else {
+            this->communicationReady = false;
+            commsState = SystemState::ON;
+            if (!comms.connect()) {
+                logs::logger.log("Failed to connect communication system.", logs::Logger::LogLevel::Error);
+                
+            }
+            else {
+                this->communicationReady = true;
+                logs::logger.log("Connected", logs::Logger::LogLevel::Info);
+            }
+        }
 
         std::string commsStateString = (commsState == SystemState::ON) ? "ON" : "OFF";
         logs::logger.log("Communication switch toggled: " + commsStateString, logs::Logger::LogLevel::Info);
 
-        // TODO comms should be a thread to listen for incoming packets and then parse out what to do with them
+
+        // TODO proabbly some kind of listening 
     }
 
     void Aircraft::toggleACARSSystem() {
+
         acarsState = (acarsState == SystemState::ON) ? SystemState::OFF : SystemState::ON;
         if (acarsState == SystemState::ON && commsState == SystemState::ON) {
             acarsActive = true;
@@ -51,6 +70,9 @@ namespace aircraft {
 
     void Aircraft::loadFlightPlan(const std::string& filepath) {
         bool exit = false;
+
+        this->flightPlanLoaded = false;
+
         std::ifstream file(filepath);
         if (!file) {
             exit = true;
@@ -89,28 +111,65 @@ namespace aircraft {
             }
 
             file.close();
+
+            this->flightPlanLoaded = true;
         }
     }
 
     void Aircraft::acarsOperation() {
         while (acarsActive) {
 
-            acars.setTelemetryData(
-                flightTelemetry.latitude,
-                flightTelemetry.longitude,
-                flightTelemetry.altitude,
-                flightTelemetry.speed,
-                flightTelemetry.heading
+            if (!flightPlanLoaded || !communicationReady) {
+                continue;
+            }
+
+            ACARS buf;
+
+            // Increment transmission number for each new packet
+            static unsigned int transmissionNumber = 0;
+            buf.setTransmissionNumber(++transmissionNumber);
+
+            buf.setIsPriority(true); 
+            buf.setFlag(ACARSFlag::Data); 
+
+            std::string aircraftTypeStr;
+            switch (this->flightInfo.type) {
+            case FlightType::Cargo:
+                aircraftTypeStr = "Cargo";
+                break;
+            case FlightType::Commercial:
+                aircraftTypeStr = "Commercial";
+                break;
+            case FlightType::Private:
+                aircraftTypeStr = "Private";
+                break;
+            default:
+                aircraftTypeStr = "Unknown"; 
+                break;
+            }
+
+            buf.setAircraftID(this->identifier);
+            buf.setFlightInformation(
+                std::to_string(this->flightInfo.number),
+                aircraftTypeStr,
+                this->flightInfo.departureAirport,
+                this->flightInfo.arrivalAirport
             );
 
-            std::stringstream ss;
+            buf.setTelemetryData(
+                this->flightTelemetry.latitude,
+                this->flightTelemetry.longitude,
+                this->flightTelemetry.altitude,
+                this->flightTelemetry.speed,
+                this->flightTelemetry.heading
+            );
 
-            std::string packet = acars.serializePacket();
+            std::string packet = buf.serializePacket();
 
             bool result = comms.sendMessage(packet);
 
             if (result) {
-                std::cout << "Packet sent successfully!" << std::endl;
+                std::cout << "Packet sent successfully!" + packet << std::endl;
             }
             else {
                 std::cerr << "Failed to send packet." << std::endl;
@@ -121,51 +180,11 @@ namespace aircraft {
     }
 
 
-    void Aircraft::dashboard() {
-        std::cout << "Dashboard Display:\n";
-        std::cout << "Aircraft Identifier: " << identifier << "\n";
-        std::cout << "Aircraft State: " << static_cast<int>(state) << "\n";
-
-    }
-
-
-    void Aircraft::input() {
-        std::cout << "Enter command (1: Toggle Comms, 2: Toggle ACARS, 3: Change State): ";
-
-        int command = 0;
-        std::cin >> command;
-
-        while (std::cin.get() != '\n') {
-
-        }
-
-        if (!std::cin.fail()) {
-            switch (command) {
-            case 1:
-                toggleCommunicationSystem();
-                break;
-            case 2:
-                toggleACARSSystem();
-                break;
-            case 3:
-                break;
-            default:
-                std::cout << "Invalid command.\n";
-                break;
-            }
-        }
-        else {
-            std::cin.clear();
-            std::cout << "Invalid input, please enter a number.\n";
-        }
-    }
-
-
     void Aircraft::toggleSimulateTelemetry() {
         simulateState = (simulateState == SystemState::ON) ? SystemState::OFF : SystemState::ON;
         if (simulateState == SystemState::ON) {
             simulateTelemetryActive = true;
-            simulateTelemetryThread = std::thread(&Aircraft::acarsOperation, this);
+            simulateTelemetryThread = std::thread(&Aircraft::simulateTelemetryOperation, this);
         }
         else {
             simulateTelemetryActive = false;

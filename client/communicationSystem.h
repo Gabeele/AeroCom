@@ -22,6 +22,8 @@ namespace aircraft {
         CommunicationSystem();
         ~CommunicationSystem();
 
+        bool disconnect();
+
         bool connect();
         bool receiveMessage();
         bool sectorHandoff();

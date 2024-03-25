@@ -22,20 +22,39 @@ namespace aircraft {
     }
 
     CommunicationSystem::~CommunicationSystem() {
-        if (socketFD != INVALID_SOCKET) {
-            int result = closesocket(socketFD);
-            if (result == SOCKET_ERROR) {
-                logs::logger.log("Close socket resulted in a positive number.", logs::Logger::LogLevel::Error);
-            }
+        if (disconnect()) {
+            logs::logger.log("Destructing the communicaiton system.", logs::Logger::LogLevel::Info);
         }
-        int result = WSACleanup();
-        if (result == SOCKET_ERROR) {
-            logs::logger.log("WSA Cleanup resulted in a postiive number.", logs::Logger::LogLevel::Error);
+
+        if (WSACleanup() == SOCKET_ERROR) {
+            logs::logger.log("WSA Cleanup resulted in an error.", logs::Logger::LogLevel::Error);
         }
     }
 
+
+    bool CommunicationSystem::disconnect() {
+        bool success = false; 
+
+        if (socketFD != INVALID_SOCKET) {
+
+            if (closesocket(socketFD) == SOCKET_ERROR) {
+
+                logs::logger.log("Failed to close socket.", logs::Logger::LogLevel::Error);
+            }
+            else {
+
+                logs::logger.log("Disconnected from server.", logs::Logger::LogLevel::Info);
+                success = true;
+            }
+            socketFD = INVALID_SOCKET; 
+        }
+
+        return success;
+    }
+
+
     bool CommunicationSystem::connect() {
-        bool returnFlag = false; // Default to false to ensure we explicitly mark success
+        bool returnFlag = false; 
 
         socketFD = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
         if (socketFD == INVALID_SOCKET) {
@@ -74,9 +93,9 @@ namespace aircraft {
     bool CommunicationSystem::receiveMessage() {
         bool success = false;
         char buffer[1024];
-        (void)memset(&buffer[0], 0, sizeof(buffer));  // Explicitly reference the first element
+        (void)memset(&buffer[0], 0, sizeof(buffer));  
 
-        int bytesReceived = recv(socketFD, &buffer[0], sizeof(buffer), 0);  // Explicitly reference the first element
+        int bytesReceived = recv(socketFD, &buffer[0], sizeof(buffer), 0);  
         if (bytesReceived > 0) {
             std::string receivedMessage(buffer, bytesReceived);
             logs::logger.log("Received message: " + receivedMessage, logs::Logger::LogLevel::Info);
@@ -98,7 +117,7 @@ namespace aircraft {
         return true; 
     }
 
-    bool CommunicationSystem::sendMessage(const std::string& message) {
+   bool CommunicationSystem::sendMessage(const std::string& message) {
         bool returnFlag = false;
 
         int bytesSent = send(this->socketFD, message.c_str(), message.length(), 0);

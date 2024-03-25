@@ -38,7 +38,7 @@ namespace aircraft {
         // Start of Packet
         packet << "START\n";
 
-        // Dynamically calculate size if needed or leave as placeholder
+        // TODO Dynamically calculate size if needed or leave as placeholder
         packet << "Size: -\n";
 
         packet << "Transmission Number: " << transmissionNumber << "\n";
@@ -148,7 +148,7 @@ namespace aircraft {
             logs::logger.log("Error getting the timestamp.", logs::Logger::LogLevel::Error);
         }
 
-        return timestamp; // Single return statement as required
+        return timestamp; 
     }
 
 
