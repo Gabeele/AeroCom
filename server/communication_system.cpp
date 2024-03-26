@@ -1,3 +1,4 @@
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
 #include "communication_system.h"
 
 namespace GroundControl {
@@ -101,18 +102,22 @@ namespace GroundControl {
         return true;
     }
 
-
-    std::string GroundControl::ReceiveMessage() 
+    SOCKET GroundControl::AcceptConnection()
     {
         SOCKET clientSocket = accept(listenSocket_, NULL, NULL);
-        if (clientSocket == INVALID_SOCKET) 
+        if (clientSocket == INVALID_SOCKET)
         {
             std::cerr << "Accept failed with error: " << WSAGetLastError() << std::endl;
             closesocket(listenSocket_);
             WSACleanup();
-            return "";
+            throw std::exception("Cant accept client connection");
         }
+        return clientSocket;
+    }
 
+
+    std::string GroundControl::ReceiveMessage(SOCKET clientSocket)
+    {
         char buffer[1024];
         int bytesReceived = recv(clientSocket, buffer, sizeof(buffer), 0);
         if (bytesReceived == SOCKET_ERROR) 
@@ -127,7 +132,9 @@ namespace GroundControl {
         // do something with the message, ig log it or parse for whatever use it has
         // if from other GC get we can get ip and then tell the 
 
-        closesocket(clientSocket);
+        std::cout << receivedMessage << std::endl;
+
+        //closesocket(clientSocket);
         return receivedMessage;
     }
 
@@ -167,15 +174,15 @@ namespace GroundControl {
                 return;
             }
 
-            // send message to the aircraft to swap, hence PACKETTHING
-            if (send(aircraftSocket, PACKETTHING.c_str(), PACKETTHING.length(), 0) == SOCKET_ERROR) 
-            {
-                std::cerr << "Failed to send handoff message to aircraft." << std::endl;
-            }
-            else 
-            {
-                std::cout << "Handoff message sent to aircraft successfully." << std::endl;
-            }
+            //// send message to the aircraft to swap, hence PACKETTHING
+            //if (send(aircraftSocket, PACKETTHING.c_str(), PACKETTHING.length(), 0) == SOCKET_ERROR) 
+            //{
+            //    std::cerr << "Failed to send handoff message to aircraft." << std::endl;
+            //}
+            //else 
+            //{
+            //    std::cout << "Handoff message sent to aircraft successfully." << std::endl;
+            //}
 
             closesocket(aircraftSocket);
         }

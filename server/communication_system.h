@@ -23,7 +23,8 @@ namespace GroundControl {
 
         bool Initialize();
         bool Connect(int port);
-        std::string ReceiveMessage();
+        std::string ReceiveMessage(SOCKET clientSocket);
+        SOCKET AcceptConnection();
 
         int GetPort() const;
 
