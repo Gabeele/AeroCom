@@ -360,3 +360,5 @@ MigrationBackup/
 .ionide/
 
 
+/server/server.vcxproj
+/server/server.vcxproj.filters
