@@ -16,7 +16,7 @@ namespace aircraft {
     enum class AircraftState { Idle, InFlight, Takeoff, Landing };
     enum class SystemState { ON, OFF };
     enum class FlightType { Cargo, Commercial, Private };
-
+    enum class CommunicationState { Closed, EstablishedConnection, Sending, Handoff };
 
     class Aircraft {
     public:
@@ -45,8 +45,9 @@ namespace aircraft {
         std::string identifier;
         AircraftState state;
         SystemState simulateState;
-        SystemState commsState;
-        SystemState acarsState;
+        SystemState commsToggle;
+        SystemState acarsToggle;
+        CommunicationState commsState;
 
         bool flightPlanLoaded ;
         bool communicationReady;

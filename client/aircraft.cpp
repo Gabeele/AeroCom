@@ -6,8 +6,8 @@ namespace aircraft {
     Aircraft::Aircraft(const std::string& identifier) :
         identifier(identifier),
         state(AircraftState::InFlight),
-        commsState(SystemState::OFF),
-        acarsState(SystemState::OFF),
+        commsToggle(SystemState::OFF),
+        acarsToggle(SystemState::OFF),
         flightInfo{ 0, FlightType::Commercial, "Unknown", "Unknown" },
         flightTelemetry{ 0.0, 0.0, 0.0, 0.0, 0 } {
 
@@ -16,7 +16,7 @@ namespace aircraft {
     Aircraft::Aircraft(const std::string& identifier, AircraftState state, SystemState commsState, SystemState acarsState,
         unsigned int flightNumber, FlightType flightType, const std::string& departureAirport, const std::string& arrivalAirport,
         float latitude, float longitude, float altitude, float speed, unsigned int heading)
-        : identifier(identifier), state(state), commsState(commsState), acarsState(acarsState),
+        : identifier(identifier), state(state), commsToggle(commsState), acarsToggle(acarsState),
         flightInfo{ flightNumber, flightType, departureAirport, arrivalAirport },
         flightTelemetry{ latitude, longitude, altitude, speed, heading } {
     }
@@ -27,26 +27,32 @@ namespace aircraft {
     }
 
     void Aircraft::toggleCommunicationSystem() {
-        if (commsState == SystemState::ON) {
-            commsState = SystemState::OFF;
+        if (commsToggle == SystemState::ON) {
+            commsToggle = SystemState::OFF;
             if (!comms.disconnect()) {
                 logs::logger.log("Failed to disconnect communication system.", logs::Logger::LogLevel::Error);
+            
             }
+            commsState = CommunicationState::Closed;
         }
         else {
             this->communicationReady = false;
-            commsState = SystemState::ON;
+            commsToggle = SystemState::ON;
             if (!comms.connect()) {
                 logs::logger.log("Failed to connect communication system.", logs::Logger::LogLevel::Error);
+                commsState = CommunicationState::Closed;
+                logs::logger.log("Communicate state: closed", logs::Logger::LogLevel::Info);
+
                 
             }
             else {
+                commsState = CommunicationState::EstablishedConnection;
+                logs::logger.log("Communicate state: Established Connection", logs::Logger::LogLevel::Info);
                 this->communicationReady = true;
-                logs::logger.log("Connected", logs::Logger::LogLevel::Info);
             }
         }
 
-        std::string commsStateString = (commsState == SystemState::ON) ? "ON" : "OFF";
+        std::string commsStateString = (commsToggle == SystemState::ON) ? "ON" : "OFF";
         logs::logger.log("Communication switch toggled: " + commsStateString, logs::Logger::LogLevel::Info);
 
 
@@ -55,8 +61,8 @@ namespace aircraft {
 
     void Aircraft::toggleACARSSystem() {
 
-        acarsState = (acarsState == SystemState::ON) ? SystemState::OFF : SystemState::ON;
-        if (acarsState == SystemState::ON && commsState == SystemState::ON) {
+        acarsToggle = (acarsToggle == SystemState::ON) ? SystemState::OFF : SystemState::ON;
+        if (acarsToggle == SystemState::ON && commsToggle == SystemState::ON) {
             acarsActive = true;
             acarsThread = std::thread(&Aircraft::acarsOperation, this);
         }
@@ -71,11 +77,16 @@ namespace aircraft {
     void Aircraft::loadFlightPlan(const std::string& filepath) {
         bool exit = false;
 
+        logs::logger.log("Loading flight plan...", logs::Logger::LogLevel::Info);
+
         this->flightPlanLoaded = false;
 
         std::ifstream file(filepath);
         if (!file) {
+            logs::logger.log("Error loading the flight plan. Is the file missing?", logs::Logger::LogLevel::Error);
+
             exit = true;
+
         }
 
         if (exit == false) {
@@ -113,10 +124,14 @@ namespace aircraft {
             file.close();
 
             this->flightPlanLoaded = true;
+            logs::logger.log("Flight plan is loaded.", logs::Logger::LogLevel::Info);
+
         }
     }
 
     void Aircraft::acarsOperation() {
+        commsState = CommunicationState::Sending;
+        logs::logger.log("Communicate state: sending", logs::Logger::LogLevel::Info);
         while (acarsActive) {
 
             if (!flightPlanLoaded || !communicationReady) {
@@ -169,10 +184,10 @@ namespace aircraft {
             bool result = comms.sendMessage(packet);
 
             if (result) {
-                std::cout << "Packet sent successfully!" + packet << std::endl;
+                logs::logger.log("Packet sent.", logs::Logger::LogLevel::Info);
             }
             else {
-                std::cerr << "Failed to send packet." << std::endl;
+                logs::logger.log("Failed to send packet.", logs::Logger::LogLevel::Error);
             }
 
             std::this_thread::sleep_for(std::chrono::seconds(1));

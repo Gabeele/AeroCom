@@ -6,7 +6,7 @@ int main() {
     aircraft::Aircraft ac("N12345");
 
     // Load the flight plan from a predefined file
-    ac.loadFlightPlan("FlightPlan.txt");
+    ac.loadFlightPlan("./FlightPlan.txt");
 
     // Toggle the communication system to active
     ac.toggleCommunicationSystem();
