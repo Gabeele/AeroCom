@@ -1,5 +1,7 @@
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
 #include "communication_system.h"
+#include "ACARS.h"
+#include "logger.h"
 
 namespace GroundControl {
 
@@ -131,13 +133,57 @@ namespace GroundControl {
         // do something with the message, ig log it or parse for whatever use it has
         // if from other GC get we can get ip and then tell the 
 
-        std::cout << receivedMessage << std::endl;
+        // just couts the packet for now
+        PacketParsing(receivedMessage);
 
         //check checksum integrity
         ChecksumCheck(receivedMessage);
         
         //closesocket(clientSocket);
         return receivedMessage;
+    }
+
+    void GroundControl::PacketParsing(std::string receivedMessage)
+    {
+        std::cout << receivedMessage << std::endl;
+
+        unsigned int tnum = atoi(receivedMessage.substr(33, 33 + sizeof(int)).c_str());
+        bool priority = false;
+        if (receivedMessage.substr(52, receivedMessage.find('\n', 52)) == "Yes")
+            priority = true;
+        aircraft::ACARSFlag flg;
+        switch (receivedMessage.substr(receivedMessage.find("Flag: ") + 6, receivedMessage.find("Flag: ") + 7)[0]) {
+        case 'H':
+            flg = aircraft::ACARSFlag::Handoff;
+            break;
+        case 'D' :
+            flg = aircraft::ACARSFlag::Data;
+            break;
+        case 'A':
+            flg = aircraft::ACARSFlag::Acknowledge;
+            break;
+        case 'M':
+            flg = aircraft::ACARSFlag::Message;
+            break;
+        case 'R':
+            flg = aircraft::ACARSFlag::Request;
+            break;
+        }
+        std::string acID = receivedMessage.substr(receivedMessage.find("Aircraft ID: ") + 13, receivedMessage.find('\n'));
+        //this is not in the transmission right now
+        //std::string gsID = receivedMessage.substr(receivedMessage.find(""));
+
+        //flight information
+        std::string flNum = receivedMessage.substr(receivedMessage.find("Flight Number: ") + 15, receivedMessage.find('\n'));
+        std::string acType = receivedMessage.substr(receivedMessage.find("Aircraft Type: ") + 15, receivedMessage.find('\n'));
+        std::string depAirport = receivedMessage.substr(receivedMessage.find("Departure Airport: ") + 19, receivedMessage.find('\n'));
+        std::string destAirport = receivedMessage.substr(receivedMessage.find("Destination Airport: ") + 21, receivedMessage.find('\n'));
+        
+        //rn there's an issue cutting off at the wrong place
+        // finish the rest of the parsing ...
+
+
+        aircraft::ACARS newAcars();
     }
 
     std::string GroundControl::generateChecksum(const std::string& packetContent) const {

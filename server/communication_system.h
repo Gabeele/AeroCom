@@ -26,6 +26,7 @@ namespace GroundControl {
         bool Connect(int port);
         std::string ReceiveMessage(SOCKET clientSocket);
         std::string generateChecksum(const std::string& packetContent) const;
+        void PacketParsing(std::string recievedMessage);
         void ChecksumCheck(std::string receivedMessage);
         SOCKET AcceptConnection();
 
