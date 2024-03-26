@@ -115,7 +115,6 @@ namespace GroundControl {
         return clientSocket;
     }
 
-
     std::string GroundControl::ReceiveMessage(SOCKET clientSocket)
     {
         char buffer[1024];
@@ -134,8 +133,34 @@ namespace GroundControl {
 
         std::cout << receivedMessage << std::endl;
 
+        //check checksum integrity
+        ChecksumCheck(receivedMessage);
+        
         //closesocket(clientSocket);
         return receivedMessage;
+    }
+
+    std::string GroundControl::generateChecksum(const std::string& packetContent) const {
+        unsigned int checksum = 0;
+        for (char c : packetContent) {
+            checksum += static_cast<unsigned int>(c);
+        }
+        std::stringstream ss;
+        ss << std::hex << checksum;
+        return ss.str();
+    }
+
+    void GroundControl::ChecksumCheck(std::string receivedMessage)
+    {
+        std::string recievedChecksum = generateChecksum(receivedMessage.substr(0, receivedMessage.find("Checksum:")));
+        std::string packetChecksum = receivedMessage.substr(receivedMessage.find("Checksum:") + 10, receivedMessage.length());
+        packetChecksum.erase(packetChecksum.length() - 1);
+
+        if (strcmp(recievedChecksum.c_str(), packetChecksum.c_str()) != 0)
+        {
+            // figure out what to do if the packets dont match
+            std::cout << "Lost packet info" << std::endl;
+        }
     }
 
     int GroundControl::GetPort() const 

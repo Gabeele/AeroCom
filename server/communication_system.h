@@ -4,6 +4,7 @@
 #include <winsock2.h>
 #include <ws2tcpip.h> 
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <vector>
 
@@ -24,6 +25,8 @@ namespace GroundControl {
         bool Initialize();
         bool Connect(int port);
         std::string ReceiveMessage(SOCKET clientSocket);
+        std::string generateChecksum(const std::string& packetContent) const;
+        void ChecksumCheck(std::string receivedMessage);
         SOCKET AcceptConnection();
 
         int GetPort() const;
