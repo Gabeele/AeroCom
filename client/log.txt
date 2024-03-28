@@ -901,3 +901,1416 @@
 [2024-03-26 08:57:56] [INFO] Packet sent.
 [2024-03-26 08:57:57] [INFO] Disconnected from server.
 [2024-03-26 08:57:57] [INFO] Communication switch toggled: OFF
+[2024-03-28 14:34:38] [INFO] Loading flight plan...
+[2024-03-28 14:34:38] [INFO] Flight plan is loaded.
+[2024-03-28 14:55:53] [INFO] Loading flight plan...
+[2024-03-28 14:55:53] [INFO] Flight plan is loaded.
+[2024-03-28 15:44:28] [INFO] Loading flight plan...
+[2024-03-28 15:44:28] [INFO] Flight plan is loaded.
+[2024-03-28 15:44:30] [ERROR] Failed to connect to the server.
+[2024-03-28 15:44:30] [ERROR] Failed to connect communication system.
+[2024-03-28 15:44:30] [INFO] Communicate state: closed
+[2024-03-28 15:44:30] [INFO] Communication switch toggled: ON
+[2024-03-28 15:44:30] [INFO] Starting simulation...
+[2024-03-28 15:44:30] [INFO] Communicate state: sending
+[2024-03-28 15:44:50] [INFO] Loading flight plan...
+[2024-03-28 15:44:50] [INFO] Flight plan is loaded.
+[2024-03-28 15:44:50] [INFO] Connected to the server.
+[2024-03-28 15:44:50] [INFO] Communicate state: Established Connection
+[2024-03-28 15:44:50] [INFO] Communication switch toggled: ON
+[2024-03-28 15:44:50] [INFO] Starting simulation...
+[2024-03-28 15:44:50] [INFO] Communicate state: sending
+[2024-03-28 15:44:50] [INFO] Message sent successfully.
+[2024-03-28 15:44:50] [INFO] Packet sent.
+[2024-03-28 15:44:51] [INFO] Message sent successfully.
+[2024-03-28 15:44:51] [INFO] Packet sent.
+[2024-03-28 15:44:52] [INFO] Message sent successfully.
+[2024-03-28 15:44:52] [INFO] Packet sent.
+[2024-03-28 15:44:53] [INFO] Message sent successfully.
+[2024-03-28 15:44:53] [INFO] Packet sent.
+[2024-03-28 15:44:54] [INFO] Message sent successfully.
+[2024-03-28 15:44:54] [INFO] Packet sent.
+[2024-03-28 15:44:55] [INFO] Message sent successfully.
+[2024-03-28 15:44:55] [INFO] Packet sent.
+[2024-03-28 15:44:56] [INFO] Message sent successfully.
+[2024-03-28 15:44:56] [INFO] Packet sent.
+[2024-03-28 15:44:57] [INFO] Message sent successfully.
+[2024-03-28 15:44:57] [INFO] Packet sent.
+[2024-03-28 15:44:58] [INFO] Message sent successfully.
+[2024-03-28 15:44:58] [INFO] Packet sent.
+[2024-03-28 15:44:59] [INFO] Message sent successfully.
+[2024-03-28 15:44:59] [INFO] Packet sent.
+[2024-03-28 15:45:00] [INFO] Message sent successfully.
+[2024-03-28 15:45:00] [INFO] Packet sent.
+[2024-03-28 15:45:01] [INFO] Message sent successfully.
+[2024-03-28 15:45:01] [INFO] Packet sent.
+[2024-03-28 15:45:02] [INFO] Message sent successfully.
+[2024-03-28 15:45:02] [INFO] Packet sent.
+[2024-03-28 15:45:03] [INFO] Message sent successfully.
+[2024-03-28 15:45:03] [INFO] Packet sent.
+[2024-03-28 15:45:04] [INFO] Message sent successfully.
+[2024-03-28 15:45:04] [INFO] Packet sent.
+[2024-03-28 15:45:05] [INFO] Message sent successfully.
+[2024-03-28 15:45:05] [INFO] Packet sent.
+[2024-03-28 15:45:06] [INFO] Message sent successfully.
+[2024-03-28 15:45:06] [INFO] Packet sent.
+[2024-03-28 15:45:07] [INFO] Message sent successfully.
+[2024-03-28 15:45:07] [INFO] Packet sent.
+[2024-03-28 15:45:08] [INFO] Message sent successfully.
+[2024-03-28 15:45:08] [INFO] Packet sent.
+[2024-03-28 15:45:09] [INFO] Message sent successfully.
+[2024-03-28 15:45:09] [INFO] Packet sent.
+[2024-03-28 15:45:10] [INFO] Message sent successfully.
+[2024-03-28 15:45:10] [INFO] Packet sent.
+[2024-03-28 15:46:53] [INFO] Loading flight plan...
+[2024-03-28 15:46:53] [INFO] Flight plan is loaded.
+[2024-03-28 15:46:53] [INFO] Connected to the server.
+[2024-03-28 15:46:53] [INFO] Communicate state: Established Connection
+[2024-03-28 15:46:53] [INFO] Communication switch toggled: ON
+[2024-03-28 15:46:53] [INFO] Starting simulation...
+[2024-03-28 15:46:53] [INFO] Communicate state: sending
+[2024-03-28 15:46:53] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:46:53] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:46:53] [INFO] Message sent successfully.
+[2024-03-28 15:46:53] [INFO] Packet sent.
+[2024-03-28 15:46:54] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:46:54] [INFO] Updated aircraft state to: Takeoff[2024-03-28 15:46:54] [INFO] Message sent successfully.
+
+[2024-03-28 15:46:54] [INFO] Packet sent.
+[2024-03-28 15:46:55] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:46:55] [INFO] Message sent successfully.
+[2024-03-28 15:46:55] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:46:55] [INFO] Packet sent.
+[2024-03-28 15:46:56] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:46:56] [INFO] Updated aircraft state to: Takeoff[2024-03-28 15:46:56] [INFO] Message sent successfully.
+
+[2024-03-28 15:46:56] [INFO] Packet sent.
+[2024-03-28 15:46:57] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:46:57] [INFO] Message sent successfully.
+[2024-03-28 15:46:57] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:46:57] [INFO] Packet sent.
+[2024-03-28 15:46:58] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:46:58] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:46:58] [INFO] Message sent successfully.
+[2024-03-28 15:46:58] [INFO] Packet sent.
+[2024-03-28 15:46:59] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:46:59] [INFO] Updated aircraft state to: Takeoff[2024-03-28 15:46:59] [INFO] Message sent successfully.
+
+[2024-03-28 15:46:59] [INFO] Packet sent.
+[2024-03-28 15:47:00] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:00] [INFO] Message sent successfully.[2024-03-28 15:47:00] [INFO] Updated aircraft state to: Takeoff
+
+[2024-03-28 15:47:00] [INFO] Packet sent.
+[2024-03-28 15:47:01] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:01] [INFO] Updated aircraft state to: Takeoff[2024-03-28 15:47:01] [INFO] Message sent successfully.
+
+[2024-03-28 15:47:01] [INFO] Packet sent.
+[2024-03-28 15:47:02] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:02] [INFO] Message sent successfully.[2024-03-28 15:47:02] [INFO] Updated aircraft state to: Takeoff
+
+[2024-03-28 15:47:02] [INFO] Packet sent.
+[2024-03-28 15:47:03] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:03] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:47:03] [INFO] Message sent successfully.
+[2024-03-28 15:47:03] [INFO] Packet sent.
+[2024-03-28 15:47:04] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:04] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:47:04] [INFO] Message sent successfully.
+[2024-03-28 15:47:04] [INFO] Packet sent.
+[2024-03-28 15:47:05] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:05] [INFO] Message sent successfully.
+[2024-03-28 15:47:05] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:47:05] [INFO] Packet sent.
+[2024-03-28 15:47:06] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:06] [INFO] Message sent successfully.[2024-03-28 15:47:06] [INFO] Updated aircraft state to: Takeoff
+
+[2024-03-28 15:47:06] [INFO] Packet sent.
+[2024-03-28 15:47:07] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:07] [INFO] Message sent successfully.
+[2024-03-28 15:47:07] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:47:07] [INFO] Packet sent.
+[2024-03-28 15:47:08] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:08] [INFO] Message sent successfully.
+[2024-03-28 15:47:08] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:47:08] [INFO] Packet sent.
+[2024-03-28 15:47:09] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:09] [INFO] Message sent successfully.
+[2024-03-28 15:47:09] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:47:09] [INFO] Packet sent.
+[2024-03-28 15:47:10] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:10] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:47:10] [INFO] Message sent successfully.
+[2024-03-28 15:47:10] [INFO] Packet sent.
+[2024-03-28 15:47:11] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:11] [INFO] Message sent successfully.
+[2024-03-28 15:47:11] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:47:11] [INFO] Packet sent.
+[2024-03-28 15:47:12] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:47:12] [INFO] Message sent successfully.
+[2024-03-28 15:47:12] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:47:12] [INFO] Packet sent.
+[2024-03-28 15:48:23] [INFO] Loading flight plan...
+[2024-03-28 15:48:23] [INFO] Flight plan is loaded.
+[2024-03-28 15:48:23] [INFO] Connected to the server.
+[2024-03-28 15:48:23] [INFO] Communicate state: Established Connection
+[2024-03-28 15:48:23] [INFO] Communication switch toggled: ON
+[2024-03-28 15:48:23] [INFO] Starting simulation...
+[2024-03-28 15:48:23] [INFO] Communicate state: sending[2024-03-28 15:48:23] [INFO] Updated aircraft state to: Idle
+
+[2024-03-28 15:48:23] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:23] [INFO] Message sent successfully.
+[2024-03-28 15:48:23] [INFO] Packet sent.
+[2024-03-28 15:48:24] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:24] [INFO] Message sent successfully.
+[2024-03-28 15:48:24] [INFO] Packet sent.
+[2024-03-28 15:48:25] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:25] [INFO] Message sent successfully.
+[2024-03-28 15:48:25] [INFO] Packet sent.
+[2024-03-28 15:48:26] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:26] [INFO] Message sent successfully.
+[2024-03-28 15:48:26] [INFO] Packet sent.
+[2024-03-28 15:48:27] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:27] [INFO] Message sent successfully.
+[2024-03-28 15:48:27] [INFO] Packet sent.
+[2024-03-28 15:48:28] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:28] [INFO] Message sent successfully.
+[2024-03-28 15:48:28] [INFO] Packet sent.
+[2024-03-28 15:48:29] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:29] [INFO] Message sent successfully.
+[2024-03-28 15:48:29] [INFO] Packet sent.
+[2024-03-28 15:48:30] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:30] [INFO] Message sent successfully.
+[2024-03-28 15:48:30] [INFO] Packet sent.
+[2024-03-28 15:48:31] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:31] [INFO] Message sent successfully.
+[2024-03-28 15:48:31] [INFO] Packet sent.
+[2024-03-28 15:48:32] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:32] [INFO] Message sent successfully.
+[2024-03-28 15:48:32] [INFO] Packet sent.
+[2024-03-28 15:48:33] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:33] [INFO] Message sent successfully.
+[2024-03-28 15:48:33] [INFO] Packet sent.
+[2024-03-28 15:48:34] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:34] [INFO] Message sent successfully.
+[2024-03-28 15:48:34] [INFO] Packet sent.
+[2024-03-28 15:48:35] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:35] [INFO] Message sent successfully.
+[2024-03-28 15:48:35] [INFO] Packet sent.
+[2024-03-28 15:48:36] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:36] [INFO] Message sent successfully.
+[2024-03-28 15:48:36] [INFO] Packet sent.
+[2024-03-28 15:48:37] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:37] [INFO] Message sent successfully.
+[2024-03-28 15:48:37] [INFO] Packet sent.
+[2024-03-28 15:48:38] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:38] [INFO] Message sent successfully.
+[2024-03-28 15:48:38] [INFO] Packet sent.
+[2024-03-28 15:48:39] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:39] [INFO] Message sent successfully.
+[2024-03-28 15:48:39] [INFO] Packet sent.
+[2024-03-28 15:48:40] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:40] [INFO] Message sent successfully.
+[2024-03-28 15:48:40] [INFO] Packet sent.
+[2024-03-28 15:48:41] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:41] [INFO] Message sent successfully.
+[2024-03-28 15:48:41] [INFO] Packet sent.
+[2024-03-28 15:48:42] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:42] [INFO] Message sent successfully.
+[2024-03-28 15:48:42] [INFO] Packet sent.
+[2024-03-28 15:48:43] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:43] [INFO] Message sent successfully.
+[2024-03-28 15:48:43] [INFO] Packet sent.
+[2024-03-28 15:48:44] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:44] [INFO] Message sent successfully.
+[2024-03-28 15:48:44] [INFO] Packet sent.
+[2024-03-28 15:48:45] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:45] [INFO] Message sent successfully.
+[2024-03-28 15:48:45] [INFO] Packet sent.
+[2024-03-28 15:48:46] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:46] [INFO] Message sent successfully.
+[2024-03-28 15:48:46] [INFO] Packet sent.
+[2024-03-28 15:48:47] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:47] [INFO] Message sent successfully.
+[2024-03-28 15:48:47] [INFO] Packet sent.
+[2024-03-28 15:48:48] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:48] [INFO] Message sent successfully.
+[2024-03-28 15:48:48] [INFO] Packet sent.
+[2024-03-28 15:48:49] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:49] [INFO] Message sent successfully.
+[2024-03-28 15:48:49] [INFO] Packet sent.
+[2024-03-28 15:48:50] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:50] [INFO] Message sent successfully.
+[2024-03-28 15:48:50] [INFO] Packet sent.
+[2024-03-28 15:48:51] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:51] [INFO] Message sent successfully.
+[2024-03-28 15:48:51] [INFO] Packet sent.
+[2024-03-28 15:48:52] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:52] [INFO] Message sent successfully.
+[2024-03-28 15:48:52] [INFO] Packet sent.
+[2024-03-28 15:48:53] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:53] [INFO] Message sent successfully.
+[2024-03-28 15:48:53] [INFO] Packet sent.
+[2024-03-28 15:48:54] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:54] [INFO] Message sent successfully.
+[2024-03-28 15:48:54] [INFO] Packet sent.
+[2024-03-28 15:48:55] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:55] [INFO] Message sent successfully.
+[2024-03-28 15:48:55] [INFO] Packet sent.
+[2024-03-28 15:48:56] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:56] [INFO] Message sent successfully.
+[2024-03-28 15:48:56] [INFO] Packet sent.
+[2024-03-28 15:48:57] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:57] [INFO] Message sent successfully.
+[2024-03-28 15:48:57] [INFO] Packet sent.
+[2024-03-28 15:48:58] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:58] [INFO] Message sent successfully.
+[2024-03-28 15:48:58] [INFO] Packet sent.
+[2024-03-28 15:48:59] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:48:59] [INFO] Message sent successfully.
+[2024-03-28 15:48:59] [INFO] Packet sent.
+[2024-03-28 15:49:00] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:00] [INFO] Message sent successfully.
+[2024-03-28 15:49:00] [INFO] Packet sent.
+[2024-03-28 15:49:01] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:01] [INFO] Message sent successfully.
+[2024-03-28 15:49:01] [INFO] Packet sent.
+[2024-03-28 15:49:02] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:02] [INFO] Message sent successfully.
+[2024-03-28 15:49:02] [INFO] Packet sent.
+[2024-03-28 15:49:03] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:03] [INFO] Message sent successfully.
+[2024-03-28 15:49:03] [INFO] Packet sent.
+[2024-03-28 15:49:04] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:04] [INFO] Message sent successfully.
+[2024-03-28 15:49:04] [INFO] Packet sent.
+[2024-03-28 15:49:05] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:05] [INFO] Message sent successfully.
+[2024-03-28 15:49:05] [INFO] Packet sent.
+[2024-03-28 15:49:06] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:06] [INFO] Message sent successfully.
+[2024-03-28 15:49:06] [INFO] Packet sent.
+[2024-03-28 15:49:07] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:07] [INFO] Message sent successfully.
+[2024-03-28 15:49:07] [INFO] Packet sent.
+[2024-03-28 15:49:08] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:08] [INFO] Message sent successfully.
+[2024-03-28 15:49:08] [INFO] Packet sent.
+[2024-03-28 15:49:09] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:09] [INFO] Message sent successfully.
+[2024-03-28 15:49:09] [INFO] Packet sent.
+[2024-03-28 15:49:10] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:10] [INFO] Message sent successfully.
+[2024-03-28 15:49:10] [INFO] Packet sent.
+[2024-03-28 15:49:11] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:11] [INFO] Message sent successfully.
+[2024-03-28 15:49:11] [INFO] Packet sent.
+[2024-03-28 15:49:12] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:12] [INFO] Message sent successfully.
+[2024-03-28 15:49:12] [INFO] Packet sent.
+[2024-03-28 15:49:13] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:13] [INFO] Message sent successfully.
+[2024-03-28 15:49:13] [INFO] Packet sent.
+[2024-03-28 15:49:14] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:14] [INFO] Message sent successfully.
+[2024-03-28 15:49:14] [INFO] Packet sent.
+[2024-03-28 15:49:15] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:15] [INFO] Message sent successfully.
+[2024-03-28 15:49:15] [INFO] Packet sent.
+[2024-03-28 15:49:16] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:16] [INFO] Message sent successfully.
+[2024-03-28 15:49:16] [INFO] Packet sent.
+[2024-03-28 15:49:17] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:17] [INFO] Message sent successfully.
+[2024-03-28 15:49:17] [INFO] Packet sent.
+[2024-03-28 15:49:18] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:18] [INFO] Message sent successfully.
+[2024-03-28 15:49:18] [INFO] Packet sent.
+[2024-03-28 15:49:19] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:19] [INFO] Message sent successfully.
+[2024-03-28 15:49:19] [INFO] Packet sent.
+[2024-03-28 15:49:20] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:20] [INFO] Message sent successfully.
+[2024-03-28 15:49:20] [INFO] Packet sent.
+[2024-03-28 15:49:21] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:21] [INFO] Message sent successfully.
+[2024-03-28 15:49:21] [INFO] Packet sent.
+[2024-03-28 15:49:22] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:49:22] [INFO] Message sent successfully.
+[2024-03-28 15:49:22] [INFO] Packet sent.
+[2024-03-28 15:49:23] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:23] [INFO] Message sent successfully.
+[2024-03-28 15:49:23] [INFO] Packet sent.
+[2024-03-28 15:49:24] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:24] [INFO] Message sent successfully.
+[2024-03-28 15:49:24] [INFO] Packet sent.
+[2024-03-28 15:49:25] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:25] [INFO] Message sent successfully.
+[2024-03-28 15:49:25] [INFO] Packet sent.
+[2024-03-28 15:49:26] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:26] [INFO] Message sent successfully.
+[2024-03-28 15:49:26] [INFO] Packet sent.
+[2024-03-28 15:49:27] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:27] [INFO] Message sent successfully.
+[2024-03-28 15:49:27] [INFO] Packet sent.
+[2024-03-28 15:49:28] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:28] [INFO] Message sent successfully.
+[2024-03-28 15:49:28] [INFO] Packet sent.
+[2024-03-28 15:49:29] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:29] [INFO] Message sent successfully.
+[2024-03-28 15:49:29] [INFO] Packet sent.
+[2024-03-28 15:49:30] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:30] [INFO] Message sent successfully.
+[2024-03-28 15:49:30] [INFO] Packet sent.
+[2024-03-28 15:49:31] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:31] [INFO] Message sent successfully.
+[2024-03-28 15:49:31] [INFO] Packet sent.
+[2024-03-28 15:49:32] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:32] [INFO] Message sent successfully.
+[2024-03-28 15:49:32] [INFO] Packet sent.
+[2024-03-28 15:49:33] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:33] [INFO] Message sent successfully.
+[2024-03-28 15:49:33] [INFO] Packet sent.
+[2024-03-28 15:49:34] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:34] [INFO] Message sent successfully.
+[2024-03-28 15:49:34] [INFO] Packet sent.
+[2024-03-28 15:49:35] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:35] [INFO] Message sent successfully.
+[2024-03-28 15:49:35] [INFO] Packet sent.
+[2024-03-28 15:49:36] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:36] [INFO] Message sent successfully.
+[2024-03-28 15:49:36] [INFO] Packet sent.
+[2024-03-28 15:49:37] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:37] [INFO] Message sent successfully.
+[2024-03-28 15:49:37] [INFO] Packet sent.
+[2024-03-28 15:49:38] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:38] [INFO] Message sent successfully.
+[2024-03-28 15:49:38] [INFO] Packet sent.
+[2024-03-28 15:49:39] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:39] [INFO] Message sent successfully.
+[2024-03-28 15:49:39] [INFO] Packet sent.
+[2024-03-28 15:49:40] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:40] [INFO] Message sent successfully.
+[2024-03-28 15:49:40] [INFO] Packet sent.
+[2024-03-28 15:49:41] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:41] [INFO] Message sent successfully.
+[2024-03-28 15:49:41] [INFO] Packet sent.
+[2024-03-28 15:49:42] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:42] [INFO] Message sent successfully.
+[2024-03-28 15:49:42] [INFO] Packet sent.
+[2024-03-28 15:49:43] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:43] [INFO] Message sent successfully.
+[2024-03-28 15:49:43] [INFO] Packet sent.
+[2024-03-28 15:49:44] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:44] [INFO] Message sent successfully.
+[2024-03-28 15:49:44] [INFO] Packet sent.
+[2024-03-28 15:49:45] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:45] [INFO] Message sent successfully.
+[2024-03-28 15:49:45] [INFO] Packet sent.
+[2024-03-28 15:49:46] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:46] [INFO] Message sent successfully.
+[2024-03-28 15:49:46] [INFO] Packet sent.
+[2024-03-28 15:49:47] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:47] [INFO] Message sent successfully.
+[2024-03-28 15:49:47] [INFO] Packet sent.
+[2024-03-28 15:49:48] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:48] [INFO] Message sent successfully.
+[2024-03-28 15:49:48] [INFO] Packet sent.
+[2024-03-28 15:49:49] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:49] [INFO] Message sent successfully.
+[2024-03-28 15:49:49] [INFO] Packet sent.
+[2024-03-28 15:49:50] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:50] [INFO] Message sent successfully.
+[2024-03-28 15:49:50] [INFO] Packet sent.
+[2024-03-28 15:49:51] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:52] [INFO] Message sent successfully.
+[2024-03-28 15:49:52] [INFO] Packet sent.
+[2024-03-28 15:49:52] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:49:53] [INFO] Message sent successfully.
+[2024-03-28 15:49:53] [INFO] Packet sent.
+[2024-03-28 15:49:53] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:49:54] [INFO] Message sent successfully.
+[2024-03-28 15:49:54] [INFO] Packet sent.
+[2024-03-28 15:49:54] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:49:55] [INFO] Message sent successfully.
+[2024-03-28 15:49:55] [INFO] Packet sent.
+[2024-03-28 15:49:55] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:49:56] [INFO] Message sent successfully.
+[2024-03-28 15:49:56] [INFO] Packet sent.
+[2024-03-28 15:49:56] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:49:57] [INFO] Message sent successfully.
+[2024-03-28 15:49:57] [INFO] Packet sent.
+[2024-03-28 15:49:57] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:49:58] [INFO] Message sent successfully.
+[2024-03-28 15:49:58] [INFO] Packet sent.
+[2024-03-28 15:49:58] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:49:59] [INFO] Message sent successfully.
+[2024-03-28 15:49:59] [INFO] Packet sent.
+[2024-03-28 15:49:59] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:00] [INFO] Message sent successfully.
+[2024-03-28 15:50:00] [INFO] Packet sent.
+[2024-03-28 15:50:00] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:01] [INFO] Message sent successfully.
+[2024-03-28 15:50:01] [INFO] Packet sent.
+[2024-03-28 15:50:02] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:02] [INFO] Message sent successfully.
+[2024-03-28 15:50:02] [INFO] Packet sent.
+[2024-03-28 15:50:03] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:03] [INFO] Message sent successfully.
+[2024-03-28 15:50:03] [INFO] Packet sent.
+[2024-03-28 15:50:04] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:04] [INFO] Message sent successfully.
+[2024-03-28 15:50:04] [INFO] Packet sent.
+[2024-03-28 15:50:05] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:05] [INFO] Message sent successfully.
+[2024-03-28 15:50:05] [INFO] Packet sent.
+[2024-03-28 15:50:06] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:06] [INFO] Message sent successfully.
+[2024-03-28 15:50:06] [INFO] Packet sent.
+[2024-03-28 15:50:07] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:07] [INFO] Message sent successfully.
+[2024-03-28 15:50:07] [INFO] Packet sent.
+[2024-03-28 15:50:08] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:08] [INFO] Message sent successfully.
+[2024-03-28 15:50:08] [INFO] Packet sent.
+[2024-03-28 15:50:09] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:09] [INFO] Message sent successfully.
+[2024-03-28 15:50:09] [INFO] Packet sent.
+[2024-03-28 15:50:10] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:10] [INFO] Message sent successfully.
+[2024-03-28 15:50:10] [INFO] Packet sent.
+[2024-03-28 15:50:11] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:11] [INFO] Message sent successfully.
+[2024-03-28 15:50:11] [INFO] Packet sent.
+[2024-03-28 15:50:12] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:12] [INFO] Message sent successfully.
+[2024-03-28 15:50:12] [INFO] Packet sent.
+[2024-03-28 15:50:13] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:13] [INFO] Message sent successfully.
+[2024-03-28 15:50:13] [INFO] Packet sent.
+[2024-03-28 15:50:14] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:14] [INFO] Message sent successfully.
+[2024-03-28 15:50:14] [INFO] Packet sent.
+[2024-03-28 15:50:15] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:15] [INFO] Message sent successfully.
+[2024-03-28 15:50:15] [INFO] Packet sent.
+[2024-03-28 15:50:16] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:16] [INFO] Message sent successfully.
+[2024-03-28 15:50:16] [INFO] Packet sent.
+[2024-03-28 15:50:17] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:17] [INFO] Message sent successfully.
+[2024-03-28 15:50:17] [INFO] Packet sent.
+[2024-03-28 15:50:18] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:18] [INFO] Message sent successfully.
+[2024-03-28 15:50:18] [INFO] Packet sent.
+[2024-03-28 15:50:19] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:19] [INFO] Message sent successfully.
+[2024-03-28 15:50:19] [INFO] Packet sent.
+[2024-03-28 15:50:20] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:20] [INFO] Message sent successfully.
+[2024-03-28 15:50:20] [INFO] Packet sent.
+[2024-03-28 15:50:21] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:21] [INFO] Message sent successfully.
+[2024-03-28 15:50:21] [INFO] Packet sent.
+[2024-03-28 15:50:22] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:22] [INFO] Message sent successfully.
+[2024-03-28 15:50:22] [INFO] Packet sent.
+[2024-03-28 15:50:23] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:50:23] [INFO] Message sent successfully.
+[2024-03-28 15:50:23] [INFO] Packet sent.
+[2024-03-28 15:50:24] [INFO] Message sent successfully.
+[2024-03-28 15:50:24] [INFO] Packet sent.
+[2024-03-28 15:50:25] [INFO] Message sent successfully.
+[2024-03-28 15:50:25] [INFO] Packet sent.
+[2024-03-28 15:50:26] [INFO] Message sent successfully.
+[2024-03-28 15:50:26] [INFO] Packet sent.
+[2024-03-28 15:50:27] [INFO] Message sent successfully.
+[2024-03-28 15:50:27] [INFO] Packet sent.
+[2024-03-28 15:50:28] [INFO] Message sent successfully.
+[2024-03-28 15:50:28] [INFO] Packet sent.
+[2024-03-28 15:50:29] [INFO] Message sent successfully.
+[2024-03-28 15:50:29] [INFO] Packet sent.
+[2024-03-28 15:50:30] [INFO] Message sent successfully.
+[2024-03-28 15:50:30] [INFO] Packet sent.
+[2024-03-28 15:50:31] [INFO] Message sent successfully.
+[2024-03-28 15:50:31] [INFO] Packet sent.
+[2024-03-28 15:50:32] [INFO] Message sent successfully.
+[2024-03-28 15:50:32] [INFO] Packet sent.
+[2024-03-28 15:50:33] [INFO] Message sent successfully.
+[2024-03-28 15:50:33] [INFO] Packet sent.
+[2024-03-28 15:50:34] [INFO] Message sent successfully.
+[2024-03-28 15:50:34] [INFO] Packet sent.
+[2024-03-28 15:50:35] [INFO] Message sent successfully.
+[2024-03-28 15:50:35] [INFO] Packet sent.
+[2024-03-28 15:50:36] [INFO] Message sent successfully.
+[2024-03-28 15:50:36] [INFO] Packet sent.
+[2024-03-28 15:50:37] [INFO] Message sent successfully.
+[2024-03-28 15:50:37] [INFO] Packet sent.
+[2024-03-28 15:50:38] [INFO] Message sent successfully.
+[2024-03-28 15:50:38] [INFO] Packet sent.
+[2024-03-28 15:50:39] [INFO] Message sent successfully.
+[2024-03-28 15:50:39] [INFO] Packet sent.
+[2024-03-28 15:50:40] [INFO] Message sent successfully.
+[2024-03-28 15:50:40] [INFO] Packet sent.
+[2024-03-28 15:50:41] [INFO] Message sent successfully.
+[2024-03-28 15:50:41] [INFO] Packet sent.
+[2024-03-28 15:50:42] [INFO] Message sent successfully.
+[2024-03-28 15:50:42] [INFO] Packet sent.
+[2024-03-28 15:50:43] [INFO] Message sent successfully.
+[2024-03-28 15:50:43] [INFO] Packet sent.
+[2024-03-28 15:50:44] [INFO] Message sent successfully.
+[2024-03-28 15:50:44] [INFO] Packet sent.
+[2024-03-28 15:50:45] [INFO] Message sent successfully.
+[2024-03-28 15:50:45] [INFO] Packet sent.
+[2024-03-28 15:50:46] [INFO] Message sent successfully.
+[2024-03-28 15:50:46] [INFO] Packet sent.
+[2024-03-28 15:50:47] [INFO] Message sent successfully.
+[2024-03-28 15:50:47] [INFO] Packet sent.
+[2024-03-28 15:50:48] [INFO] Message sent successfully.
+[2024-03-28 15:50:48] [INFO] Packet sent.
+[2024-03-28 15:50:49] [INFO] Message sent successfully.
+[2024-03-28 15:50:49] [INFO] Packet sent.
+[2024-03-28 15:50:50] [INFO] Message sent successfully.
+[2024-03-28 15:50:50] [INFO] Packet sent.
+[2024-03-28 15:50:51] [INFO] Message sent successfully.
+[2024-03-28 15:50:51] [INFO] Packet sent.
+[2024-03-28 15:50:52] [INFO] Message sent successfully.
+[2024-03-28 15:50:52] [INFO] Packet sent.
+[2024-03-28 15:50:53] [INFO] Message sent successfully.
+[2024-03-28 15:50:53] [INFO] Packet sent.
+[2024-03-28 15:50:54] [INFO] Message sent successfully.
+[2024-03-28 15:50:54] [INFO] Packet sent.
+[2024-03-28 15:50:55] [INFO] Message sent successfully.
+[2024-03-28 15:50:55] [INFO] Packet sent.
+[2024-03-28 15:50:56] [INFO] Message sent successfully.
+[2024-03-28 15:50:56] [INFO] Packet sent.
+[2024-03-28 15:50:57] [INFO] Message sent successfully.
+[2024-03-28 15:50:57] [INFO] Packet sent.
+[2024-03-28 15:50:58] [INFO] Message sent successfully.
+[2024-03-28 15:50:58] [INFO] Packet sent.
+[2024-03-28 15:50:59] [INFO] Message sent successfully.
+[2024-03-28 15:50:59] [INFO] Packet sent.
+[2024-03-28 15:51:00] [INFO] Message sent successfully.
+[2024-03-28 15:51:00] [INFO] Packet sent.
+[2024-03-28 15:51:01] [INFO] Message sent successfully.
+[2024-03-28 15:51:01] [INFO] Packet sent.
+[2024-03-28 15:51:02] [INFO] Message sent successfully.
+[2024-03-28 15:51:02] [INFO] Packet sent.
+[2024-03-28 15:51:03] [INFO] Message sent successfully.
+[2024-03-28 15:51:03] [INFO] Packet sent.
+[2024-03-28 15:51:04] [INFO] Message sent successfully.
+[2024-03-28 15:51:04] [INFO] Packet sent.
+[2024-03-28 15:51:05] [INFO] Message sent successfully.
+[2024-03-28 15:51:05] [INFO] Packet sent.
+[2024-03-28 15:51:06] [INFO] Message sent successfully.
+[2024-03-28 15:51:06] [INFO] Packet sent.
+[2024-03-28 15:51:07] [INFO] Message sent successfully.
+[2024-03-28 15:51:07] [INFO] Packet sent.
+[2024-03-28 15:51:08] [INFO] Message sent successfully.
+[2024-03-28 15:51:08] [INFO] Packet sent.
+[2024-03-28 15:51:09] [INFO] Message sent successfully.
+[2024-03-28 15:51:09] [INFO] Packet sent.
+[2024-03-28 15:51:10] [INFO] Message sent successfully.
+[2024-03-28 15:51:10] [INFO] Packet sent.
+[2024-03-28 15:51:11] [INFO] Message sent successfully.
+[2024-03-28 15:51:11] [INFO] Packet sent.
+[2024-03-28 15:51:12] [INFO] Message sent successfully.
+[2024-03-28 15:51:12] [INFO] Packet sent.
+[2024-03-28 15:51:13] [INFO] Message sent successfully.
+[2024-03-28 15:51:13] [INFO] Packet sent.
+[2024-03-28 15:51:14] [INFO] Message sent successfully.
+[2024-03-28 15:51:14] [INFO] Packet sent.
+[2024-03-28 15:51:15] [INFO] Message sent successfully.
+[2024-03-28 15:51:15] [INFO] Packet sent.
+[2024-03-28 15:51:16] [INFO] Message sent successfully.
+[2024-03-28 15:51:16] [INFO] Packet sent.
+[2024-03-28 15:51:17] [INFO] Message sent successfully.
+[2024-03-28 15:51:17] [INFO] Packet sent.
+[2024-03-28 15:51:18] [INFO] Message sent successfully.
+[2024-03-28 15:51:18] [INFO] Packet sent.
+[2024-03-28 15:51:19] [INFO] Message sent successfully.
+[2024-03-28 15:51:19] [INFO] Packet sent.
+[2024-03-28 15:51:20] [INFO] Message sent successfully.
+[2024-03-28 15:51:20] [INFO] Packet sent.
+[2024-03-28 15:51:21] [INFO] Message sent successfully.
+[2024-03-28 15:51:21] [INFO] Packet sent.
+[2024-03-28 15:51:22] [INFO] Message sent successfully.
+[2024-03-28 15:51:22] [INFO] Packet sent.
+[2024-03-28 15:51:23] [INFO] Message sent successfully.
+[2024-03-28 15:51:23] [INFO] Packet sent.
+[2024-03-28 15:51:24] [INFO] Message sent successfully.
+[2024-03-28 15:51:24] [INFO] Packet sent.
+[2024-03-28 15:51:25] [INFO] Message sent successfully.
+[2024-03-28 15:51:25] [INFO] Packet sent.
+[2024-03-28 15:51:26] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:51:26] [INFO] Message sent successfully.
+[2024-03-28 15:51:26] [INFO] Packet sent.
+[2024-03-28 15:51:27] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:51:27] [INFO] Disconnected from server.
+[2024-03-28 15:51:27] [INFO] Communication switch toggled: OFF
+[2024-03-28 15:51:28] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:51:29] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:51:30] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:51:31] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:51:32] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:51:33] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:51:34] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:51:35] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:51:36] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:52:05] [INFO] Loading flight plan...
+[2024-03-28 15:52:05] [INFO] Flight plan is loaded.
+[2024-03-28 15:52:05] [INFO] Connected to the server.
+[2024-03-28 15:52:05] [INFO] Communicate state: Established Connection
+[2024-03-28 15:52:05] [INFO] Communication switch toggled: ON
+[2024-03-28 15:52:05] [INFO] Starting simulation...
+[2024-03-28 15:52:05] [INFO] Communicate state: sending
+[2024-03-28 15:52:05] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:52:05] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:05] [INFO] Message sent successfully.
+[2024-03-28 15:52:05] [INFO] Packet sent.
+[2024-03-28 15:52:06] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:06] [INFO] Message sent successfully.
+[2024-03-28 15:52:06] [INFO] Packet sent.
+[2024-03-28 15:52:07] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:07] [INFO] Message sent successfully.
+[2024-03-28 15:52:07] [INFO] Packet sent.
+[2024-03-28 15:52:08] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:08] [INFO] Message sent successfully.
+[2024-03-28 15:52:08] [INFO] Packet sent.
+[2024-03-28 15:52:09] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:09] [INFO] Message sent successfully.
+[2024-03-28 15:52:09] [INFO] Packet sent.
+[2024-03-28 15:52:10] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:10] [INFO] Message sent successfully.
+[2024-03-28 15:52:10] [INFO] Packet sent.
+[2024-03-28 15:52:11] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:11] [INFO] Message sent successfully.
+[2024-03-28 15:52:11] [INFO] Packet sent.
+[2024-03-28 15:52:12] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:12] [INFO] Message sent successfully.
+[2024-03-28 15:52:12] [INFO] Packet sent.
+[2024-03-28 15:52:13] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:13] [INFO] Message sent successfully.
+[2024-03-28 15:52:13] [INFO] Packet sent.
+[2024-03-28 15:52:14] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:14] [INFO] Message sent successfully.
+[2024-03-28 15:52:14] [INFO] Packet sent.
+[2024-03-28 15:52:15] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:15] [INFO] Message sent successfully.
+[2024-03-28 15:52:15] [INFO] Packet sent.
+[2024-03-28 15:52:16] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:16] [INFO] Message sent successfully.
+[2024-03-28 15:52:16] [INFO] Packet sent.
+[2024-03-28 15:52:17] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:17] [INFO] Message sent successfully.
+[2024-03-28 15:52:17] [INFO] Packet sent.
+[2024-03-28 15:52:18] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:18] [INFO] Message sent successfully.
+[2024-03-28 15:52:18] [INFO] Packet sent.
+[2024-03-28 15:52:19] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:19] [INFO] Message sent successfully.
+[2024-03-28 15:52:19] [INFO] Packet sent.
+[2024-03-28 15:52:20] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:20] [INFO] Message sent successfully.
+[2024-03-28 15:52:20] [INFO] Packet sent.
+[2024-03-28 15:52:21] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:21] [INFO] Message sent successfully.
+[2024-03-28 15:52:21] [INFO] Packet sent.
+[2024-03-28 15:52:22] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:22] [INFO] Message sent successfully.
+[2024-03-28 15:52:22] [INFO] Packet sent.
+[2024-03-28 15:52:23] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:23] [INFO] Message sent successfully.
+[2024-03-28 15:52:23] [INFO] Packet sent.
+[2024-03-28 15:52:24] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:24] [INFO] Message sent successfully.
+[2024-03-28 15:52:24] [INFO] Packet sent.
+[2024-03-28 15:52:25] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:25] [INFO] Message sent successfully.
+[2024-03-28 15:52:25] [INFO] Packet sent.
+[2024-03-28 15:52:26] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:26] [INFO] Message sent successfully.
+[2024-03-28 15:52:26] [INFO] Packet sent.
+[2024-03-28 15:52:27] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:27] [INFO] Message sent successfully.
+[2024-03-28 15:52:27] [INFO] Packet sent.
+[2024-03-28 15:52:28] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:28] [INFO] Message sent successfully.
+[2024-03-28 15:52:28] [INFO] Packet sent.
+[2024-03-28 15:52:29] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:29] [INFO] Message sent successfully.
+[2024-03-28 15:52:29] [INFO] Packet sent.
+[2024-03-28 15:52:30] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:30] [INFO] Message sent successfully.
+[2024-03-28 15:52:30] [INFO] Packet sent.
+[2024-03-28 15:52:31] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:31] [INFO] Message sent successfully.
+[2024-03-28 15:52:31] [INFO] Packet sent.
+[2024-03-28 15:52:32] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:32] [INFO] Message sent successfully.
+[2024-03-28 15:52:32] [INFO] Packet sent.
+[2024-03-28 15:52:33] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:33] [INFO] Message sent successfully.
+[2024-03-28 15:52:33] [INFO] Packet sent.
+[2024-03-28 15:52:34] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:34] [INFO] Message sent successfully.
+[2024-03-28 15:52:34] [INFO] Packet sent.
+[2024-03-28 15:52:35] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:35] [INFO] Message sent successfully.
+[2024-03-28 15:52:35] [INFO] Packet sent.
+[2024-03-28 15:52:36] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:36] [INFO] Message sent successfully.
+[2024-03-28 15:52:36] [INFO] Packet sent.
+[2024-03-28 15:52:37] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:37] [INFO] Message sent successfully.
+[2024-03-28 15:52:37] [INFO] Packet sent.
+[2024-03-28 15:52:38] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:38] [INFO] Message sent successfully.
+[2024-03-28 15:52:38] [INFO] Packet sent.
+[2024-03-28 15:52:39] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:39] [INFO] Message sent successfully.
+[2024-03-28 15:52:39] [INFO] Packet sent.
+[2024-03-28 15:52:40] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:40] [INFO] Message sent successfully.
+[2024-03-28 15:52:40] [INFO] Packet sent.
+[2024-03-28 15:52:41] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:41] [INFO] Message sent successfully.
+[2024-03-28 15:52:41] [INFO] Packet sent.
+[2024-03-28 15:52:42] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:42] [INFO] Message sent successfully.
+[2024-03-28 15:52:42] [INFO] Packet sent.
+[2024-03-28 15:52:43] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:43] [INFO] Message sent successfully.
+[2024-03-28 15:52:43] [INFO] Packet sent.
+[2024-03-28 15:52:44] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:44] [INFO] Message sent successfully.
+[2024-03-28 15:52:44] [INFO] Packet sent.
+[2024-03-28 15:52:45] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:45] [INFO] Message sent successfully.
+[2024-03-28 15:52:45] [INFO] Packet sent.
+[2024-03-28 15:52:46] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:46] [INFO] Message sent successfully.
+[2024-03-28 15:52:46] [INFO] Packet sent.
+[2024-03-28 15:52:47] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:47] [INFO] Message sent successfully.
+[2024-03-28 15:52:47] [INFO] Packet sent.
+[2024-03-28 15:52:48] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:48] [INFO] Message sent successfully.
+[2024-03-28 15:52:48] [INFO] Packet sent.
+[2024-03-28 15:52:49] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:49] [INFO] Message sent successfully.
+[2024-03-28 15:52:49] [INFO] Packet sent.
+[2024-03-28 15:52:50] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:50] [INFO] Message sent successfully.
+[2024-03-28 15:52:50] [INFO] Packet sent.
+[2024-03-28 15:52:51] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:51] [INFO] Message sent successfully.
+[2024-03-28 15:52:51] [INFO] Packet sent.
+[2024-03-28 15:52:52] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:52] [INFO] Message sent successfully.
+[2024-03-28 15:52:52] [INFO] Packet sent.
+[2024-03-28 15:52:53] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:53] [INFO] Message sent successfully.
+[2024-03-28 15:52:53] [INFO] Packet sent.
+[2024-03-28 15:52:54] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:54] [INFO] Message sent successfully.
+[2024-03-28 15:52:54] [INFO] Packet sent.
+[2024-03-28 15:52:55] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:55] [INFO] Message sent successfully.
+[2024-03-28 15:52:55] [INFO] Packet sent.
+[2024-03-28 15:52:56] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:56] [INFO] Message sent successfully.
+[2024-03-28 15:52:56] [INFO] Packet sent.
+[2024-03-28 15:52:57] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:57] [INFO] Message sent successfully.
+[2024-03-28 15:52:57] [INFO] Packet sent.
+[2024-03-28 15:52:58] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:58] [INFO] Message sent successfully.
+[2024-03-28 15:52:58] [INFO] Packet sent.
+[2024-03-28 15:52:59] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:52:59] [INFO] Message sent successfully.
+[2024-03-28 15:52:59] [INFO] Packet sent.
+[2024-03-28 15:53:00] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:53:00] [INFO] Message sent successfully.
+[2024-03-28 15:53:00] [INFO] Packet sent.
+[2024-03-28 15:53:01] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:53:01] [INFO] Message sent successfully.
+[2024-03-28 15:53:01] [INFO] Packet sent.
+[2024-03-28 15:53:02] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:53:02] [INFO] Message sent successfully.
+[2024-03-28 15:53:02] [INFO] Packet sent.
+[2024-03-28 15:53:03] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:53:03] [INFO] Message sent successfully.
+[2024-03-28 15:53:03] [INFO] Packet sent.
+[2024-03-28 15:53:04] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:53:04] [INFO] Message sent successfully.
+[2024-03-28 15:53:04] [INFO] Packet sent.
+[2024-03-28 15:53:05] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:05] [INFO] Message sent successfully.
+[2024-03-28 15:53:05] [INFO] Packet sent.
+[2024-03-28 15:53:06] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:06] [INFO] Message sent successfully.
+[2024-03-28 15:53:06] [INFO] Packet sent.
+[2024-03-28 15:53:07] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:07] [INFO] Message sent successfully.
+[2024-03-28 15:53:07] [INFO] Packet sent.
+[2024-03-28 15:53:08] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:08] [INFO] Message sent successfully.
+[2024-03-28 15:53:08] [INFO] Packet sent.
+[2024-03-28 15:53:09] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:09] [INFO] Message sent successfully.
+[2024-03-28 15:53:09] [INFO] Packet sent.
+[2024-03-28 15:53:10] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:10] [INFO] Message sent successfully.
+[2024-03-28 15:53:10] [INFO] Packet sent.
+[2024-03-28 15:53:11] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:11] [INFO] Message sent successfully.
+[2024-03-28 15:53:11] [INFO] Packet sent.
+[2024-03-28 15:53:12] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:12] [INFO] Message sent successfully.
+[2024-03-28 15:53:12] [INFO] Packet sent.
+[2024-03-28 15:53:13] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:13] [INFO] Message sent successfully.
+[2024-03-28 15:53:13] [INFO] Packet sent.
+[2024-03-28 15:53:14] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:14] [INFO] Message sent successfully.
+[2024-03-28 15:53:14] [INFO] Packet sent.
+[2024-03-28 15:53:15] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:15] [INFO] Message sent successfully.
+[2024-03-28 15:53:15] [INFO] Packet sent.
+[2024-03-28 15:53:16] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:16] [INFO] Message sent successfully.
+[2024-03-28 15:53:16] [INFO] Packet sent.
+[2024-03-28 15:53:17] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:17] [INFO] Message sent successfully.
+[2024-03-28 15:53:17] [INFO] Packet sent.
+[2024-03-28 15:53:18] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:18] [INFO] Message sent successfully.
+[2024-03-28 15:53:18] [INFO] Packet sent.
+[2024-03-28 15:53:19] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:19] [INFO] Message sent successfully.
+[2024-03-28 15:53:19] [INFO] Packet sent.
+[2024-03-28 15:53:20] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:20] [INFO] Message sent successfully.
+[2024-03-28 15:53:20] [INFO] Packet sent.
+[2024-03-28 15:53:21] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:21] [INFO] Message sent successfully.
+[2024-03-28 15:53:21] [INFO] Packet sent.
+[2024-03-28 15:53:22] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:22] [INFO] Message sent successfully.
+[2024-03-28 15:53:22] [INFO] Packet sent.
+[2024-03-28 15:53:23] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:23] [INFO] Message sent successfully.
+[2024-03-28 15:53:23] [INFO] Packet sent.
+[2024-03-28 15:53:24] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:24] [INFO] Message sent successfully.
+[2024-03-28 15:53:24] [INFO] Packet sent.
+[2024-03-28 15:53:25] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:25] [INFO] Message sent successfully.
+[2024-03-28 15:53:25] [INFO] Packet sent.
+[2024-03-28 15:53:26] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:26] [INFO] Message sent successfully.
+[2024-03-28 15:53:26] [INFO] Packet sent.
+[2024-03-28 15:53:27] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:27] [INFO] Message sent successfully.
+[2024-03-28 15:53:27] [INFO] Packet sent.
+[2024-03-28 15:53:28] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:28] [INFO] Message sent successfully.
+[2024-03-28 15:53:28] [INFO] Packet sent.
+[2024-03-28 15:53:29] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:29] [INFO] Message sent successfully.
+[2024-03-28 15:53:29] [INFO] Packet sent.
+[2024-03-28 15:53:30] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:30] [INFO] Message sent successfully.
+[2024-03-28 15:53:30] [INFO] Packet sent.
+[2024-03-28 15:53:31] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:31] [INFO] Message sent successfully.
+[2024-03-28 15:53:31] [INFO] Packet sent.
+[2024-03-28 15:53:32] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:32] [INFO] Message sent successfully.
+[2024-03-28 15:53:32] [INFO] Packet sent.
+[2024-03-28 15:53:33] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:33] [INFO] Message sent successfully.
+[2024-03-28 15:53:33] [INFO] Packet sent.
+[2024-03-28 15:53:34] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:53:34] [INFO] Message sent successfully.
+[2024-03-28 15:53:34] [INFO] Packet sent.
+[2024-03-28 15:53:35] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:35] [INFO] Message sent successfully.
+[2024-03-28 15:53:35] [INFO] Packet sent.
+[2024-03-28 15:53:36] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:36] [INFO] Message sent successfully.
+[2024-03-28 15:53:36] [INFO] Packet sent.
+[2024-03-28 15:53:37] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:37] [INFO] Message sent successfully.
+[2024-03-28 15:53:37] [INFO] Packet sent.
+[2024-03-28 15:53:38] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:38] [INFO] Message sent successfully.
+[2024-03-28 15:53:38] [INFO] Packet sent.
+[2024-03-28 15:53:39] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:39] [INFO] Message sent successfully.
+[2024-03-28 15:53:39] [INFO] Packet sent.
+[2024-03-28 15:53:40] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:40] [INFO] Message sent successfully.
+[2024-03-28 15:53:40] [INFO] Packet sent.
+[2024-03-28 15:53:41] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:41] [INFO] Message sent successfully.
+[2024-03-28 15:53:41] [INFO] Packet sent.
+[2024-03-28 15:53:42] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:42] [INFO] Message sent successfully.
+[2024-03-28 15:53:42] [INFO] Packet sent.
+[2024-03-28 15:53:43] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:43] [INFO] Message sent successfully.
+[2024-03-28 15:53:43] [INFO] Packet sent.
+[2024-03-28 15:53:44] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:44] [INFO] Message sent successfully.
+[2024-03-28 15:53:44] [INFO] Packet sent.
+[2024-03-28 15:53:45] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:45] [INFO] Message sent successfully.
+[2024-03-28 15:53:45] [INFO] Packet sent.
+[2024-03-28 15:53:46] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:46] [INFO] Message sent successfully.
+[2024-03-28 15:53:46] [INFO] Packet sent.
+[2024-03-28 15:53:47] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:47] [INFO] Message sent successfully.
+[2024-03-28 15:53:47] [INFO] Packet sent.
+[2024-03-28 15:53:48] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:48] [INFO] Message sent successfully.
+[2024-03-28 15:53:48] [INFO] Packet sent.
+[2024-03-28 15:53:49] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:49] [INFO] Message sent successfully.
+[2024-03-28 15:53:49] [INFO] Packet sent.
+[2024-03-28 15:53:50] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:50] [INFO] Message sent successfully.
+[2024-03-28 15:53:50] [INFO] Packet sent.
+[2024-03-28 15:53:51] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:51] [INFO] Message sent successfully.
+[2024-03-28 15:53:51] [INFO] Packet sent.
+[2024-03-28 15:53:52] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:52] [INFO] Message sent successfully.
+[2024-03-28 15:53:52] [INFO] Packet sent.
+[2024-03-28 15:53:53] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:53] [INFO] Message sent successfully.
+[2024-03-28 15:53:53] [INFO] Packet sent.
+[2024-03-28 15:53:54] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:54] [INFO] Message sent successfully.
+[2024-03-28 15:53:54] [INFO] Packet sent.
+[2024-03-28 15:53:55] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:55] [INFO] Message sent successfully.
+[2024-03-28 15:53:55] [INFO] Packet sent.
+[2024-03-28 15:53:56] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:56] [INFO] Message sent successfully.
+[2024-03-28 15:53:56] [INFO] Packet sent.
+[2024-03-28 15:53:57] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:57] [INFO] Message sent successfully.
+[2024-03-28 15:53:57] [INFO] Packet sent.
+[2024-03-28 15:53:58] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:58] [INFO] Message sent successfully.
+[2024-03-28 15:53:58] [INFO] Packet sent.
+[2024-03-28 15:53:59] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:53:59] [INFO] Message sent successfully.
+[2024-03-28 15:53:59] [INFO] Packet sent.
+[2024-03-28 15:54:00] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:54:00] [INFO] Message sent successfully.
+[2024-03-28 15:54:00] [INFO] Packet sent.
+[2024-03-28 15:54:01] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:54:01] [INFO] Message sent successfully.
+[2024-03-28 15:54:01] [INFO] Packet sent.
+[2024-03-28 15:54:02] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:54:02] [INFO] Message sent successfully.
+[2024-03-28 15:54:02] [INFO] Packet sent.
+[2024-03-28 15:54:03] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:54:03] [INFO] Message sent successfully.
+[2024-03-28 15:54:03] [INFO] Packet sent.
+[2024-03-28 15:54:04] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:54:04] [INFO] Message sent successfully.
+[2024-03-28 15:54:04] [INFO] Packet sent.
+[2024-03-28 15:54:05] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:54:05] [INFO] Message sent successfully.
+[2024-03-28 15:54:05] [INFO] Packet sent.
+[2024-03-28 15:54:06] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:54:06] [INFO] Message sent successfully.
+[2024-03-28 15:54:06] [INFO] Packet sent.
+[2024-03-28 15:54:07] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:54:07] [INFO] Message sent successfully.
+[2024-03-28 15:54:07] [INFO] Packet sent.
+[2024-03-28 15:54:08] [INFO] Disconnected from server.
+[2024-03-28 15:54:08] [INFO] Communication switch toggled: OFF
+[2024-03-28 15:55:02] [INFO] Loading flight plan...
+[2024-03-28 15:55:02] [INFO] Flight plan is loaded.
+[2024-03-28 15:55:02] [INFO] Connected to the server.
+[2024-03-28 15:55:02] [INFO] Communicate state: Established Connection
+[2024-03-28 15:55:02] [INFO] Communication switch toggled: ON
+[2024-03-28 15:55:02] [INFO] Starting simulation...
+[2024-03-28 15:55:02] [INFO] Communicate state: sending
+[2024-03-28 15:55:02] [INFO] Updated aircraft state to: Idle
+[2024-03-28 15:55:02] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:02] [INFO] Message sent successfully.
+[2024-03-28 15:55:02] [INFO] Packet sent.
+[2024-03-28 15:55:03] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:03] [INFO] Message sent successfully.
+[2024-03-28 15:55:03] [INFO] Packet sent.
+[2024-03-28 15:55:04] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:04] [INFO] Message sent successfully.
+[2024-03-28 15:55:04] [INFO] Packet sent.
+[2024-03-28 15:55:05] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:05] [INFO] Message sent successfully.
+[2024-03-28 15:55:05] [INFO] Packet sent.
+[2024-03-28 15:55:06] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:06] [INFO] Message sent successfully.
+[2024-03-28 15:55:06] [INFO] Packet sent.
+[2024-03-28 15:55:07] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:07] [INFO] Message sent successfully.
+[2024-03-28 15:55:07] [INFO] Packet sent.
+[2024-03-28 15:55:08] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:08] [INFO] Message sent successfully.
+[2024-03-28 15:55:08] [INFO] Packet sent.
+[2024-03-28 15:55:09] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:09] [INFO] Message sent successfully.
+[2024-03-28 15:55:09] [INFO] Packet sent.
+[2024-03-28 15:55:10] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:10] [INFO] Message sent successfully.
+[2024-03-28 15:55:10] [INFO] Packet sent.
+[2024-03-28 15:55:11] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:11] [INFO] Message sent successfully.
+[2024-03-28 15:55:11] [INFO] Packet sent.
+[2024-03-28 15:55:12] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:12] [INFO] Message sent successfully.
+[2024-03-28 15:55:12] [INFO] Packet sent.
+[2024-03-28 15:55:13] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:13] [INFO] Message sent successfully.
+[2024-03-28 15:55:13] [INFO] Packet sent.
+[2024-03-28 15:55:14] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:14] [INFO] Message sent successfully.
+[2024-03-28 15:55:14] [INFO] Packet sent.
+[2024-03-28 15:55:15] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:15] [INFO] Message sent successfully.
+[2024-03-28 15:55:15] [INFO] Packet sent.
+[2024-03-28 15:55:16] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:16] [INFO] Message sent successfully.
+[2024-03-28 15:55:16] [INFO] Packet sent.
+[2024-03-28 15:55:17] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:17] [INFO] Message sent successfully.
+[2024-03-28 15:55:17] [INFO] Packet sent.
+[2024-03-28 15:55:18] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:18] [INFO] Message sent successfully.
+[2024-03-28 15:55:18] [INFO] Packet sent.
+[2024-03-28 15:55:19] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:19] [INFO] Message sent successfully.
+[2024-03-28 15:55:19] [INFO] Packet sent.
+[2024-03-28 15:55:20] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:20] [INFO] Message sent successfully.
+[2024-03-28 15:55:20] [INFO] Packet sent.
+[2024-03-28 15:55:21] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:21] [INFO] Message sent successfully.
+[2024-03-28 15:55:21] [INFO] Packet sent.
+[2024-03-28 15:55:22] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:23] [INFO] Message sent successfully.
+[2024-03-28 15:55:23] [INFO] Packet sent.
+[2024-03-28 15:55:23] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:24] [INFO] Message sent successfully.
+[2024-03-28 15:55:24] [INFO] Packet sent.
+[2024-03-28 15:55:24] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:25] [INFO] Message sent successfully.
+[2024-03-28 15:55:25] [INFO] Packet sent.
+[2024-03-28 15:55:25] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:26] [INFO] Message sent successfully.
+[2024-03-28 15:55:26] [INFO] Packet sent.
+[2024-03-28 15:55:26] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:27] [INFO] Message sent successfully.
+[2024-03-28 15:55:27] [INFO] Packet sent.
+[2024-03-28 15:55:27] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:28] [INFO] Message sent successfully.
+[2024-03-28 15:55:28] [INFO] Packet sent.
+[2024-03-28 15:55:28] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:29] [INFO] Message sent successfully.
+[2024-03-28 15:55:29] [INFO] Packet sent.
+[2024-03-28 15:55:30] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:30] [INFO] Message sent successfully.
+[2024-03-28 15:55:30] [INFO] Packet sent.
+[2024-03-28 15:55:31] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:31] [INFO] Message sent successfully.
+[2024-03-28 15:55:31] [INFO] Packet sent.
+[2024-03-28 15:55:32] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:32] [INFO] Message sent successfully.
+[2024-03-28 15:55:32] [INFO] Packet sent.
+[2024-03-28 15:55:33] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:33] [INFO] Message sent successfully.
+[2024-03-28 15:55:33] [INFO] Packet sent.
+[2024-03-28 15:55:34] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:34] [INFO] Message sent successfully.
+[2024-03-28 15:55:34] [INFO] Packet sent.
+[2024-03-28 15:55:35] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:35] [INFO] Message sent successfully.
+[2024-03-28 15:55:35] [INFO] Packet sent.
+[2024-03-28 15:55:36] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:36] [INFO] Message sent successfully.
+[2024-03-28 15:55:36] [INFO] Packet sent.
+[2024-03-28 15:55:37] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:37] [INFO] Message sent successfully.
+[2024-03-28 15:55:37] [INFO] Packet sent.
+[2024-03-28 15:55:38] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:38] [INFO] Message sent successfully.
+[2024-03-28 15:55:38] [INFO] Packet sent.
+[2024-03-28 15:55:39] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:39] [INFO] Message sent successfully.
+[2024-03-28 15:55:39] [INFO] Packet sent.
+[2024-03-28 15:55:40] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:40] [INFO] Message sent successfully.
+[2024-03-28 15:55:40] [INFO] Packet sent.
+[2024-03-28 15:55:41] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:41] [INFO] Message sent successfully.
+[2024-03-28 15:55:41] [INFO] Packet sent.
+[2024-03-28 15:55:42] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:42] [INFO] Message sent successfully.
+[2024-03-28 15:55:42] [INFO] Packet sent.
+[2024-03-28 15:55:43] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:43] [INFO] Message sent successfully.
+[2024-03-28 15:55:43] [INFO] Packet sent.
+[2024-03-28 15:55:44] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:44] [INFO] Message sent successfully.
+[2024-03-28 15:55:44] [INFO] Packet sent.
+[2024-03-28 15:55:45] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:45] [INFO] Message sent successfully.
+[2024-03-28 15:55:45] [INFO] Packet sent.
+[2024-03-28 15:55:46] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:46] [INFO] Message sent successfully.
+[2024-03-28 15:55:46] [INFO] Packet sent.
+[2024-03-28 15:55:47] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:47] [INFO] Message sent successfully.
+[2024-03-28 15:55:47] [INFO] Packet sent.
+[2024-03-28 15:55:48] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:48] [INFO] Message sent successfully.
+[2024-03-28 15:55:48] [INFO] Packet sent.
+[2024-03-28 15:55:49] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:49] [INFO] Message sent successfully.
+[2024-03-28 15:55:49] [INFO] Packet sent.
+[2024-03-28 15:55:50] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:50] [INFO] Message sent successfully.
+[2024-03-28 15:55:50] [INFO] Packet sent.
+[2024-03-28 15:55:51] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:51] [INFO] Message sent successfully.
+[2024-03-28 15:55:51] [INFO] Packet sent.
+[2024-03-28 15:55:52] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:52] [INFO] Message sent successfully.
+[2024-03-28 15:55:52] [INFO] Packet sent.
+[2024-03-28 15:55:53] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:53] [INFO] Message sent successfully.
+[2024-03-28 15:55:53] [INFO] Packet sent.
+[2024-03-28 15:55:54] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:54] [INFO] Message sent successfully.
+[2024-03-28 15:55:54] [INFO] Packet sent.
+[2024-03-28 15:55:55] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:55] [INFO] Message sent successfully.
+[2024-03-28 15:55:55] [INFO] Packet sent.
+[2024-03-28 15:55:56] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:56] [INFO] Message sent successfully.
+[2024-03-28 15:55:56] [INFO] Packet sent.
+[2024-03-28 15:55:57] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:57] [INFO] Message sent successfully.
+[2024-03-28 15:55:57] [INFO] Packet sent.
+[2024-03-28 15:55:58] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:58] [INFO] Message sent successfully.
+[2024-03-28 15:55:58] [INFO] Packet sent.
+[2024-03-28 15:55:59] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:55:59] [INFO] Message sent successfully.
+[2024-03-28 15:55:59] [INFO] Packet sent.
+[2024-03-28 15:56:00] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:56:00] [INFO] Message sent successfully.
+[2024-03-28 15:56:00] [INFO] Packet sent.
+[2024-03-28 15:56:01] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:56:01] [INFO] Message sent successfully.
+[2024-03-28 15:56:01] [INFO] Packet sent.
+[2024-03-28 15:56:02] [INFO] Updated aircraft state to: Takeoff
+[2024-03-28 15:56:02] [INFO] Message sent successfully.
+[2024-03-28 15:56:02] [INFO] Packet sent.
+[2024-03-28 15:56:03] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:03] [INFO] Message sent successfully.
+[2024-03-28 15:56:03] [INFO] Packet sent.
+[2024-03-28 15:56:04] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:04] [INFO] Message sent successfully.
+[2024-03-28 15:56:04] [INFO] Packet sent.
+[2024-03-28 15:56:05] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:05] [INFO] Message sent successfully.
+[2024-03-28 15:56:05] [INFO] Packet sent.
+[2024-03-28 15:56:06] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:06] [INFO] Message sent successfully.
+[2024-03-28 15:56:06] [INFO] Packet sent.
+[2024-03-28 15:56:07] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:07] [INFO] Message sent successfully.
+[2024-03-28 15:56:07] [INFO] Packet sent.
+[2024-03-28 15:56:08] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:08] [INFO] Message sent successfully.
+[2024-03-28 15:56:08] [INFO] Packet sent.
+[2024-03-28 15:56:09] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:09] [INFO] Message sent successfully.
+[2024-03-28 15:56:09] [INFO] Packet sent.
+[2024-03-28 15:56:10] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:10] [INFO] Message sent successfully.
+[2024-03-28 15:56:10] [INFO] Packet sent.
+[2024-03-28 15:56:11] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:11] [INFO] Message sent successfully.
+[2024-03-28 15:56:11] [INFO] Packet sent.
+[2024-03-28 15:56:12] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:12] [INFO] Message sent successfully.
+[2024-03-28 15:56:12] [INFO] Packet sent.
+[2024-03-28 15:56:13] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:13] [INFO] Message sent successfully.
+[2024-03-28 15:56:13] [INFO] Packet sent.
+[2024-03-28 15:56:14] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:14] [INFO] Message sent successfully.
+[2024-03-28 15:56:14] [INFO] Packet sent.
+[2024-03-28 15:56:15] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:15] [INFO] Message sent successfully.
+[2024-03-28 15:56:15] [INFO] Packet sent.
+[2024-03-28 15:56:16] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:16] [INFO] Message sent successfully.
+[2024-03-28 15:56:16] [INFO] Packet sent.
+[2024-03-28 15:56:17] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:17] [INFO] Message sent successfully.
+[2024-03-28 15:56:17] [INFO] Packet sent.
+[2024-03-28 15:56:18] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:18] [INFO] Message sent successfully.
+[2024-03-28 15:56:18] [INFO] Packet sent.
+[2024-03-28 15:56:19] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:19] [INFO] Message sent successfully.
+[2024-03-28 15:56:19] [INFO] Packet sent.
+[2024-03-28 15:56:20] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:20] [INFO] Message sent successfully.
+[2024-03-28 15:56:20] [INFO] Packet sent.
+[2024-03-28 15:56:21] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:21] [INFO] Message sent successfully.
+[2024-03-28 15:56:21] [INFO] Packet sent.
+[2024-03-28 15:56:22] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:22] [INFO] Message sent successfully.
+[2024-03-28 15:56:22] [INFO] Packet sent.
+[2024-03-28 15:56:23] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:23] [INFO] Message sent successfully.
+[2024-03-28 15:56:23] [INFO] Packet sent.
+[2024-03-28 15:56:24] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:24] [INFO] Message sent successfully.
+[2024-03-28 15:56:24] [INFO] Packet sent.
+[2024-03-28 15:56:25] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:25] [INFO] Message sent successfully.
+[2024-03-28 15:56:25] [INFO] Packet sent.
+[2024-03-28 15:56:26] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:26] [INFO] Message sent successfully.
+[2024-03-28 15:56:26] [INFO] Packet sent.
+[2024-03-28 15:56:27] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:27] [INFO] Message sent successfully.
+[2024-03-28 15:56:27] [INFO] Packet sent.
+[2024-03-28 15:56:28] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:28] [INFO] Message sent successfully.
+[2024-03-28 15:56:28] [INFO] Packet sent.
+[2024-03-28 15:56:29] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:29] [INFO] Message sent successfully.
+[2024-03-28 15:56:29] [INFO] Packet sent.
+[2024-03-28 15:56:30] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:30] [INFO] Message sent successfully.
+[2024-03-28 15:56:30] [INFO] Packet sent.
+[2024-03-28 15:56:31] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:31] [INFO] Message sent successfully.
+[2024-03-28 15:56:31] [INFO] Packet sent.
+[2024-03-28 15:56:32] [INFO] Updated aircraft state to: In Flight
+[2024-03-28 15:56:32] [INFO] Message sent successfully.
+[2024-03-28 15:56:32] [INFO] Packet sent.
+[2024-03-28 15:56:33] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:33] [INFO] Message sent successfully.
+[2024-03-28 15:56:33] [INFO] Packet sent.
+[2024-03-28 15:56:34] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:34] [INFO] Message sent successfully.
+[2024-03-28 15:56:34] [INFO] Packet sent.
+[2024-03-28 15:56:35] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:35] [INFO] Message sent successfully.
+[2024-03-28 15:56:35] [INFO] Packet sent.
+[2024-03-28 15:56:36] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:36] [INFO] Message sent successfully.
+[2024-03-28 15:56:36] [INFO] Packet sent.
+[2024-03-28 15:56:37] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:37] [INFO] Message sent successfully.
+[2024-03-28 15:56:37] [INFO] Packet sent.
+[2024-03-28 15:56:38] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:38] [INFO] Message sent successfully.
+[2024-03-28 15:56:38] [INFO] Packet sent.
+[2024-03-28 15:56:39] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:39] [INFO] Message sent successfully.
+[2024-03-28 15:56:39] [INFO] Packet sent.
+[2024-03-28 15:56:40] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:40] [INFO] Message sent successfully.
+[2024-03-28 15:56:40] [INFO] Packet sent.
+[2024-03-28 15:56:41] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:41] [INFO] Message sent successfully.
+[2024-03-28 15:56:41] [INFO] Packet sent.
+[2024-03-28 15:56:42] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:42] [INFO] Message sent successfully.
+[2024-03-28 15:56:42] [INFO] Packet sent.
+[2024-03-28 15:56:43] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:43] [INFO] Message sent successfully.
+[2024-03-28 15:56:43] [INFO] Packet sent.
+[2024-03-28 15:56:44] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:44] [INFO] Message sent successfully.
+[2024-03-28 15:56:44] [INFO] Packet sent.
+[2024-03-28 15:56:45] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:45] [INFO] Message sent successfully.
+[2024-03-28 15:56:45] [INFO] Packet sent.
+[2024-03-28 15:56:46] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:46] [INFO] Message sent successfully.
+[2024-03-28 15:56:46] [INFO] Packet sent.
+[2024-03-28 15:56:47] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:47] [INFO] Message sent successfully.
+[2024-03-28 15:56:47] [INFO] Packet sent.
+[2024-03-28 15:56:48] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:48] [INFO] Message sent successfully.
+[2024-03-28 15:56:48] [INFO] Packet sent.
+[2024-03-28 15:56:49] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:49] [INFO] Message sent successfully.
+[2024-03-28 15:56:49] [INFO] Packet sent.
+[2024-03-28 15:56:50] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:50] [INFO] Message sent successfully.
+[2024-03-28 15:56:50] [INFO] Packet sent.
+[2024-03-28 15:56:51] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:51] [INFO] Message sent successfully.
+[2024-03-28 15:56:51] [INFO] Packet sent.
+[2024-03-28 15:56:52] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:52] [INFO] Message sent successfully.
+[2024-03-28 15:56:52] [INFO] Packet sent.
+[2024-03-28 15:56:53] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:53] [INFO] Message sent successfully.
+[2024-03-28 15:56:53] [INFO] Packet sent.
+[2024-03-28 15:56:54] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:54] [INFO] Message sent successfully.
+[2024-03-28 15:56:54] [INFO] Packet sent.
+[2024-03-28 15:56:55] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:55] [INFO] Message sent successfully.
+[2024-03-28 15:56:55] [INFO] Packet sent.
+[2024-03-28 15:56:56] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:56] [INFO] Message sent successfully.
+[2024-03-28 15:56:56] [INFO] Packet sent.
+[2024-03-28 15:56:57] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:57] [INFO] Message sent successfully.
+[2024-03-28 15:56:57] [INFO] Packet sent.
+[2024-03-28 15:56:58] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:58] [INFO] Message sent successfully.
+[2024-03-28 15:56:58] [INFO] Packet sent.
+[2024-03-28 15:56:59] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:56:59] [INFO] Message sent successfully.
+[2024-03-28 15:56:59] [INFO] Packet sent.
+[2024-03-28 15:57:00] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:57:00] [INFO] Message sent successfully.
+[2024-03-28 15:57:00] [INFO] Packet sent.
+[2024-03-28 15:57:01] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:57:01] [INFO] Message sent successfully.
+[2024-03-28 15:57:01] [INFO] Packet sent.
+[2024-03-28 15:57:02] [INFO] Updated aircraft state to: Landing
+[2024-03-28 15:57:02] [INFO] Message sent successfully.
+[2024-03-28 15:57:02] [INFO] Packet sent.
+[2024-03-28 15:57:03] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:57:03] [INFO] Message sent successfully.
+[2024-03-28 15:57:03] [INFO] Packet sent.
+[2024-03-28 15:57:04] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:57:04] [INFO] Message sent successfully.
+[2024-03-28 15:57:04] [INFO] Packet sent.
+[2024-03-28 15:57:05] [INFO] Updated aircraft state to: Unknown State
+[2024-03-28 15:57:05] [INFO] Message sent successfully.
+[2024-03-28 15:57:05] [INFO] Packet sent.
+[2024-03-28 15:57:06] [INFO] Disconnected from server.
+[2024-03-28 15:57:06] [INFO] Communication switch toggled: OFF

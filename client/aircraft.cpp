@@ -22,8 +22,32 @@ namespace aircraft {
     }
 
     void Aircraft::updateAircraftState(AircraftState newState) {
-        state = newState;
+        // Convert the newState enum to a descriptive string
+        std::string newStateStr;
+        switch (newState) {
+        case AircraftState::Idle:
+            newStateStr = "Idle";
+            break;
+        case AircraftState::InFlight:
+            newStateStr = "In Flight";
+            break;
+        case AircraftState::Takeoff:
+            newStateStr = "Takeoff";
+            break;
+        case AircraftState::Landing:
+            newStateStr = "Landing";
+            break;
+        case AircraftState::Completed:
+            newStateStr = "Completed";
+        default:
+            newStateStr = "Unknown State"; 
+        }
 
+
+        logs::logger.log("Updated aircraft state to: " + newStateStr, logs::Logger::LogLevel::Info);
+
+  
+        state = newState;
     }
 
     void Aircraft::toggleCommunicationSystem() {
@@ -195,6 +219,10 @@ namespace aircraft {
     }
 
 
+    AircraftState Aircraft::getAircraftState() {
+        return this->state;
+    }
+
     void Aircraft::toggleSimulateTelemetry() {
         simulateState = (simulateState == SystemState::ON) ? SystemState::OFF : SystemState::ON;
         if (simulateState == SystemState::ON) {
@@ -223,34 +251,40 @@ namespace aircraft {
         const float maxSpeed = 500.0; // Cruising speed in knots
 
         auto startTime = std::chrono::steady_clock::now();
+        
+        updateAircraftState(AircraftState::Idle);
+
 
         while (simulateTelemetryActive) {
             auto currentTime = std::chrono::steady_clock::now();
             std::chrono::duration<float> elapsed = currentTime - startTime;
             float elapsedTime = elapsed.count();
 
-            // Convert integers to float explicitly for MISRA compliance
-            const float ascentDuration = 900.0; // Ascent duration in seconds
-            const float cruisingStartTime = 900.0; // When cruising starts in seconds
-            const float descentStartTime = 17100.0; // When descent starts in seconds
-            const float totalDuration = 18000.0; // Total flight duration in seconds
+            const float ascentDuration = 60.0; // Ascent duration in seconds
+            const float cruisingStartTime = 60.0; // When cruising starts in seconds
+            const float descentStartTime = 90.0; // When descent starts in seconds
+            const float totalDuration = 120.0; // Total flight duration in seconds
 
             // Calculate the phase of the flight
-            if (elapsedTime <= ascentDuration) { // Ascent for first 15 minutes
+            if (elapsedTime <= ascentDuration) { 
+                updateAircraftState(AircraftState::Takeoff);
                 flightTelemetry.altitude = maxAltitude * (elapsedTime / ascentDuration);
                 flightTelemetry.speed = maxSpeed * (elapsedTime / ascentDuration);
             }
-            else if (elapsedTime > cruisingStartTime && elapsedTime <= descentStartTime) { // Cruising for next 4.5 hours
+            else if (elapsedTime > cruisingStartTime && elapsedTime <= descentStartTime) { 
                 flightTelemetry.altitude = maxAltitude;
                 flightTelemetry.speed = maxSpeed;
+                updateAircraftState(AircraftState::InFlight);
             }
-            else if (elapsedTime > descentStartTime && elapsedTime <= totalDuration) { // Descent for last 15 minutes
+            else if (elapsedTime > descentStartTime && elapsedTime <= totalDuration) { 
                 flightTelemetry.altitude = maxAltitude * (1.0 - ((elapsedTime - descentStartTime) / (totalDuration - descentStartTime)));
                 flightTelemetry.speed = maxSpeed * (1.0 - ((elapsedTime - descentStartTime) / (totalDuration - descentStartTime)));
+                updateAircraftState(AircraftState::Landing);
             }
             else {
                 flightTelemetry.altitude = 0.0;
                 flightTelemetry.speed = 0.0;
+        updateAircraftState(AircraftState::Completed);
             }
 
             // Linear interpolation for latitude and longitude over the flight duration

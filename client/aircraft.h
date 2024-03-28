@@ -13,7 +13,7 @@
 
 namespace aircraft {
 
-    enum class AircraftState { Idle, InFlight, Takeoff, Landing };
+    enum class AircraftState { Idle, InFlight, Takeoff, Landing, Completed };
     enum class SystemState { ON, OFF };
     enum class FlightType { Cargo, Commercial, Private };
     enum class CommunicationState { Closed, EstablishedConnection, Sending, Handoff };
@@ -29,6 +29,7 @@ namespace aircraft {
         void toggleACARSSystem();
         void loadFlightPlan(const std::string& filepath);
         void toggleSimulateTelemetry();
+        AircraftState getAircraftState();
 
     private:
         void acarsOperation();
@@ -51,6 +52,7 @@ namespace aircraft {
 
         bool flightPlanLoaded ;
         bool communicationReady;
+
 
         struct flightInformation {
 

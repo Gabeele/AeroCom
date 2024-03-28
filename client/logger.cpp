@@ -12,10 +12,7 @@ namespace logs {
         if (!logFile.empty()) {
             logStream.open(logFile, std::ios::out | std::ios::app);
             isStreamValid = logStream.is_open();
-            isStreamValid = logStream.is_open();
             if (!isStreamValid) {
-                // Handle the case where the file could not be opened.
-                // Logging to a file is not possible, but stdout logging can continue if enabled.
                 std::cerr << "Unable to open log file: " << logFile << std::endl;
             }
         }
@@ -55,6 +52,8 @@ namespace logs {
             // Write to file if stream is valid
             if (isStreamValid) {
                 logStream << logMessage << std::endl;
+                logStream.flush(); 
+
             }
 
             // Optionally, write to stdout
@@ -86,5 +85,5 @@ namespace logs {
         return levelString;
     }
 
-    Logger logger("log.txt", true);
+    Logger logger("log.txt", true); // Globally scoped logging functionality
 }

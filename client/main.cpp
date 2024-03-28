@@ -1,5 +1,6 @@
 #include <iostream>
 #include "aircraft.h"
+#include "logger.h"
 
 int main() {
     // Initialize the aircraft with an identifier
@@ -18,10 +19,14 @@ int main() {
     ac.toggleSimulateTelemetry();
 
 
-    std::cout << "Simulating for 60 seconds. Please wait..." << std::endl;
-    std::this_thread::sleep_for(std::chrono::seconds(60));
+    logs::logger.log("Starting simulation...", logs::Logger::LogLevel::Info);
+    while (ac.getAircraftState() != aircraft::AircraftState::Completed) {
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+    }
 
-    std::cout << "Ending simulation." << std::endl;
+    logs::logger.log("Simulation ended. Aircraft completed it's flight.", logs::Logger::LogLevel::Info);
+
+    ac.toggleSimulateTelemetry();
 
     ac.toggleACARSSystem();
 
