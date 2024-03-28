@@ -31,7 +31,6 @@ namespace aircraft {
         }
     }
 
-
     bool CommunicationSystem::disconnect() {
         bool success = false; 
 
@@ -51,7 +50,6 @@ namespace aircraft {
 
         return success;
     }
-
 
     bool CommunicationSystem::connect() {
         bool returnFlag = false; 
@@ -90,31 +88,85 @@ namespace aircraft {
         frequency.sin_addr.s_addr = inet_addr(ipAddress.c_str());
     }
 
-    bool CommunicationSystem::receiveMessage() {
-        bool success = false;
-        char buffer[1024];
-        (void)memset(&buffer[0], 0, sizeof(buffer));  
+    std::string CommunicationSystem::receiveMessage() {
+        constexpr std::size_t bufferSize = 1024;
+        char buffer[bufferSize] = { 0 };
+        std::string receivedMessage; 
+        int bytesReceived = recv(socketFD, buffer, bufferSize, 0);
 
-        int bytesReceived = recv(socketFD, &buffer[0], sizeof(buffer), 0);  
         if (bytesReceived > 0) {
-            std::string receivedMessage(buffer, bytesReceived);
+
+            receivedMessage = std::string(buffer, static_cast<std::string::size_type>(bytesReceived));
             logs::logger.log("Received message: " + receivedMessage, logs::Logger::LogLevel::Info);
-            success = true;
         }
         else if (bytesReceived == 0) {
             logs::logger.log("Connection closed by the remote host.", logs::Logger::LogLevel::Warning);
         }
         else {
+
             int recvError = WSAGetLastError();
             logs::logger.log("Receive failed with error code: " + std::to_string(recvError), logs::Logger::LogLevel::Error);
         }
-        return success;
+
+        return receivedMessage;
     }
 
 
-    bool CommunicationSystem::sectorHandoff() {
+    bool CommunicationSystem::sendFile(const std::string& path) {
+        bool success = true;
 
-        return true; 
+        // Open the file in binary mode
+        std::ifstream file(path, std::ios::binary);
+        if (!file.is_open()) {
+            logs::logger.log("Failed to open file: " + path, logs::Logger::LogLevel::Error);
+            success = false;
+        }
+
+        size_t fileSize = 0;
+        if (success) {
+            file.seekg(0, std::ios::end);
+            fileSize = file.tellg();
+            if (fileSize == static_cast<size_t>(-1)) {
+                logs::logger.log("Failed to tell the file size.", logs::Logger::LogLevel::Error);
+                success = false;
+            }
+            file.seekg(0, std::ios::beg); 
+        }
+
+        // Send the file size to the server
+        if (success) {
+            std::string fileSizeStr = "Size: " + std::to_string(fileSize) + "\n";
+            if (!sendMessage(fileSizeStr.c_str(), fileSizeStr.size())) {
+                logs::logger.log("Failed to send file size.", logs::Logger::LogLevel::Error);
+                success = false;
+            }
+        }
+
+        // Send the actual file content
+        if (success) {
+            char buffer[1024];
+            while (success && file.read(buffer, sizeof(buffer)).gcount() > 0) {
+                size_t bytesToWrite = file.gcount();
+                if (!sendMessage(buffer, bytesToWrite)) {
+                    logs::logger.log("Failed to send file data.", logs::Logger::LogLevel::Error);
+                    success = false; 
+                }
+            }
+        }
+
+        // Wait for an acknowledgment from the server
+        if (success) {
+            std::string ackMsg = receiveMessage();
+            if (ackMsg != "akn") { 
+                logs::logger.log("Acknowledgment not received or not as expected.", logs::Logger::LogLevel::Warning);
+                success = false;
+            }
+            else {
+                logs::logger.log("File transmission acknowledged.", logs::Logger::LogLevel::Info);
+            }
+        }
+
+        return success;
     }
 
    bool CommunicationSystem::sendMessage(const std::string& message) {
@@ -132,6 +184,28 @@ namespace aircraft {
         
         return returnFlag;
     }
+
+   bool CommunicationSystem::sendMessage(const char* data, size_t size) {
+       bool success = true; 
+
+       int bytesSent = send(this->socketFD, data, static_cast<int>(size), 0);
+       if (bytesSent == SOCKET_ERROR) {
+           logs::logger.log("Failed to send message.", logs::Logger::LogLevel::Error);
+           success = false; 
+       }
+       else {
+           logs::logger.log("Message sent successfully.", logs::Logger::LogLevel::Info);
+       }
+
+       return success; 
+   }
+
+
+    bool CommunicationSystem::sectorHandoff() {
+
+        return true; 
+    }
+
 
 
     void CommunicationSystem::setCommunicationType(CommunicationType type) {

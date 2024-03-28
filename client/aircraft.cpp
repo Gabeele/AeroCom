@@ -39,8 +39,10 @@ namespace aircraft {
             break;
         case AircraftState::Completed:
             newStateStr = "Completed";
+            break;
         default:
             newStateStr = "Unknown State"; 
+            break;
         }
 
 
@@ -73,6 +75,13 @@ namespace aircraft {
                 commsState = CommunicationState::EstablishedConnection;
                 logs::logger.log("Communicate state: Established Connection", logs::Logger::LogLevel::Info);
                 this->communicationReady = true;
+
+                //send large file 
+
+                if (comms.sendFile("./trajectory.png")) {
+                    logs::logger.log("Large file transfer is completed.", logs::Logger::LogLevel::Info);
+                }
+
             }
         }
 

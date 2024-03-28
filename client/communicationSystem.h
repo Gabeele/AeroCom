@@ -25,11 +25,13 @@ namespace aircraft {
         bool disconnect();
 
         bool connect();
-        bool receiveMessage();
+        std::string receiveMessage();
         bool sectorHandoff();
         bool sendMessage(const std::string& message);
+        bool sendMessage(const char* data, size_t size);
         void setCommunicationType(CommunicationType type);
         void setFrequency(const std::string& ipAddress);
+        bool sendFile(const std::string& path);
 
     private:
         SOCKET socketFD;
