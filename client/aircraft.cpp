@@ -41,14 +41,14 @@ namespace aircraft {
             newStateStr = "Completed";
             break;
         default:
-            newStateStr = "Unknown State"; 
+            newStateStr = "Unknown State";
             break;
         }
 
 
         logs::logger.log("Updated aircraft state to: " + newStateStr, logs::Logger::LogLevel::Info);
 
-  
+
         state = newState;
     }
 
@@ -57,9 +57,15 @@ namespace aircraft {
             commsToggle = SystemState::OFF;
             if (!comms.disconnect()) {
                 logs::logger.log("Failed to disconnect communication system.", logs::Logger::LogLevel::Error);
-            
+
             }
             commsState = CommunicationState::Closed;
+
+            listeningActive = false;
+            if (listeningThread.joinable()) {
+                listeningThread.join();
+            }
+
         }
         else {
             this->communicationReady = false;
@@ -69,18 +75,15 @@ namespace aircraft {
                 commsState = CommunicationState::Closed;
                 logs::logger.log("Communicate state: closed", logs::Logger::LogLevel::Info);
 
-                
+
             }
             else {
                 commsState = CommunicationState::EstablishedConnection;
                 logs::logger.log("Communicate state: Established Connection", logs::Logger::LogLevel::Info);
                 this->communicationReady = true;
 
-                //send large file 
-
-                if (comms.sendFile("./trajectory.png")) { // TODO remove hard code
-                    logs::logger.log("Large file transfer is completed.", logs::Logger::LogLevel::Info);
-                }
+                listeningActive = true;
+                listeningThread = std::thread(&Aircraft::listeningOperation, this);
 
             }
         }
@@ -176,8 +179,8 @@ namespace aircraft {
             static unsigned int transmissionNumber = 0;
             buf.setTransmissionNumber(++transmissionNumber);
 
-            buf.setIsPriority(true); 
-            buf.setFlag(ACARSFlag::Data); 
+            buf.setIsPriority(true);
+            buf.setFlag(ACARSFlag::Data);
 
             std::string aircraftTypeStr;
             switch (this->flightInfo.type) {
@@ -191,7 +194,7 @@ namespace aircraft {
                 aircraftTypeStr = "Private";
                 break;
             default:
-                aircraftTypeStr = "Unknown"; 
+                aircraftTypeStr = "Unknown";
                 break;
             }
 
@@ -259,7 +262,7 @@ namespace aircraft {
         const float maxSpeed = 500.0; // Cruising speed in knots
 
         auto startTime = std::chrono::steady_clock::now();
-        
+
         updateAircraftState(AircraftState::Idle);
 
 
@@ -274,17 +277,17 @@ namespace aircraft {
             const float totalDuration = 120.0; // Total flight duration in seconds
 
             // Calculate the phase of the flight
-            if (elapsedTime <= ascentDuration) { 
+            if (elapsedTime <= ascentDuration) {
                 updateAircraftState(AircraftState::Takeoff);
                 flightTelemetry.altitude = maxAltitude * (elapsedTime / ascentDuration);
                 flightTelemetry.speed = maxSpeed * (elapsedTime / ascentDuration);
             }
-            else if (elapsedTime > cruisingStartTime && elapsedTime <= descentStartTime) { 
+            else if (elapsedTime > cruisingStartTime && elapsedTime <= descentStartTime) {
                 flightTelemetry.altitude = maxAltitude;
                 flightTelemetry.speed = maxSpeed;
                 updateAircraftState(AircraftState::InFlight);
             }
-            else if (elapsedTime > descentStartTime && elapsedTime <= totalDuration) { 
+            else if (elapsedTime > descentStartTime && elapsedTime <= totalDuration) {
                 flightTelemetry.altitude = maxAltitude * (1.0 - ((elapsedTime - descentStartTime) / (totalDuration - descentStartTime)));
                 flightTelemetry.speed = maxSpeed * (1.0 - ((elapsedTime - descentStartTime) / (totalDuration - descentStartTime)));
                 updateAircraftState(AircraftState::Landing);
@@ -292,7 +295,7 @@ namespace aircraft {
             else {
                 flightTelemetry.altitude = 0.0;
                 flightTelemetry.speed = 0.0;
-        updateAircraftState(AircraftState::Completed);
+                updateAircraftState(AircraftState::Completed);
             }
 
             // Linear interpolation for latitude and longitude over the flight duration
@@ -313,4 +316,46 @@ namespace aircraft {
         }
     }
 
+    void Aircraft::listeningOperation() {
+        while (listeningActive) {
+            std::string message = comms.receiveMessage();
+            if (message.find("Flag: H") != std::string::npos) {
+                std::string newFrequency = extractFrequency(message);
+                std::string newChannel = extractChannel(message);
+                comms.handoff(newFrequency, newChannel);
+            }
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        }
+    }
+
+
+    std::string Aircraft::extractFrequency(const std::string& message) {
+        std::string frequencyLabel = "Frequency: ";
+        auto startPos = message.find(frequencyLabel);
+        if (startPos != std::string::npos) {
+            startPos += frequencyLabel.length();
+            auto endPos = message.find(" ", startPos);
+            if (endPos == std::string::npos) {
+                endPos = message.length();
+            }
+            return message.substr(startPos, endPos - startPos);
+        }
+        return DEFAULT_FREQUENCY;
+    }
+
+    std::string Aircraft::extractChannel(const std::string& message) {
+        std::string channelLabel = "Channel: ";
+        auto startPos = message.find(channelLabel);
+        if (startPos != std::string::npos) {
+            startPos += channelLabel.length();
+            auto endPos = message.find(" ", startPos);
+            if (endPos == std::string::npos) {
+                endPos = message.length();
+            }
+            return message.substr(startPos, endPos - startPos);
+        }
+        return DEFAULT_CHANNEL_STR;
+
+
+    }
 }
