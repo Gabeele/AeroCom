@@ -89,28 +89,29 @@ namespace aircraft {
     }
 
     std::string CommunicationSystem::receiveMessage() {
-        constexpr std::size_t bufferSize = 1024;
-        char buffer[bufferSize] = { 0 };
-        std::string receivedMessage; 
-        int bytesReceived = recv(socketFD, buffer, bufferSize, 0);
+        const std::size_t bufferSize = 1024;
+        char buffer[bufferSize] = { 0 }; 
+        char* bufferPtr = buffer; 
+
+        std::string receivedMessage;
+
+        int bytesReceived = recv(socketFD, bufferPtr, bufferSize, 0);
 
         if (bytesReceived > 0) {
 
-            receivedMessage = std::string(buffer, static_cast<std::string::size_type>(bytesReceived));
+            receivedMessage = std::string(bufferPtr, static_cast<std::string::size_type>(bytesReceived));
             logs::logger.log("Received message: " + receivedMessage, logs::Logger::LogLevel::Info);
         }
         else if (bytesReceived == 0) {
             logs::logger.log("Connection closed by the remote host.", logs::Logger::LogLevel::Warning);
         }
         else {
-
             int recvError = WSAGetLastError();
             logs::logger.log("Receive failed with error code: " + std::to_string(recvError), logs::Logger::LogLevel::Error);
         }
 
         return receivedMessage;
     }
-
 
     bool CommunicationSystem::sendFile(const std::string& path) {
         bool success = true;
@@ -123,38 +124,52 @@ namespace aircraft {
         }
 
         size_t fileSize = 0;
+        // Proceed only if the file was successfully opened
         if (success) {
-            file.seekg(0, std::ios::end);
-            fileSize = file.tellg();
-            if (fileSize == static_cast<size_t>(-1)) {
-                logs::logger.log("Failed to tell the file size.", logs::Logger::LogLevel::Error);
+            // Check the return value of seekg to ensure it succeeds
+            if (!(file.seekg(0, std::ios::end))) {
+                logs::logger.log("Failed to seek to the end of the file.", logs::Logger::LogLevel::Error);
                 success = false;
             }
-            file.seekg(0, std::ios::beg); 
+            else {
+                fileSize = file.tellg();
+                if (fileSize == static_cast<size_t>(-1)) { // tellg() returns -1 on failure
+                    logs::logger.log("Failed to tell the file size.", logs::Logger::LogLevel::Error);
+                    success = false;
+                }
+                // Check the return value of seekg when seeking back to the beginning
+                if (!(file.seekg(0, std::ios::beg))) {
+                    logs::logger.log("Failed to seek back to the beginning of the file.", logs::Logger::LogLevel::Error);
+                    success = false;
+                }
+            }
         }
 
-        // Send the file size to the server
+        // Send the file size to the server if the file operations were successful
         if (success) {
-            std::string fileSizeStr = "Size: " + std::to_string(fileSize) + "\n";
-            if (!sendMessage(fileSizeStr.c_str(), fileSizeStr.size())) {
+            std::string fileSizeStr = "Filesize:" + std::to_string(fileSize) + "\n";
+            if (!sendMessage(fileSizeStr)) {
                 logs::logger.log("Failed to send file size.", logs::Logger::LogLevel::Error);
                 success = false;
             }
         }
 
-        // Send the actual file content
+        // Send the file content if the file size was successfully sent
         if (success) {
-            char buffer[1024];
-            while (success && file.read(buffer, sizeof(buffer)).gcount() > 0) {
-                size_t bytesToWrite = file.gcount();
-                if (!sendMessage(buffer, bytesToWrite)) {
+            constexpr std::size_t bufferSize = 1024;
+            char buffer[bufferSize]; 
+            char* bufferPtr = buffer; 
+
+            while (success && file.read(bufferPtr, bufferSize) || file.gcount() > 0) {
+                size_t bytesToWrite = static_cast<size_t>(file.gcount());
+                if (!sendMessage(bufferPtr, bytesToWrite)) {
                     logs::logger.log("Failed to send file data.", logs::Logger::LogLevel::Error);
-                    success = false; 
+                    success = false;
+                    break; 
                 }
             }
         }
 
-        // Wait for an acknowledgment from the server
         if (success) {
             std::string ackMsg = receiveMessage();
             if (ackMsg != "akn") { 
@@ -164,6 +179,9 @@ namespace aircraft {
             else {
                 logs::logger.log("File transmission acknowledged.", logs::Logger::LogLevel::Info);
             }
+        }
+        else {
+            logs::logger.log("Skipping acknowledgment check due to previous errors.", logs::Logger::LogLevel::Info);
         }
 
         return success;
@@ -190,6 +208,7 @@ namespace aircraft {
 
        int bytesSent = send(this->socketFD, data, static_cast<int>(size), 0);
        if (bytesSent == SOCKET_ERROR) {
+           std::cerr << "Listen failed with error: " << WSAGetLastError() << std::endl;
            logs::logger.log("Failed to send message.", logs::Logger::LogLevel::Error);
            success = false; 
        }
