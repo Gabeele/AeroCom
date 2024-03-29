@@ -52,7 +52,6 @@ namespace logs {
             // Write to file if stream is valid
             if (isStreamValid) {
                 logStream << logMessage << std::endl;
-                logStream.flush(); 
 
             }
 

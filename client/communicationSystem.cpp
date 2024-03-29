@@ -31,7 +31,6 @@ namespace aircraft {
         }
     }
 
-
     bool CommunicationSystem::disconnect() {
         bool success = false; 
 
@@ -51,7 +50,6 @@ namespace aircraft {
 
         return success;
     }
-
 
     bool CommunicationSystem::connect() {
         bool returnFlag = false; 
@@ -90,16 +88,19 @@ namespace aircraft {
         frequency.sin_addr.s_addr = inet_addr(ipAddress.c_str());
     }
 
-    bool CommunicationSystem::receiveMessage() {
-        bool success = false;
-        char buffer[1024];
-        (void)memset(&buffer[0], 0, sizeof(buffer));  
+    std::string CommunicationSystem::receiveMessage() {
+        const std::size_t bufferSize = 1024;
+        char buffer[bufferSize] = { 0 }; 
+        char* bufferPtr = buffer; 
 
-        int bytesReceived = recv(socketFD, &buffer[0], sizeof(buffer), 0);  
+        std::string receivedMessage;
+
+        int bytesReceived = recv(socketFD, bufferPtr, bufferSize, 0);
+
         if (bytesReceived > 0) {
-            std::string receivedMessage(buffer, bytesReceived);
+
+            receivedMessage = std::string(bufferPtr, static_cast<std::string::size_type>(bytesReceived));
             logs::logger.log("Received message: " + receivedMessage, logs::Logger::LogLevel::Info);
-            success = true;
         }
         else if (bytesReceived == 0) {
             logs::logger.log("Connection closed by the remote host.", logs::Logger::LogLevel::Warning);
@@ -108,13 +109,82 @@ namespace aircraft {
             int recvError = WSAGetLastError();
             logs::logger.log("Receive failed with error code: " + std::to_string(recvError), logs::Logger::LogLevel::Error);
         }
-        return success;
+
+        return receivedMessage;
     }
 
+    bool CommunicationSystem::sendFile(const std::string& path) {
+        bool success = true;
 
-    bool CommunicationSystem::sectorHandoff() {
+        // Open the file in binary mode
+        std::ifstream file(path, std::ios::binary);
+        if (!file.is_open()) {
+            logs::logger.log("Failed to open file: " + path, logs::Logger::LogLevel::Error);
+            success = false;
+        }
 
-        return true; 
+        size_t fileSize = 0;
+        // Proceed only if the file was successfully opened
+        if (success) {
+            // Check the return value of seekg to ensure it succeeds
+            if (!(file.seekg(0, std::ios::end))) {
+                logs::logger.log("Failed to seek to the end of the file.", logs::Logger::LogLevel::Error);
+                success = false;
+            }
+            else {
+                fileSize = file.tellg();
+                if (fileSize == static_cast<size_t>(-1)) { // tellg() returns -1 on failure
+                    logs::logger.log("Failed to tell the file size.", logs::Logger::LogLevel::Error);
+                    success = false;
+                }
+                // Check the return value of seekg when seeking back to the beginning
+                if (!(file.seekg(0, std::ios::beg))) {
+                    logs::logger.log("Failed to seek back to the beginning of the file.", logs::Logger::LogLevel::Error);
+                    success = false;
+                }
+            }
+        }
+
+        // Send the file size to the server if the file operations were successful
+        if (success) {
+            std::string fileSizeStr = "Filesize:" + std::to_string(fileSize) + "\n";
+            if (!sendMessage(fileSizeStr)) {
+                logs::logger.log("Failed to send file size.", logs::Logger::LogLevel::Error);
+                success = false;
+            }
+        }
+
+        // Send the file content if the file size was successfully sent
+        if (success) {
+            constexpr std::size_t bufferSize = 1024;
+            char buffer[bufferSize]; 
+            char* bufferPtr = buffer; 
+
+            while (success && file.read(bufferPtr, bufferSize) || file.gcount() > 0) {
+                size_t bytesToWrite = static_cast<size_t>(file.gcount());
+                if (!sendMessage(bufferPtr, bytesToWrite)) {
+                    logs::logger.log("Failed to send file data.", logs::Logger::LogLevel::Error);
+                    success = false;
+                    break; 
+                }
+            }
+        }
+
+        if (success) {
+            std::string ackMsg = receiveMessage();
+            if (ackMsg != "akn") { 
+                logs::logger.log("Acknowledgment not received or not as expected.", logs::Logger::LogLevel::Warning);
+                success = false;
+            }
+            else {
+                logs::logger.log("File transmission acknowledged.", logs::Logger::LogLevel::Info);
+            }
+        }
+        else {
+            logs::logger.log("Skipping acknowledgment check due to previous errors.", logs::Logger::LogLevel::Info);
+        }
+
+        return success;
     }
 
    bool CommunicationSystem::sendMessage(const std::string& message) {
@@ -132,6 +202,29 @@ namespace aircraft {
         
         return returnFlag;
     }
+
+   bool CommunicationSystem::sendMessage(const char* data, size_t size) {
+       bool success = true; 
+
+       int bytesSent = send(this->socketFD, data, static_cast<int>(size), 0);
+       if (bytesSent == SOCKET_ERROR) {
+           std::cerr << "Listen failed with error: " << WSAGetLastError() << std::endl;
+           logs::logger.log("Failed to send message.", logs::Logger::LogLevel::Error);
+           success = false; 
+       }
+       else {
+           logs::logger.log("Message sent successfully.", logs::Logger::LogLevel::Info);
+       }
+
+       return success; 
+   }
+
+
+    bool CommunicationSystem::sectorHandoff() {
+
+        return true; 
+    }
+
 
 
     void CommunicationSystem::setCommunicationType(CommunicationType type) {

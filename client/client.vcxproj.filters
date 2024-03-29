@@ -30,9 +30,6 @@
     <ClCompile Include="ACARS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="logTransfer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="logger.h">
@@ -45,9 +42,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ACARS.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="logTransfer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

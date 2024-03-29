@@ -2314,3 +2314,531 @@
 [2024-03-28 15:57:05] [INFO] Packet sent.
 [2024-03-28 15:57:06] [INFO] Disconnected from server.
 [2024-03-28 15:57:06] [INFO] Communication switch toggled: OFF
+[2024-03-28 17:25:08] [INFO] Loading flight plan...
+[2024-03-28 17:25:08] [INFO] Flight plan is loaded.
+[2024-03-28 17:25:08] [INFO] Connected to the server.
+[2024-03-28 17:25:08] [INFO] Communicate state: Established Connection
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Message sent successfully.
+[2024-03-28 17:25:08] [INFO] Received message: akn
+[2024-03-28 17:25:08] [INFO] File transmission acknowledged.
+[2024-03-28 17:25:08] [INFO] Communication switch toggled: ON
+[2024-03-28 17:25:08] [INFO] Disconnected from server.
+[2024-03-28 17:25:08] [INFO] Destructing the communicaiton system.
+[2024-03-28 17:36:41] [INFO] Loading flight plan...
+[2024-03-28 17:36:41] [INFO] Flight plan is loaded.
+[2024-03-28 17:36:41] [INFO] Connected to the server.
+[2024-03-28 17:36:41] [INFO] Communicate state: Established Connection
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Message sent successfully.
+[2024-03-28 17:36:41] [INFO] Received message: akn
+[2024-03-28 17:36:41] [INFO] File transmission acknowledged.
+[2024-03-28 17:36:41] [INFO] Communication switch toggled: ON
+[2024-03-28 17:36:41] [INFO] Disconnected from server.
+[2024-03-28 17:36:41] [INFO] Destructing the communicaiton system.
+[2024-03-28 17:51:25] [INFO] Loading flight plan...
+[2024-03-28 17:51:25] [INFO] Flight plan is loaded.
+[2024-03-28 17:51:25] [INFO] Connected to the server.
+[2024-03-28 17:51:25] [INFO] Communicate state: Established Connection
+[2024-03-28 17:51:38] [INFO] Loading flight plan...
+[2024-03-28 17:51:38] [INFO] Flight plan is loaded.
+[2024-03-28 17:51:40] [ERROR] Failed to connect to the server.
+[2024-03-28 17:51:40] [ERROR] Failed to connect communication system.
+[2024-03-28 17:51:40] [INFO] Communicate state: closed
+[2024-03-28 17:51:40] [INFO] Communication switch toggled: ON
+[2024-03-28 17:51:40] [ERROR] Failed to close socket.
+[2024-03-28 17:51:40] [ERROR] WSA Cleanup resulted in an error.
+[2024-03-28 17:51:48] [INFO] Loading flight plan...
+[2024-03-28 17:51:48] [INFO] Flight plan is loaded.
+[2024-03-28 17:51:48] [INFO] Connected to the server.
+[2024-03-28 17:51:48] [INFO] Communicate state: Established Connection
+[2024-03-28 17:52:23] [INFO] Loading flight plan...
+[2024-03-28 17:52:23] [INFO] Flight plan is loaded.
+[2024-03-28 17:52:29] [INFO] Loading flight plan...
+[2024-03-28 17:52:29] [INFO] Flight plan is loaded.
+[2024-03-28 17:52:29] [INFO] Connected to the server.
+[2024-03-28 17:52:29] [INFO] Communicate state: Established Connection
+[2024-03-28 17:55:02] [INFO] Loading flight plan...
+[2024-03-28 17:55:02] [INFO] Flight plan is loaded.
+[2024-03-28 17:55:10] [INFO] Loading flight plan...
+[2024-03-28 17:55:10] [INFO] Flight plan is loaded.
+[2024-03-28 17:55:10] [INFO] Connected to the server.
+[2024-03-28 17:55:10] [INFO] Communicate state: Established Connection
+[2024-03-28 17:55:12] [INFO] Message sent successfully.
+[2024-03-28 17:55:12] [INFO] Message sent successfully.
+[2024-03-28 17:55:12] [ERROR] Failed to send message.
+[2024-03-28 17:55:12] [ERROR] Failed to send file data.
+[2024-03-28 17:55:12] [INFO] Communication switch toggled: ON
+[2024-03-28 17:55:12] [INFO] Disconnected from server.
+[2024-03-28 17:55:12] [INFO] Destructing the communicaiton system.
+[2024-03-28 17:55:23] [INFO] Loading flight plan...
+[2024-03-28 17:55:23] [INFO] Flight plan is loaded.
+[2024-03-28 17:55:23] [INFO] Connected to the server.
+[2024-03-28 17:55:23] [INFO] Communicate state: Established Connection
+[2024-03-28 17:55:23] [INFO] Message sent successfully.
+[2024-03-28 17:55:23] [INFO] Message sent successfully.
+[2024-03-28 17:55:23] [ERROR] Failed to send message.
+[2024-03-28 17:55:23] [ERROR] Failed to send file data.
+[2024-03-28 17:55:23] [INFO] Communication switch toggled: ON
+[2024-03-28 17:55:23] [INFO] Disconnected from server.
+[2024-03-28 17:55:23] [INFO] Destructing the communicaiton system.
+[2024-03-28 17:55:35] [INFO] Loading flight plan...
+[2024-03-28 17:55:35] [INFO] Flight plan is loaded.
+[2024-03-28 17:55:35] [INFO] Connected to the server.
+[2024-03-28 17:55:35] [INFO] Communicate state: Established Connection
+[2024-03-28 17:55:57] [INFO] Message sent successfully.
+[2024-03-28 17:56:05] [INFO] Message sent successfully.
+[2024-03-28 17:56:10] [ERROR] Failed to send message.
+[2024-03-28 17:56:38] [INFO] Loading flight plan...
+[2024-03-28 17:56:38] [INFO] Flight plan is loaded.
+[2024-03-28 17:56:38] [INFO] Connected to the server.
+[2024-03-28 17:56:38] [INFO] Communicate state: Established Connection
+[2024-03-28 17:56:40] [INFO] Message sent successfully.
+[2024-03-28 17:56:40] [INFO] Message sent successfully.
+[2024-03-28 17:56:40] [ERROR] Failed to send message.
+[2024-03-28 17:56:40] [ERROR] Failed to send file data.
+[2024-03-28 17:56:40] [INFO] Communication switch toggled: ON
+[2024-03-28 17:56:40] [INFO] Disconnected from server.
+[2024-03-28 17:56:40] [INFO] Destructing the communicaiton system.
+[2024-03-28 17:57:16] [INFO] Loading flight plan...
+[2024-03-28 17:57:16] [INFO] Flight plan is loaded.
+[2024-03-28 17:57:16] [INFO] Connected to the server.
+[2024-03-28 17:57:16] [INFO] Communicate state: Established Connection
+[2024-03-28 17:57:16] [INFO] Message sent successfully.
+[2024-03-28 17:57:16] [INFO] Message sent successfully.
+[2024-03-28 17:57:16] [ERROR] Failed to send message.
+[2024-03-28 17:57:16] [ERROR] Failed to send file data.
+[2024-03-28 17:57:16] [INFO] Communication switch toggled: ON
+[2024-03-28 17:57:16] [INFO] Disconnected from server.
+[2024-03-28 17:57:16] [INFO] Destructing the communicaiton system.
+[2024-03-29 07:28:47] [INFO] Loading flight plan...
+[2024-03-29 07:28:47] [INFO] Flight plan is loaded.
+[2024-03-29 07:28:47] [INFO] Connected to the server.
+[2024-03-29 07:28:47] [INFO] Communicate state: Established Connection
+[2024-03-29 07:28:47] [INFO] Message sent successfully.
+[2024-03-29 07:28:47] [INFO] Message sent successfully.
+[2024-03-29 07:28:47] [ERROR] Failed to send message.
+[2024-03-29 07:28:47] [ERROR] Failed to send file data.
+[2024-03-29 07:28:47] [INFO] Communication switch toggled: ON
+[2024-03-29 07:28:47] [INFO] Disconnected from server.
+[2024-03-29 07:28:47] [INFO] Destructing the communicaiton system.
+[2024-03-29 07:29:58] [INFO] Loading flight plan...
+[2024-03-29 07:29:58] [INFO] Flight plan is loaded.
+[2024-03-29 07:29:58] [INFO] Connected to the server.
+[2024-03-29 07:29:58] [INFO] Communicate state: Established Connection
+[2024-03-29 07:29:58] [INFO] Message sent successfully.
+[2024-03-29 07:30:51] [INFO] Message sent successfully.
+[2024-03-29 07:31:18] [ERROR] Failed to send message.
+[2024-03-29 07:31:32] [INFO] Loading flight plan...
+[2024-03-29 07:31:32] [INFO] Flight plan is loaded.
+[2024-03-29 07:31:32] [INFO] Connected to the server.
+[2024-03-29 07:31:32] [INFO] Communicate state: Established Connection
+[2024-03-29 07:31:32] [INFO] Message sent successfully.
+[2024-03-29 07:31:35] [INFO] Message sent successfully.
+[2024-03-29 07:36:41] [INFO] Loading flight plan...
+[2024-03-29 07:36:41] [INFO] Flight plan is loaded.
+[2024-03-29 07:36:41] [INFO] Connected to the server.
+[2024-03-29 07:36:41] [INFO] Communicate state: Established Connection
+[2024-03-29 07:36:41] [INFO] Message sent successfully.
+[2024-03-29 07:36:47] [INFO] Message sent successfully.
+[2024-03-29 07:36:48] [ERROR] Failed to send message.
+[2024-03-29 07:36:49] [ERROR] Failed to send file data.
+[2024-03-29 07:37:48] [INFO] Loading flight plan...
+[2024-03-29 07:37:48] [INFO] Flight plan is loaded.
+[2024-03-29 07:37:48] [INFO] Connected to the server.
+[2024-03-29 07:37:48] [INFO] Communicate state: Established Connection
+[2024-03-29 07:37:48] [INFO] Message sent successfully.
+[2024-03-29 07:38:18] [INFO] Message sent successfully.
+[2024-03-29 07:39:18] [INFO] Loading flight plan...
+[2024-03-29 07:39:18] [INFO] Flight plan is loaded.
+[2024-03-29 07:39:18] [INFO] Connected to the server.
+[2024-03-29 07:39:18] [INFO] Communicate state: Established Connection
+[2024-03-29 07:39:18] [INFO] Message sent successfully.
+[2024-03-29 07:39:22] [INFO] Message sent successfully.
+[2024-03-29 07:39:24] [ERROR] 
+[2024-03-29 07:39:25] [ERROR] Failed to send file data.
+[2024-03-29 07:42:04] [INFO] Loading flight plan...
+[2024-03-29 07:42:04] [INFO] Flight plan is loaded.
+[2024-03-29 07:42:04] [INFO] Connected to the server.
+[2024-03-29 07:42:04] [INFO] Communicate state: Established Connection
+[2024-03-29 07:42:04] [INFO] Message sent successfully.
+[2024-03-29 07:42:08] [INFO] Message sent successfully.
+[2024-03-29 07:42:09] [ERROR] Failed to send message.
+[2024-03-29 07:42:09] [ERROR] Failed to send file data.
+[2024-03-29 07:45:23] [INFO] Loading flight plan...
+[2024-03-29 07:45:23] [INFO] Flight plan is loaded.
+[2024-03-29 07:45:23] [INFO] Connected to the server.
+[2024-03-29 07:45:23] [INFO] Communicate state: Established Connection
+[2024-03-29 07:45:23] [INFO] Message sent successfully.
+[2024-03-29 07:45:23] [INFO] Message sent successfully.
+[2024-03-29 07:45:23] [ERROR] Failed to send message.
+[2024-03-29 07:45:23] [ERROR] Failed to send file data.
+[2024-03-29 07:45:23] [INFO] Communication switch toggled: ON
+[2024-03-29 07:45:23] [INFO] Disconnected from server.
+[2024-03-29 07:45:23] [INFO] Destructing the communicaiton system.
+[2024-03-29 07:46:24] [INFO] Loading flight plan...
+[2024-03-29 07:46:24] [INFO] Flight plan is loaded.
+[2024-03-29 07:46:24] [INFO] Connected to the server.
+[2024-03-29 07:46:24] [INFO] Communicate state: Established Connection
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Message sent successfully.
+[2024-03-29 07:46:24] [INFO] Received message: akn
+[2024-03-29 07:46:24] [INFO] File transmission acknowledged.
+[2024-03-29 07:46:24] [INFO] Large file transfer is completed.
+[2024-03-29 07:46:24] [INFO] Communication switch toggled: ON
+[2024-03-29 07:46:24] [INFO] Disconnected from server.
+[2024-03-29 07:46:24] [INFO] Destructing the communicaiton system.
+[2024-03-29 07:48:13] [INFO] Loading flight plan...
+[2024-03-29 07:48:13] [INFO] Flight plan is loaded.
+[2024-03-29 07:48:13] [INFO] Connected to the server.
+[2024-03-29 07:48:13] [INFO] Communicate state: Established Connection
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Message sent successfully.
+[2024-03-29 07:48:13] [INFO] Received message: akn
+[2024-03-29 07:48:13] [INFO] File transmission acknowledged.
+[2024-03-29 07:48:13] [INFO] Large file transfer is completed.
+[2024-03-29 07:48:13] [INFO] Communication switch toggled: ON
+[2024-03-29 07:48:13] [INFO] Disconnected from server.
+[2024-03-29 07:48:13] [INFO] Destructing the communicaiton system.
+[2024-03-29 07:52:29] [INFO] Loading flight plan...
+[2024-03-29 07:52:29] [INFO] Flight plan is loaded.
+[2024-03-29 07:52:29] [INFO] Connected to the server.
+[2024-03-29 07:52:29] [INFO] Communicate state: Established Connection
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Message sent successfully.
+[2024-03-29 07:52:29] [INFO] Received message: akn
+[2024-03-29 07:52:29] [INFO] File transmission acknowledged.
+[2024-03-29 07:52:29] [INFO] Large file transfer is completed.
+[2024-03-29 07:52:29] [INFO] Communication switch toggled: ON
+[2024-03-29 07:52:29] [INFO] Disconnected from server.
+[2024-03-29 07:52:29] [INFO] Destructing the communicaiton system.
+[2024-03-29 07:54:01] [INFO] Loading flight plan...
+[2024-03-29 07:54:01] [INFO] Flight plan is loaded.
+[2024-03-29 07:54:01] [INFO] Connected to the server.
+[2024-03-29 07:54:01] [INFO] Communicate state: Established Connection
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Message sent successfully.
+[2024-03-29 07:54:01] [INFO] Received message: akn
+[2024-03-29 07:54:01] [INFO] File transmission acknowledged.
+[2024-03-29 07:54:01] [INFO] Large file transfer is completed.
+[2024-03-29 07:54:01] [INFO] Communication switch toggled: ON
+[2024-03-29 07:54:01] [INFO] Disconnected from server.
+[2024-03-29 07:54:01] [INFO] Destructing the communicaiton system.
