@@ -78,7 +78,7 @@ namespace aircraft {
 
                 //send large file 
 
-                if (comms.sendFile("./trajectory.png")) {
+                if (comms.sendFile("./trajectory.png")) { // TODO remove hard code
                     logs::logger.log("Large file transfer is completed.", logs::Logger::LogLevel::Info);
                 }
 
@@ -89,7 +89,6 @@ namespace aircraft {
         logs::logger.log("Communication switch toggled: " + commsStateString, logs::Logger::LogLevel::Info);
 
 
-        // TODO proabbly some kind of listening 
     }
 
     void Aircraft::toggleACARSSystem() {
@@ -227,7 +226,6 @@ namespace aircraft {
         }
     }
 
-
     AircraftState Aircraft::getAircraftState() {
         return this->state;
     }
@@ -245,6 +243,7 @@ namespace aircraft {
             }
         }
     }
+
     void Aircraft::simulateTelemetryOperation() {
 
         const double PI = 3.14159265358979323846;
