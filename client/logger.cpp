@@ -1,11 +1,13 @@
+// This file is used to denote the functions for logger
+
 #include "logger.h"
 
 namespace logs {
 
     Logger::Logger(const std::string& logFile, bool logToStdout)
         : logToStdout(logToStdout), isStreamValid(false) {
+
         if (logToStdout) {
-            // Logging to stdout does not require initialization.
             isStreamValid = true;
         }
 
@@ -24,45 +26,50 @@ namespace logs {
         }
     }
 
-
-
     void Logger::log(const std::string& message, LogLevel level) {
-        bool exitFlag = false;
+        std::string timeStr = getTimeString();
+        std::ostringstream logStreamMsg;
+
+        logStreamMsg << timeStr << " "
+            << "[" << logLevelToString(level) << "] " << message;
+
+        std::string logMessage = logStreamMsg.str();
+
+        // Write the streams if valid 
+        if (isStreamValid) {
+            logStream << logMessage << std::endl;
+        }
+
+        if (logToStdout) {
+            std::cout << logMessage << std::endl;
+        }
+    }
+
+    std::string Logger::getTimeString() const {
         std::time_t t = std::time(nullptr);
         std::tm tm;
         errno_t localtimeResult = localtime_s(&tm, &t);
 
-        if (localtimeResult != 0) {
-            exitFlag = true;
-        }
+        std::string result;
 
-        if (!exitFlag) {
-            std::ostringstream logStreamMsg;
-            logStreamMsg << "[" << tm.tm_year + 1900 << "-"
+        /// Use the current time and build a time stamp string
+        if (localtimeResult != 0) {
+            result = "[Error getting time]";
+        }
+        else {
+
+            std::ostringstream timestampStream;
+            timestampStream << "[" << tm.tm_year + 1900 << "-"
                 << std::setfill('0') << std::setw(2) << tm.tm_mon + 1 << "-"
                 << std::setfill('0') << std::setw(2) << tm.tm_mday << " "
                 << std::setfill('0') << std::setw(2) << tm.tm_hour << ":"
                 << std::setfill('0') << std::setw(2) << tm.tm_min << ":"
-                << std::setfill('0') << std::setw(2) << tm.tm_sec << "] "
-                << "[" << logLevelToString(level) << "] " << message;
-
-            // Convert the stringstream to std::string
-            std::string logMessage = logStreamMsg.str();
-
-            // Write to file if stream is valid
-            if (isStreamValid) {
-                logStream << logMessage << std::endl;
-
-            }
-
-            // Optionally, write to stdout
-            if (logToStdout) {
-                std::cout << logMessage << std::endl;
-            }
-
+                << std::setfill('0') << std::setw(2) << tm.tm_sec << "]";
+            result = timestampStream.str();
         }
-    }
 
+        return result;
+    }
 
     std::string Logger::logLevelToString(LogLevel level) const {
         std::string levelString;

@@ -1,3 +1,4 @@
+// This file is used to denote the aircraft functions and properties
 #ifndef AIRCRAFT_H
 #define AIRCRAFT_H
 
@@ -20,10 +21,8 @@ namespace aircraft {
 
     class Aircraft {
     public:
-        explicit Aircraft(const std::string& identifier);
-        Aircraft(const std::string& identifier, AircraftState state, SystemState commsState, SystemState acarsState,
-            unsigned int flightNumber, FlightType flightType, const std::string& departureAirport, const std::string& arrivalAirport,
-            float latitude, float longitude, float altitude, float speed, unsigned int heading);
+        Aircraft(const std::string& identifier);
+        Aircraft(const std::string& identifier, AircraftState state, SystemState commsState, SystemState acarsState,unsigned int flightNumber, FlightType flightType, const std::string& departureAirport, const std::string& arrivalAirport,float latitude, float longitude, float altitude, float speed, unsigned int heading);
         void updateAircraftState(AircraftState newState);
         void toggleCommunicationSystem();
         void toggleACARSSystem();
@@ -80,5 +79,5 @@ namespace aircraft {
 
 
     };
-#endif
 }
+#endif
