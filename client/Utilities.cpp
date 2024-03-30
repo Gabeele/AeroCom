@@ -1,3 +1,4 @@
+// This file denotes all the utility functions for enums and other global scopped artifacts
 #include "Utilities.h"
 
 namespace aircraft {
