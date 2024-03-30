@@ -7,16 +7,18 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include "Handoff.h"
 
 namespace GroundControl {
 
     const std::string DEFAULT_FREQUENCY = "127.0.0.1";
+
     const unsigned int DEFAULT_CHANNEL = 5555;
 
     enum class CommunicationType { VHF, HF };
     // maybe some sort of channel for ground control to communicate over
 
-    class GroundControl 
+    class GroundControl
     {
     public:
         GroundControl(); // constructor wit da parameters
@@ -34,7 +36,7 @@ namespace GroundControl {
 
         // maybe should be broken down into a function that requests a hand off and one that accepts it
         // /03/24 edit,i have no idea what i was thinking above
-        void HandleATCToAircraftHandoffRequest(GroundControl* targetServer, char* targetAircraft);
+        void HandleATCToAircraftHandoffRequest(Handoff* targetServer, std::string targetAircraft);
 
         bool SwitchFrequency(int newPort);
     private:

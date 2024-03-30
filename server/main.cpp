@@ -5,6 +5,12 @@ int main()
 {
 	GroundControl::GroundControl gc;
 	SOCKET clientSocket;
+	
+
+	std::string tempFlag = "H";
+	std::string tempFreq = "192.168.1.33";
+	std::string tempChan = "HF";
+	GroundControl::Handoff handoff(tempFlag, tempFreq, tempChan);
 
 	gc.Initialize();
 
@@ -19,6 +25,8 @@ int main()
 			try
 			{
 				clientSocket = gc.AcceptConnection();
+
+				gc.HandleATCToAircraftHandoffRequest(&handoff, "127.0.0.2");
 			}
 			catch (std::exception error)
 			{

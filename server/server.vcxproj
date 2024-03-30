@@ -132,10 +132,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="communication_system.cpp" />
+    <ClCompile Include="Handoff.cpp" />
+    <ClCompile Include="logger.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="communication_system.h" />
+    <ClInclude Include="Handoff.h" />
+    <ClInclude Include="logger.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
