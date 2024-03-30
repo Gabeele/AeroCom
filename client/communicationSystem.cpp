@@ -80,9 +80,9 @@ namespace aircraft {
                 }
             }
 
-            //if (intializeCommunication()) { // run the first step connection process of sending a trajectory file
-            //    success = true;
-            //}
+            if (intializeCommunication()) { // run the first step connection process of sending a trajectory file
+                success = true;
+            }
         }
 
         return success;
