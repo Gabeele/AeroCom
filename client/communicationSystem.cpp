@@ -235,15 +235,44 @@ namespace aircraft {
    }
 
 
-    bool CommunicationSystem::handoff(const std::string freqency, const std::string channel) {
+   bool CommunicationSystem::handoff(const std::string& newFrequency, const std::string& newChannel) {
+       bool success = true; 
 
-        setFrequency(freqency);
-        setChannel(channel);
-        disconnect();
-        connect();
+       setFrequency(newFrequency);
+       setChannel(newChannel);
 
-        return true; 
-    }
+       if (!disconnect()) {
+           logs::logger.log("Failed to disconnect using current settings.", logs::Logger::LogLevel::Error);
+           success = false;
+       }
+
+       if (!connect()) {
+
+           logs::logger.log("Connection with new settings failed, reverting to previous settings.", logs::Logger::LogLevel::Warning);
+           setFrequency(this->getFrequencyString());
+           setChannel(this->getChannelString());
+
+           if (!disconnect()) {
+               logs::logger.log("Failed to disconnect using current settings.", logs::Logger::LogLevel::Error);
+               success = false;
+           }
+
+           if (!connect()) {
+              
+               logs::logger.log("Reconnection with original settings also failed.", logs::Logger::LogLevel::Error);
+               success = false;
+           }
+           else {
+               
+               success = true;
+           }
+       }
+  
+
+       return success; 
+   }
+
+
 
     void CommunicationSystem::setChannel(const std::string& channelString) {
 
@@ -263,6 +292,15 @@ namespace aircraft {
 
     void CommunicationSystem::setCommunicationType(CommunicationType type) {
         this->channel = type;
+    }
+
+    std::string CommunicationSystem::getFrequencyString() const {
+        return inet_ntoa(frequency.sin_addr);
+    }
+
+    std::string CommunicationSystem::getChannelString() const {
+
+        return this->channel == CommunicationType::HF ? "HF" : "VHF";
     }
 
 }

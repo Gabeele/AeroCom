@@ -316,17 +316,6 @@ namespace aircraft {
         }
     }
 
-    void Aircraft::listeningOperation() {
-        while (listeningActive) {
-            std::string message = comms.receiveMessage();
-            if (message.find("Flag: H") != std::string::npos) {
-                std::string newFrequency = extractFrequency(message);
-                std::string newChannel = extractChannel(message);
-                comms.handoff(newFrequency, newChannel);
-            }
-        }
-    }
-
     void Aircraft::setFrequencyChannel(const std::string frequency, const std::string channel) {
 
         comms.setFrequency(frequency);
@@ -334,34 +323,57 @@ namespace aircraft {
 
     }
 
+    void Aircraft::listeningOperation() {
+        std::string handoffFlag = "Flag: H";
+
+        while (listeningActive) {
+            std::string message = comms.receiveMessage();
+            if (message.find(handoffFlag) != std::string::npos) {
+                std::string newFrequency = extractFrequency(message);
+                std::string newChannel = extractChannel(message);
+                if (comms.handoff(newFrequency, newChannel)) {
+                    logs::logger.log("Handoff completed. Connected to new server.", logs::Logger::LogLevel::Info);
+                }
+                else{
+                    logs::logger.log("Handoff didn't work.", logs::Logger::LogLevel::Error);
+            }
+            }
+        }
+    }
+
     std::string Aircraft::extractFrequency(const std::string& message) {
+        std::string result = DEFAULT_FREQUENCY; 
         std::string frequencyLabel = "Frequency: ";
+
         auto startPos = message.find(frequencyLabel);
         if (startPos != std::string::npos) {
+        std::string space = " ";    
             startPos += frequencyLabel.length();
-            auto endPos = message.find(" ", startPos);
+            auto endPos = message.find(space, startPos);
             if (endPos == std::string::npos) {
                 endPos = message.length();
             }
-            return message.substr(startPos, endPos - startPos);
+            result = message.substr(startPos, endPos - startPos); 
         }
-        return DEFAULT_FREQUENCY;
+        return result; // Single return statement
     }
 
     std::string Aircraft::extractChannel(const std::string& message) {
+        std::string result = DEFAULT_CHANNEL_STR; 
         std::string channelLabel = "Channel: ";
+
         auto startPos = message.find(channelLabel);
         if (startPos != std::string::npos) {
+        std::string space = " ";
             startPos += channelLabel.length();
-            auto endPos = message.find(" ", startPos);
+            auto endPos = message.find(space, startPos);
             if (endPos == std::string::npos) {
                 endPos = message.length();
             }
-            return message.substr(startPos, endPos - startPos);
+            result = message.substr(startPos, endPos - startPos); 
         }
-        return DEFAULT_CHANNEL_STR;
-
-
+        return result; 
     }
+
 }
 
