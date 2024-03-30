@@ -2,12 +2,10 @@
 
 namespace aircraft {
 
-    // Default constructor
     ACARS::ACARS() : transmissionNumber(0), isPriority(false), flag(ACARSFlag::Data),
         latitude(0.0), longitude(0.0), altitude(0.0),
         speed(0.0), heading(0) {}
 
-    // Parameterized constructor
     ACARS::ACARS(unsigned int transNum, bool priority, ACARSFlag flg,
         const std::string& acID, const std::string& gsID,
         const std::string& flNumber, const std::string& acType,
@@ -21,14 +19,16 @@ namespace aircraft {
         latitude(lat), longitude(lon), altitude(alt),
         speed(spd), heading(hdg) {}
 
-
     std::string ACARS::generateChecksum(const std::string& packetContent) const {
         unsigned int checksum = 0;
+
         for (char c : packetContent) {
             checksum += static_cast<unsigned int>(c);
         }
+
         std::stringstream ss;
         ss << std::hex << checksum;
+
         return ss.str();
     }
 
@@ -38,8 +38,8 @@ namespace aircraft {
         // Start of Packet
         packet << "START\n";
 
-        // TODO Dynamically calculate size if needed or leave as placeholder
-        packet << "Size: -\n";
+
+        packet << "Size: -\n"; // The size seems to always be the same so we won't need to add it
 
         packet << "Transmission Number: " << transmissionNumber << "\n";
         packet << "Message Priority: " << (isPriority ? "Yes" : "No") << "\n";
@@ -96,10 +96,7 @@ namespace aircraft {
     }
 
     void ACARS::setFlag(ACARSFlag flag) {
-
-
         this->flag = flag;
-
     }
 
     void ACARS::setAircraftID(const std::string& id) {
@@ -150,6 +147,5 @@ namespace aircraft {
 
         return timestamp; 
     }
-
 
 }

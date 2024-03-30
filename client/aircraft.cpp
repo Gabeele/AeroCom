@@ -2,7 +2,6 @@
 
 namespace aircraft {
 
-    // Constructor
     Aircraft::Aircraft(const std::string& identifier) :
         identifier(identifier),
         state(AircraftState::InFlight),
@@ -12,191 +11,202 @@ namespace aircraft {
         flightTelemetry{ 0.0, 0.0, 0.0, 0.0, 0 } {
 
     }
-
-    Aircraft::Aircraft(const std::string& identifier, AircraftState state, SystemState commsState, SystemState acarsState,
-        unsigned int flightNumber, FlightType flightType, const std::string& departureAirport, const std::string& arrivalAirport,
-        float latitude, float longitude, float altitude, float speed, unsigned int heading)
-        : identifier(identifier), state(state), commsToggle(commsState), acarsToggle(acarsState),
-        flightInfo{ flightNumber, flightType, departureAirport, arrivalAirport },
-        flightTelemetry{ latitude, longitude, altitude, speed, heading } {
-    }
-
+   
     void Aircraft::updateAircraftState(AircraftState newState) {
-        // Convert the newState enum to a descriptive string
-        std::string newStateStr;
-        switch (newState) {
-        case AircraftState::Idle:
-            newStateStr = "Idle";
-            break;
-        case AircraftState::InFlight:
-            newStateStr = "In Flight";
-            break;
-        case AircraftState::Takeoff:
-            newStateStr = "Takeoff";
-            break;
-        case AircraftState::Landing:
-            newStateStr = "Landing";
-            break;
-        case AircraftState::Completed:
-            newStateStr = "Completed";
-            break;
-        default:
-            newStateStr = "Unknown State";
-            break;
-        }
-
-
-        logs::logger.log("Updated aircraft state to: " + newStateStr, logs::Logger::LogLevel::Info);
-
 
         state = newState;
+
+        logs::logger.log("Updated aircraft state to: " + aircraft::aircraftStateToString(state), logs::Logger::LogLevel::Info);
     }
 
+    AircraftState Aircraft::getAircraftState() {
+        return this->state;
+    }
+
+    void aircraft::Aircraft::setCommState(CommunicationState newState) 
+    {
+            this->commsState = newState;
+            logs::logger.log("Communication state set to: " + CommunicationStateToString(newState), logs::Logger::LogLevel::Info);
+
+     }
     void Aircraft::toggleCommunicationSystem() {
+
         if (commsToggle == SystemState::ON) {
-            commsToggle = SystemState::OFF;
-            if (!comms.disconnect()) {
-                logs::logger.log("Failed to disconnect communication system.", logs::Logger::LogLevel::Error);
 
-            }
-            commsState = CommunicationState::Closed;
+            commsToggle = SystemState::OFF;     // Toggle off
 
-            listeningActive = false;
-            if (listeningThread.joinable()) {
+            this->listeningActive = false;    // Set listen to false
+
+            if (listeningThread.joinable()) {   // Join the threads
                 listeningThread.join();
+            }
+            if (comms.disconnect()) {      // Attempt to disconnect
+
+                setCommState(CommunicationState::Closed);   // Close the comm state
+
             }
 
         }
         else {
-            this->communicationReady = false;
-            commsToggle = SystemState::ON;
-            if (!comms.connect()) {
-                logs::logger.log("Failed to connect communication system.", logs::Logger::LogLevel::Error);
-                commsState = CommunicationState::Closed;
-                logs::logger.log("Communicate state: closed", logs::Logger::LogLevel::Info);
 
+            commsToggle = SystemState::ON;  // Toggle On
+
+            this->communicationReady = false;
+
+            if (!comms.connect()) {
+
+                logs::logger.log("Failed to connect communication system.", logs::Logger::LogLevel::Error);
+                setCommState(CommunicationState::Closed);
 
             }
             else {
-                commsState = CommunicationState::EstablishedConnection;
-                logs::logger.log("Communicate state: Established Connection", logs::Logger::LogLevel::Info);
-                this->communicationReady = true;
+                setCommState(CommunicationState::EstablishedConnection);
 
-                listeningActive = true;
+                this->communicationReady = true;
+                this->listeningActive = true;
+
                 listeningThread = std::thread(&Aircraft::listeningOperation, this);
 
             }
         }
 
-        std::string commsStateString = (commsToggle == SystemState::ON) ? "ON" : "OFF";
-        logs::logger.log("Communication switch toggled: " + commsStateString, logs::Logger::LogLevel::Info);
-
+        logs::logger.log("Communication toggled: " + SystemStateToString(commsToggle), logs::Logger::LogLevel::Info);
 
     }
 
     void Aircraft::toggleACARSSystem() {
 
-        acarsToggle = (acarsToggle == SystemState::ON) ? SystemState::OFF : SystemState::ON;
-        if (acarsToggle == SystemState::ON && commsToggle == SystemState::ON) {
+        acarsToggle = (acarsToggle == SystemState::ON) ? SystemState::OFF : SystemState::ON;    // Toggle
+
+        if (acarsToggle == SystemState::ON && commsToggle == SystemState::ON) {     // Activate the acars thread 
             acarsActive = true;
+
             acarsThread = std::thread(&Aircraft::acarsOperation, this);
+
         }
-        else {
+        else {  // Otherwise it should be joined
+
             acarsActive = false;
+
             if (acarsThread.joinable()) {
                 acarsThread.join();
             }
         }
     }
 
-    void Aircraft::loadFlightPlan(const std::string& filepath) {
-        bool exit = false;
+    void Aircraft::toggleSimulateTelemetry() {
+
+        simulateState = (simulateState == SystemState::ON) ? SystemState::OFF : SystemState::ON;    // Toggle
+
+        if (simulateState == SystemState::ON) {     // Start the simulation thread
+
+            simulateTelemetryActive = true;
+
+            simulateTelemetryThread = std::thread(&Aircraft::simulateTelemetryOperation, this);
+        }
+        else {  // Otherwise join
+
+            simulateTelemetryActive = false;
+
+            if (simulateTelemetryThread.joinable()) {
+                simulateTelemetryThread.join();
+            }
+        }
+    }
+
+    bool Aircraft::loadFlightPlan(const std::string & filepath) {
+        bool success = true;
 
         logs::logger.log("Loading flight plan...", logs::Logger::LogLevel::Info);
 
         this->flightPlanLoaded = false;
 
         std::ifstream file(filepath);
+
         if (!file) {
             logs::logger.log("Error loading the flight plan. Is the file missing?", logs::Logger::LogLevel::Error);
-
-            exit = true;
-
+            success = false;
         }
 
-        if (exit == false) {
+        if (success) {
             std::string line;
 
             // Read Flight Number
             if (std::getline(file, line)) {
                 flightInfo.number = std::stoul(line);
+                success = true;
+            }
+            else {
+                success = false;
             }
 
             // Read Flight Type
-            if (std::getline(file, line)) {
+            if (success && std::getline(file, line)) {
+                flightInfo.type = fromStringToFlightType(line);
+                success = true;
 
-                if (line == "Cargo") {
-                    flightInfo.type = FlightType::Cargo;
-                }
-                else if (line == "Private") {
-                    flightInfo.type = FlightType::Private;
-                }
-                else {
-                    flightInfo.type = FlightType::Commercial;
-                }
+            }
+            else {
+                success = false;
             }
 
             // Read Departure Airport
-            if (std::getline(file, line)) {
+            if (success && std::getline(file, line)) {
                 flightInfo.departureAirport = line;
+                success = true;
+
+            }
+            else {
+                success = false;
             }
 
             // Read Arrival Airport
-            if (std::getline(file, line)) {
+            if (success && std::getline(file, line)) {
                 flightInfo.arrivalAirport = line;
+                success = true;
+
             }
+            else {
+                success = false;
+            }
+        }
 
-            file.close();
+        file.close();
 
+        if (success) {
             this->flightPlanLoaded = true;
             logs::logger.log("Flight plan is loaded.", logs::Logger::LogLevel::Info);
-
         }
+        else {
+            logs::logger.log("Failed to load the flight plan.", logs::Logger::LogLevel::Error);
+        }
+
+        return success;
+
     }
 
     void Aircraft::acarsOperation() {
-        commsState = CommunicationState::Sending;
-        logs::logger.log("Communicate state: sending", logs::Logger::LogLevel::Info);
+
+        setCommState(CommunicationState::Sending);
+
         while (acarsActive) {
 
-            if (!flightPlanLoaded || !communicationReady) {
+            if (!flightPlanLoaded || !communicationReady) {     // Block any packets from being built if the flight plan isn't loaded or communicaiton isn't ready
                 continue;
             }
 
+
+            // Building acars packet using the current flight data. 
+
             ACARS buf;
 
-            // Increment transmission number for each new packet
             static unsigned int transmissionNumber = 0;
             buf.setTransmissionNumber(++transmissionNumber);
 
             buf.setIsPriority(true);
             buf.setFlag(ACARSFlag::Data);
 
-            std::string aircraftTypeStr;
-            switch (this->flightInfo.type) {
-            case FlightType::Cargo:
-                aircraftTypeStr = "Cargo";
-                break;
-            case FlightType::Commercial:
-                aircraftTypeStr = "Commercial";
-                break;
-            case FlightType::Private:
-                aircraftTypeStr = "Private";
-                break;
-            default:
-                aircraftTypeStr = "Unknown";
-                break;
-            }
+            std::string aircraftTypeStr = FlightTypeToString(this->flightInfo.type);
 
             buf.setAircraftID(this->identifier);
             buf.setFlightInformation(
@@ -218,32 +228,11 @@ namespace aircraft {
 
             bool result = comms.sendMessage(packet);
 
-            if (result) {
-                logs::logger.log("Packet sent.", logs::Logger::LogLevel::Info);
-            }
-            else {
-                logs::logger.log("Failed to send packet.", logs::Logger::LogLevel::Error);
+            if (!result) {
+                logs::logger.log("Error sending ACARS packet from aircraft.", logs::Logger::LogLevel::Error);
             }
 
             std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-    }
-
-    AircraftState Aircraft::getAircraftState() {
-        return this->state;
-    }
-
-    void Aircraft::toggleSimulateTelemetry() {
-        simulateState = (simulateState == SystemState::ON) ? SystemState::OFF : SystemState::ON;
-        if (simulateState == SystemState::ON) {
-            simulateTelemetryActive = true;
-            simulateTelemetryThread = std::thread(&Aircraft::simulateTelemetryOperation, this);
-        }
-        else {
-            simulateTelemetryActive = false;
-            if (simulateTelemetryThread.joinable()) {
-                simulateTelemetryThread.join();
-            }
         }
     }
 
@@ -316,52 +305,95 @@ namespace aircraft {
         }
     }
 
-    void Aircraft::listeningOperation() {
-        while (listeningActive) {
-            std::string message = comms.receiveMessage();
-            if (message.find("Flag: H") != std::string::npos) {
-                std::string newFrequency = extractFrequency(message);
-                std::string newChannel = extractChannel(message);
-                comms.handoff(newFrequency, newChannel);
-            }
-        }
-    }
-
-    void Aircraft::setFrequencyChannel(const std::string frequency, const std::string channel) {
+    void Aircraft::setFrequencyChannel(const std::string & frequency, const std::string & channel) {
 
         comms.setFrequency(frequency);
         comms.setChannel(channel);
 
     }
 
-    std::string Aircraft::extractFrequency(const std::string& message) {
+    void Aircraft::listeningOperation() {
+        std::string handoffFlag = "Flag: H";    // Flag patter for handoff request
+
+        while (listeningActive) {
+
+            std::string message = comms.receiveMessage();   // Listen for receive 
+
+            // Find and extract the frequency and channel
+            if (message.find(handoffFlag) != std::string::npos) {
+
+                std::string newFrequency = extractFrequency(message);
+                std::string newChannel = extractChannel(message);
+
+                if (comms.handoff(newFrequency, newChannel)) {
+                    logs::logger.log("Handoff completed. Connected to new server.", logs::Logger::LogLevel::Info);
+                }
+                else {
+                    logs::logger.log("Handoff didn't work.", logs::Logger::LogLevel::Error);
+                }
+            }
+
+            // If received no message then an error has occurred. The system will attempt a reconnect of the last known freq and chann
+            if (message == "") {
+                communicationReady = false;
+                
+                if (comms.reconnect()) {
+                    logs::logger.log("Connected back. Resuming operations.", logs::Logger::LogLevel::Info);
+                    communicationReady = true;
+
+                }
+                else {
+                    logs::logger.log("Reconnect failed. Use emergency backup communication systems.", logs::Logger::LogLevel::Error);
+                }
+            }
+        }
+    }
+
+    std::string Aircraft::extractFrequency(const std::string & message) {
+
+        std::string result = DEFAULT_FREQUENCY;
         std::string frequencyLabel = "Frequency: ";
+
         auto startPos = message.find(frequencyLabel);
+
         if (startPos != std::string::npos) {
+
+            std::string space = " ";
             startPos += frequencyLabel.length();
-            auto endPos = message.find(" ", startPos);
+
+            auto endPos = message.find(space, startPos);
+
             if (endPos == std::string::npos) {
                 endPos = message.length();
             }
-            return message.substr(startPos, endPos - startPos);
+
+            result = message.substr(startPos, endPos - startPos);
         }
-        return DEFAULT_FREQUENCY;
+        return result; 
     }
 
-    std::string Aircraft::extractChannel(const std::string& message) {
+    std::string Aircraft::extractChannel(const std::string & message) {
+
+        std::string result = DEFAULT_CHANNEL_STR;
         std::string channelLabel = "Channel: ";
+
         auto startPos = message.find(channelLabel);
+
         if (startPos != std::string::npos) {
+
+            std::string space = " ";
             startPos += channelLabel.length();
-            auto endPos = message.find(" ", startPos);
+
+            auto endPos = message.find(space, startPos);
+
             if (endPos == std::string::npos) {
                 endPos = message.length();
             }
-            return message.substr(startPos, endPos - startPos);
-        }
-        return DEFAULT_CHANNEL_STR;
 
+            result = message.substr(startPos, endPos - startPos);
+        }
+        return result;
+    }
 
     }
-}
 

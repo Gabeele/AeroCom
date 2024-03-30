@@ -132,12 +132,14 @@
     <ClCompile Include="communicationSystem.cpp" />
     <ClCompile Include="logger.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ACARS.h" />
     <ClInclude Include="aircraft.h" />
     <ClInclude Include="communicationSystem.h" />
     <ClInclude Include="logger.h" />
+    <ClInclude Include="Utilities.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

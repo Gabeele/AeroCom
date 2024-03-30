@@ -1,5 +1,6 @@
 #include "communicationSystem.h"
 
+
 namespace aircraft {
 
 #pragma comment(lib, "ws2_32.lib")
@@ -7,16 +8,20 @@ namespace aircraft {
 
     CommunicationSystem::CommunicationSystem() : socketFD(INVALID_SOCKET) {
 
-        setCommunicationType(CommunicationType::VHF);
+        setChannel(DEFAULT_CHANNEL_STR);    // Sets the default channel and frequency
+        setFrequency(DEFAULT_FREQUENCY);
+        
+        
+        // Initalizes windows sockets
 
         WSADATA wsaData;
         int result = WSAStartup(MAKEWORD(2, 2), &wsaData);
+
         if (result != 0) {
             logs::logger.log("WSA Startup has an issue. Result is non-zero.", logs::Logger::LogLevel::Error);
         }
 
         frequency.sin_family = AF_INET;
-        frequency.sin_addr.s_addr = inet_addr(DEFAULT_FREQUENCY.c_str()); 
         frequency.sin_port = htons(static_cast<u_short>(this->channel));
 
     }
@@ -54,6 +59,8 @@ namespace aircraft {
     bool CommunicationSystem::connect() {
         bool success = false; 
 
+        // Windows sockets connection initalization
+
         socketFD = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
         if (socketFD == INVALID_SOCKET) {
             logs::logger.log("Error opening the socket.", logs::Logger::LogLevel::Error);
@@ -62,6 +69,7 @@ namespace aircraft {
             // Attempt to connect
             if (::connect(socketFD, reinterpret_cast<struct sockaddr*>(&frequency), sizeof(frequency)) == SOCKET_ERROR) {
                 logs::logger.log("Failed to connect to the server.", logs::Logger::LogLevel::Error);
+                success = false;
             }
             else {
                 logs::logger.log("Connected to the server.", logs::Logger::LogLevel::Info);
@@ -72,16 +80,21 @@ namespace aircraft {
                 if (closesocket(socketFD) == SOCKET_ERROR) {
                     int closeError = WSAGetLastError();
                     logs::logger.log("closesocket failed with error code: " + std::to_string(closeError), logs::Logger::LogLevel::Error);
+                    success = false;
                 }
 
                 if (WSACleanup() == SOCKET_ERROR) {
                     int wsacleanupError = WSAGetLastError();
                     logs::logger.log("WSACleanup failed with error code: " + std::to_string(wsacleanupError), logs::Logger::LogLevel::Error);
+                    success = false;
                 }
             }
 
-            if (intializeCommunication()) { // run the first step connection process of sending a trajectory file
+            if (intializeCommunication()) {     // Execute the initalization step
                 success = true;
+            }
+            else {
+                success = false;
             }
         }
 
@@ -90,10 +103,26 @@ namespace aircraft {
 
     bool CommunicationSystem::intializeCommunication() {
         bool success = false;
+        const std::string aknowledgeFlag = "Flag: A";
 
-        if (sendFile("./trajectory.png")) { // TODO remove hard code
-            logs::logger.log("Large file transfer is completed.", logs::Logger::LogLevel::Info);
+        // Send the trajectory to the connected server
+        if (sendFile(TRAJECTORY_PATH)) {
+            logs::logger.log("Large file sent.", logs::Logger::LogLevel::Info);
             success = true;
+        }
+
+        // Receive an aknowledgement packet
+        if (success) {
+            std::string ackMsg = receiveMessage();
+
+            if (ackMsg.find(aknowledgeFlag) == std::string::npos) {
+
+                logs::logger.log("Acknowledgment not received or not as expected.", logs::Logger::LogLevel::Warning);
+                success = false;
+            }
+            else {
+                logs::logger.log("File transmission acknowledged.", logs::Logger::LogLevel::Info);
+            }
         }
 
         return success;
@@ -104,42 +133,76 @@ namespace aircraft {
     }
 
     std::string CommunicationSystem::receiveMessage() {
-        const std::size_t bufferSize = 1024;
+
+        const std::size_t bufferSize = BUFFER_SIZE;
         char buffer[bufferSize] = { 0 }; 
         char* bufferPtr = buffer; 
-
         std::string receivedMessage;
 
-        int bytesReceived = recv(socketFD, bufferPtr, bufferSize, 0);
+        int bytesReceived = recv(socketFD, bufferPtr, bufferSize, 0);   // Receive from the socket
 
         if (bytesReceived > 0) {
-
             receivedMessage = std::string(bufferPtr, static_cast<std::string::size_type>(bytesReceived));
             logs::logger.log("Received message: " + receivedMessage, logs::Logger::LogLevel::Info);
         }
-        else if (bytesReceived == 0) {
-            logs::logger.log("Connection closed by the remote host.", logs::Logger::LogLevel::Warning);
-        }
         else {
-            int recvError = WSAGetLastError();
-            logs::logger.log("Receive failed with error code: " + std::to_string(recvError), logs::Logger::LogLevel::Error);
+            if (bytesReceived == 0) {
+                logs::logger.log("Connection closed by the remote host.", logs::Logger::LogLevel::Warning);
+                receivedMessage = "";
+
+            }
+            else {
+                int recvError = WSAGetLastError();
+                logs::logger.log("Receive failed with error code: " + std::to_string(recvError), logs::Logger::LogLevel::Error);
+                receivedMessage = "";
+            }
         }
 
         return receivedMessage;
     }
 
+    bool CommunicationSystem::reconnect() {
+        const unsigned int MAX_ATTEMPTS = 5;
+        bool isConnected = false;
+        unsigned int attemptCount = 0;
+
+        // While the system isn't connected and attempts is less than 5, it will disconnect from the current server (Cleaning up socket) and attemp to connect again
+        while (!isConnected && attemptCount < MAX_ATTEMPTS) {
+            logs::logger.log("Attempting to reconnect, attempt " + std::to_string(attemptCount + 1), logs::Logger::LogLevel::Warning);
+
+            if (disconnect()) {
+                isConnected = connect();
+            }
+
+            if (!isConnected) {
+                std::this_thread::sleep_for(std::chrono::seconds(2));
+            }
+
+            ++attemptCount;
+        }
+
+        if (!isConnected) {
+            logs::logger.log("Failed to reconnect after " + std::to_string(MAX_ATTEMPTS) + " attempts.", logs::Logger::LogLevel::Error);
+        }
+        else {
+            logs::logger.log("Reconnected to the server successfully.", logs::Logger::LogLevel::Info);
+        }
+
+        return isConnected; 
+    }
+
+
     bool CommunicationSystem::sendFile(const std::string& path) {
         bool success = true;
 
-        // Open the file in binary mode
         std::ifstream file(path, std::ios::binary);
+        size_t fileSize = 0;
+
         if (!file.is_open()) {
             logs::logger.log("Failed to open file: " + path, logs::Logger::LogLevel::Error);
             success = false;
         }
 
-        size_t fileSize = 0;
-        // Proceed only if the file was successfully opened
         if (success) {
             // Check the return value of seekg to ensure it succeeds
             if (!(file.seekg(0, std::ios::end))) {
@@ -148,7 +211,7 @@ namespace aircraft {
             }
             else {
                 fileSize = file.tellg();
-                if (fileSize == static_cast<size_t>(-1)) { // tellg() returns -1 on failure
+                if (fileSize == static_cast<size_t>(-1)) {
                     logs::logger.log("Failed to tell the file size.", logs::Logger::LogLevel::Error);
                     success = false;
                 }
@@ -171,11 +234,10 @@ namespace aircraft {
 
         // Send the file content if the file size was successfully sent
         if (success) {
-            constexpr std::size_t bufferSize = 1024;
-            char buffer[bufferSize]; 
+            char buffer[BUFFER_SIZE]; 
             char* bufferPtr = buffer; 
 
-            while (success && file.read(bufferPtr, bufferSize) || file.gcount() > 0) {
+            while (success && file.read(bufferPtr, BUFFER_SIZE) || file.gcount() > 0) {
                 size_t bytesToWrite = static_cast<size_t>(file.gcount());
                 if (!sendMessage(bufferPtr, bytesToWrite)) {
                     logs::logger.log("Failed to send file data.", logs::Logger::LogLevel::Error);
@@ -185,20 +247,6 @@ namespace aircraft {
             }
         }
 
-        if (success) {
-            std::string ackMsg = receiveMessage();
-            if (ackMsg != "akn") { 
-                logs::logger.log("Acknowledgment not received or not as expected.", logs::Logger::LogLevel::Warning);
-                success = false;
-            }
-            else {
-                logs::logger.log("File transmission acknowledged.", logs::Logger::LogLevel::Info);
-            }
-        }
-        else {
-            logs::logger.log("Skipping acknowledgment check due to previous errors.", logs::Logger::LogLevel::Info);
-        }
-
         return success;
     }
 
@@ -206,6 +254,7 @@ namespace aircraft {
         bool returnFlag = false;
 
         int bytesSent = send(this->socketFD, message.c_str(), message.length(), 0);
+
         if (bytesSent == SOCKET_ERROR) {
             logs::logger.log("Failed to send message.", logs::Logger::LogLevel::Error);
             returnFlag = false;
@@ -222,8 +271,8 @@ namespace aircraft {
        bool success = true; 
 
        int bytesSent = send(this->socketFD, data, static_cast<int>(size), 0);
+
        if (bytesSent == SOCKET_ERROR) {
-           std::cerr << "Listen failed with error: " << WSAGetLastError() << std::endl;
            logs::logger.log("Failed to send message.", logs::Logger::LogLevel::Error);
            success = false; 
        }
@@ -234,35 +283,66 @@ namespace aircraft {
        return success; 
    }
 
+   bool CommunicationSystem::handoff(const std::string& newFrequency, const std::string& newChannel) {
+       bool success = true; 
 
-    bool CommunicationSystem::handoff(const std::string freqency, const std::string channel) {
+       std::string prevFrequency = getFrequencyString();
+       CommunicationType prevChannel = this->channel;
 
-        setFrequency(freqency);
-        setChannel(channel);
-        disconnect();
-        connect();
+       // Sets a new frequency and channel
+       setFrequency(newFrequency);
+       setChannel(newChannel);
 
-        return true; 
-    }
+       // Disconnects from the current server
+       if (!disconnect()) {
+           logs::logger.log("Failed to disconnect using current settings.", logs::Logger::LogLevel::Error);
+           success = false;
+       }
+
+       // Attenpts to connect to another server, if it does then it will attempt to connect to old server
+       if (!connect()) {
+
+           logs::logger.log("Connection with new settings failed, reverting to previous settings.", logs::Logger::LogLevel::Warning);
+
+           setFrequency(prevFrequency);
+           setChannel(CommunicationTypeToString(prevChannel));
+
+           if (!disconnect()) {
+               logs::logger.log("Failed to disconnect using current settings.", logs::Logger::LogLevel::Error);
+               success = false;
+           }
+
+           if (!connect()) {
+              
+               logs::logger.log("Reconnection with original settings also failed.", logs::Logger::LogLevel::Error);
+               success = false;
+           }
+           else {
+               
+               success = true;
+           }
+       }
+  
+       return success; 
+   }
 
     void CommunicationSystem::setChannel(const std::string& channelString) {
 
-        if (channelString == "HF") {
-            this->channel = CommunicationType::HF;
-        }
-        else {
-            this->channel = CommunicationType::VHF;
-        }
+            this->channel = fromStringToCommunicationType(channelString);
 
         frequency.sin_port = htons(static_cast<u_short>(this->channel));
 
-        logs::logger.log("Channel set to " + channelString + " with port " + std::to_string(static_cast<u_short>(this->channel)), logs::Logger::LogLevel::Info);
+        logs::logger.log("Channel set to " + channelString + " with port " + CommunicationTypeToString(this->channel), logs::Logger::LogLevel::Info);
     }
-
-
 
     void CommunicationSystem::setCommunicationType(CommunicationType type) {
         this->channel = type;
     }
+
+    std::string CommunicationSystem::getFrequencyString() const {
+        return inet_ntoa(frequency.sin_addr);
+    }
+
+
 
 }
