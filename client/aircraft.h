@@ -30,16 +30,24 @@ namespace aircraft {
         void loadFlightPlan(const std::string& filepath);
         void toggleSimulateTelemetry();
         AircraftState getAircraftState();
+        void setFrequencyChannel(const std::string frequency, const std::string channel);
 
     private:
         void acarsOperation();
         void simulateTelemetryOperation();
+        void listeningOperation();
+        void handoff();
+        std::string extractFrequency(const std::string& message);
+        std::string extractChannel(const std::string& message);
 
         std::thread acarsThread;
         std::atomic<bool> acarsActive{ false };
 
         std::thread simulateTelemetryThread;
         std::atomic<bool> simulateTelemetryActive{ false };
+
+        std::thread listeningThread;
+        std::atomic<bool> listeningActive{ false };
 
         CommunicationSystem comms;
 

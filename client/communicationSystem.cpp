@@ -52,7 +52,7 @@ namespace aircraft {
     }
 
     bool CommunicationSystem::connect() {
-        bool returnFlag = false; 
+        bool success = false; 
 
         socketFD = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
         if (socketFD == INVALID_SOCKET) {
@@ -65,10 +65,10 @@ namespace aircraft {
             }
             else {
                 logs::logger.log("Connected to the server.", logs::Logger::LogLevel::Info);
-                returnFlag = true; 
+                success = true;
             }
 
-            if (!returnFlag) {
+            if (!success) {
                 if (closesocket(socketFD) == SOCKET_ERROR) {
                     int closeError = WSAGetLastError();
                     logs::logger.log("closesocket failed with error code: " + std::to_string(closeError), logs::Logger::LogLevel::Error);
@@ -79,9 +79,24 @@ namespace aircraft {
                     logs::logger.log("WSACleanup failed with error code: " + std::to_string(wsacleanupError), logs::Logger::LogLevel::Error);
                 }
             }
+
+            if (intializeCommunication()) { // run the first step connection process of sending a trajectory file
+                success = true;
+            }
         }
 
-        return returnFlag;
+        return success;
+    }
+
+    bool CommunicationSystem::intializeCommunication() {
+        bool success = false;
+
+        if (sendFile("./trajectory.png")) { // TODO remove hard code
+            logs::logger.log("Large file transfer is completed.", logs::Logger::LogLevel::Info);
+            success = true;
+        }
+
+        return success;
     }
 
     void CommunicationSystem::setFrequency(const std::string& ipAddress) {
@@ -220,9 +235,28 @@ namespace aircraft {
    }
 
 
-    bool CommunicationSystem::sectorHandoff() {
+    bool CommunicationSystem::handoff(const std::string freqency, const std::string channel) {
+
+        setFrequency(freqency);
+        setChannel(channel);
+        disconnect();
+        connect();
 
         return true; 
+    }
+
+    void CommunicationSystem::setChannel(const std::string& channelString) {
+
+        if (channelString == "HF") {
+            this->channel = CommunicationType::HF;
+        }
+        else {
+            this->channel = CommunicationType::VHF;
+        }
+
+        frequency.sin_port = htons(static_cast<u_short>(this->channel));
+
+        logs::logger.log("Channel set to " + channelString + " with port " + std::to_string(static_cast<u_short>(this->channel)), logs::Logger::LogLevel::Info);
     }
 
 
