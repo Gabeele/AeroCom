@@ -32,7 +32,6 @@ namespace aircraft {
         return ss.str();
     }
 
-
     std::string ACARS::serializePacket() {
         std::stringstream packet;
 
