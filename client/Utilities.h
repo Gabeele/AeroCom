@@ -8,6 +8,7 @@ namespace aircraft {
     const std::string DEFAULT_FREQUENCY = "127.0.0.1";
     const std::string DEFAULT_CHANNEL_STR = "VHF";
     const std::string TRAJECTORY_PATH = "./trajectory.png";
+    const size_t BUFFER_SIZE = 1024;
 
     enum class AircraftState { Idle, InFlight, Takeoff, Landing, Completed };
     enum class SystemState { ON, OFF };

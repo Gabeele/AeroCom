@@ -84,12 +84,6 @@ namespace aircraft {
         std::string getFrequencyString() const;
 
         /// <summary>
-        /// Retrieves the current communication channel as a string.
-        /// </summary>
-        /// <returns>The channel as a string.</returns>
-        std::string getChannelString() const;
-
-        /// <summary>
         /// Sets the communication frequency of the system.
         /// </summary>
         /// <param name="ipAddress">The IP address to be set for the frequency.</param>
