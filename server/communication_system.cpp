@@ -2,6 +2,7 @@
 #include "communication_system.h"
 #include "ACARS.h"
 #include "logger.h"
+#include "Handoff.h"
 
 namespace GroundControl {
 
@@ -26,7 +27,7 @@ namespace GroundControl {
         int result = WSAStartup(MAKEWORD(2, 2), &wsaData);
         if (result != 0) 
         {
-            std::cerr << "WSA Startup has an issue. Result is non-zero." << std::endl;
+            logs::logger.log("WSA Startup has an issue. Result is non-zero.", logs::Logger::LogLevel::Error);
             return false;
         }
         return true;
@@ -37,13 +38,13 @@ namespace GroundControl {
         listenSocket_ = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
         if (listenSocket_ == INVALID_SOCKET) 
         {
-            std::cerr << "Error opening the socket." << std::endl;
+            logs::logger.log("Error opening the socket.", logs::Logger::LogLevel::Error);
             return false;
         }
 
         sockaddr_in serverAddr;
         serverAddr.sin_family = AF_INET;
-        serverAddr.sin_addr.s_addr = INADDR_ANY;
+        serverAddr.sin_addr.s_addr = inet_addr(GROUND_CONTROL_A.c_str());
         serverAddr.sin_port = htons(static_cast<u_short>(port));
 
         if (bind(listenSocket_, reinterpret_cast<sockaddr*>(&serverAddr), sizeof(serverAddr)) == SOCKET_ERROR) 
@@ -63,18 +64,18 @@ namespace GroundControl {
         return true;
     }
 
-    bool GroundControl::SwitchFrequency(int newPort) // should take a port number which can be changed to the HF or VHF enum to change between port 4444 or 5555
+    bool GroundControl::SwitchFrequency(int newPort) // should take a port number which can be changed to the HF or VHF enum to change between port 4444 or 5555 this can also be an enum probably
     {
         SOCKET newSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
         if (newSocket == INVALID_SOCKET) 
         {
-            std::cerr << "Error creating socket for new frequency." << std::endl;
+            logs::logger.log("Error creating socket for new frequency.", logs::Logger::LogLevel::Error);
             return false;
         }
 
         sockaddr_in serverAddr;
         serverAddr.sin_family = AF_INET;
-        serverAddr.sin_addr.s_addr = INADDR_ANY;
+        serverAddr.sin_addr.s_addr = inet_addr(GROUND_CONTROL_A.c_str());;
         serverAddr.sin_port = htons(static_cast<u_short>(newPort));
 
 
@@ -110,6 +111,7 @@ namespace GroundControl {
         if (clientSocket == INVALID_SOCKET)
         {
             std::cerr << "Accept failed with error: " << WSAGetLastError() << std::endl;
+
             closesocket(listenSocket_);
             WSACleanup();
             throw std::exception("Cant accept client connection");
@@ -205,7 +207,8 @@ namespace GroundControl {
         if (strcmp(recievedChecksum.c_str(), packetChecksum.c_str()) != 0)
         {
             // figure out what to do if the packets dont match
-            std::cout << "Lost packet info" << std::endl;
+            logs::logger.log("Lost packet info", logs::Logger::LogLevel::Error);
+
         }
     }
 
@@ -214,22 +217,20 @@ namespace GroundControl {
         return port_;
     }
 
-    void GroundControl::HandleATCToAircraftHandoffRequest(GroundControl* targetServer, char* targetAircraft)
+    void GroundControl::HandleATCToAircraftHandoffRequest(Handoff* targetServer, char* targetAircraft)
     {
 
         if (targetServer == nullptr) {
-            std::cerr << "Invalid servers for handoff request." << std::endl;
+            logs::logger.log("Invalid servers for handoff request.", logs::Logger::LogLevel::Error);
             return;
         }
 
-        int newPort = targetServer->GetPort();
-
-        if (targetServer->SwitchFrequency(newPort)) 
+        if (targetServer->SwitchFrequency(targetServer.)) 
         {
             SOCKET aircraftSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
             if (aircraftSocket == INVALID_SOCKET) 
             {
-                std::cerr << "Error creating socket for aircraft." << std::endl;
+                logs::logger.log("Error creating socket for aircraft.", logs::Logger::LogLevel::Error);
                 return;
             }
 
@@ -240,7 +241,7 @@ namespace GroundControl {
 
             if (connect(aircraftSocket, reinterpret_cast<sockaddr*>(&aircraftAddr), sizeof(aircraftAddr)) == SOCKET_ERROR) 
             {
-                std::cerr << "Failed to connect to aircraft." << std::endl;
+                logs::logger.log("Failed to connect to aircraft.", logs::Logger::LogLevel::Error);
                 closesocket(aircraftSocket);
                 return;
             }
@@ -258,7 +259,7 @@ namespace GroundControl {
             closesocket(aircraftSocket);
         }
         else {
-            std::cerr << "Failed to switch frequency on the requesting server." << std::endl;
+            logs::logger.log("Failed to switch frequency on the requesting server.", logs::Logger::LogLevel::Error);
         }
     }
 

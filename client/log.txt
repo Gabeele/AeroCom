@@ -2842,3 +2842,62 @@
 [2024-03-29 07:54:01] [INFO] Communication switch toggled: ON
 [2024-03-29 07:54:01] [INFO] Disconnected from server.
 [2024-03-29 07:54:01] [INFO] Destructing the communicaiton system.
+[2024-03-30 09:49:00] [INFO] Loading flight plan...
+[2024-03-30 09:49:00] [INFO] Flight plan is loaded.
+[2024-03-30 09:49:01] [INFO] Connected to the server.
+[2024-03-30 09:49:01] [INFO] Communicate state: Established Connection
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.
+[2024-03-30 09:49:01] [INFO] Message sent successfully.

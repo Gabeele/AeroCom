@@ -10,7 +10,8 @@
 
 namespace GroundControl {
 
-    const std::string DEFAULT_FREQUENCY = "127.0.0.1";
+    const std::string GROUND_CONTROL_A = "127.0.0.1";
+    const std::string GROUND_CONTROL_A = "127.0.0.2";
     const unsigned int DEFAULT_CHANNEL = 5555;
 
     enum class CommunicationType { VHF, HF };
@@ -34,7 +35,7 @@ namespace GroundControl {
 
         // maybe should be broken down into a function that requests a hand off and one that accepts it
         // /03/24 edit,i have no idea what i was thinking above
-        void HandleATCToAircraftHandoffRequest(GroundControl* targetServer, char* targetAircraft);
+        void HandleATCToAircraftHandoffRequest(Handoff* targetServer, char* targetAircraft);
 
         bool SwitchFrequency(int newPort);
     private:
