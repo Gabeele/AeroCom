@@ -9,6 +9,8 @@ int main() {
     // Load the flight plan from a predefined file
     ac.loadFlightPlan("./FlightPlan.txt");
 
+    //ac.setFrequencyChannel("192.168.1.33", "HF");
+
     // Toggle the communication system to active
     ac.toggleCommunicationSystem();
 

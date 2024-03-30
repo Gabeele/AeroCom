@@ -30,6 +30,7 @@ namespace aircraft {
         void loadFlightPlan(const std::string& filepath);
         void toggleSimulateTelemetry();
         AircraftState getAircraftState();
+        void setFrequencyChannel(const std::string frequency, const std::string channel);
 
     private:
         void acarsOperation();

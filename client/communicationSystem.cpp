@@ -245,15 +245,20 @@ namespace aircraft {
         return true; 
     }
 
-    void CommunicationSystem::setChannel(const std::string& channel) {
+    void CommunicationSystem::setChannel(const std::string& channelString) {
 
-        if (channel == "vhf") {
-            setCommunicationType(CommunicationType::VHF);
+        if (channelString == "HF") {
+            this->channel = CommunicationType::HF;
         }
-        else{
-            setCommunicationType(CommunicationType::HF);
+        else {
+            this->channel = CommunicationType::VHF;
         }
+
+        frequency.sin_port = htons(static_cast<u_short>(this->channel));
+
+        logs::logger.log("Channel set to " + channelString + " with port " + std::to_string(static_cast<u_short>(this->channel)), logs::Logger::LogLevel::Info);
     }
+
 
 
     void CommunicationSystem::setCommunicationType(CommunicationType type) {

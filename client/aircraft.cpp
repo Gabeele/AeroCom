@@ -324,10 +324,15 @@ namespace aircraft {
                 std::string newChannel = extractChannel(message);
                 comms.handoff(newFrequency, newChannel);
             }
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
         }
     }
 
+    void Aircraft::setFrequencyChannel(const std::string frequency, const std::string channel) {
+
+        comms.setFrequency(frequency);
+        comms.setChannel(channel);
+
+    }
 
     std::string Aircraft::extractFrequency(const std::string& message) {
         std::string frequencyLabel = "Frequency: ";
@@ -359,3 +364,4 @@ namespace aircraft {
 
     }
 }
+
