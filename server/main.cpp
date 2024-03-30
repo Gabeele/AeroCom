@@ -8,8 +8,8 @@ int main()
 	
 
 	std::string tempFlag = "H";
-	std::string tempFreq = "192.168.1.33";
-	std::string tempChan = "HF";
+	std::string tempFreq = "127.0.0.15";
+	std::string tempChan = "VHF";
 	GroundControl::Handoff handoff(tempFlag, tempFreq, tempChan);
 
 	gc.Initialize();
@@ -25,8 +25,6 @@ int main()
 			try
 			{
 				clientSocket = gc.AcceptConnection();
-
-				gc.HandleATCToAircraftHandoffRequest(&handoff, "127.0.0.2");
 			}
 			catch (std::exception error)
 			{

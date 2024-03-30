@@ -216,42 +216,22 @@ namespace GroundControl {
         return port_;
     }
 
-    void GroundControl::HandleATCToAircraftHandoffRequest(Handoff* targetServer, std::string targetAircraft)
+    void GroundControl::HandleATCToAircraftHandoffRequest(SOCKET CurrentGroundToAir, Handoff* targetServer)
     {
-
-        //temp making a target server to go to
-
-         
         if (targetServer == nullptr) {
             logs::logger.log("Invalid servers for handoff request.", logs::Logger::LogLevel::Error);
             return;
         }
 
-        //if (targetServer->SwitchFrequency(targetServer->GetChannel()))
-       //{
-            SOCKET aircraftSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-            if (aircraftSocket == INVALID_SOCKET)
+            if (CurrentGroundToAir == INVALID_SOCKET)
             {
                 logs::logger.log("Error creating socket for aircraft.", logs::Logger::LogLevel::Error);
                 return;
             }
 
-            //sockaddr_in aircraftAddr;
-            //aircraftAddr.sin_family = AF_INET;
-            //aircraftAddr.sin_addr.s_addr = inet_addr(targetAircraft.c_str());
-            //aircraftAddr.sin_port = 5555;
-
-            //if (connect(aircraftSocket, reinterpret_cast<sockaddr*>(&aircraftAddr), sizeof(aircraftAddr)) == SOCKET_ERROR)
-            //{
-            //    logs::logger.log("Failed to connect to aircraft.", logs::Logger::LogLevel::Error);
-            //    closesocket(aircraftSocket);
-            //    return;
-            //}
-
-            //// send message to the aircraft to swap, hence PACKETTHING
             std::string packet = targetServer->Serialize();
 
-            if (send(aircraftSocket, packet.c_str(), packet.length(), 0) == SOCKET_ERROR)
+            if (send(CurrentGroundToAir, packet.c_str(), packet.length(), 0) == SOCKET_ERROR)
             {
                 std::cerr << "Failed to send handoff message to aircraft." << std::endl;
             }
@@ -260,11 +240,7 @@ namespace GroundControl {
                 std::cout << "Handoff message sent to aircraft successfully." << std::endl;
             }
 
-            closesocket(aircraftSocket);
-        //}
-        //else {
-        //    logs::logger.log("Failed to switch frequency on the requesting server.", logs::Logger::LogLevel::Error);
-       // }
+            closesocket(CurrentGroundToAir);
     }
 
 

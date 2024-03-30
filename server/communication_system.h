@@ -36,7 +36,7 @@ namespace GroundControl {
 
         // maybe should be broken down into a function that requests a hand off and one that accepts it
         // /03/24 edit,i have no idea what i was thinking above
-        void HandleATCToAircraftHandoffRequest(Handoff* targetServer, std::string targetAircraft);
+        void HandleATCToAircraftHandoffRequest(SOCKET CurrentGroundToAir, Handoff* targetServer);
 
         bool SwitchFrequency(int newPort);
     private:
