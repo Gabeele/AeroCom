@@ -7,7 +7,9 @@ int main() {
     aircraft::Aircraft ac("N12345");
 
     // Load the flight plan from a predefined file
-    ac.loadFlightPlan("./FlightPlan.txt");
+    if (!ac.loadFlightPlan("./FlightPlan.txt")) {
+        return 0;
+    }
 
     //ac.setFrequencyChannel("192.168.1.33", "HF");
 
@@ -33,8 +35,6 @@ int main() {
     ac.toggleACARSSystem();
 
     ac.toggleCommunicationSystem();
-
-
 
     //aircraft::Aircraft ac("WC1234");
 

@@ -1,22 +1,45 @@
-// This file denotes all the utility functions for enums and other global scopped artifacts
 #include "Utilities.h"
 
 namespace aircraft {
 
     std::string aircraftStateToString(AircraftState state) {
-        if (state == AircraftState::Idle) return "Idle";
-        if (state == AircraftState::InFlight) return "InFlight";
-        if (state == AircraftState::Takeoff) return "Takeoff";
-        if (state == AircraftState::Landing) return "Landing";
-        return "Completed";
+        std::string result;
+        if (state == AircraftState::Idle) {
+            result = "Idle";
+        }
+        else if (state == AircraftState::InFlight) {
+            result = "InFlight";
+        }
+        else if (state == AircraftState::Takeoff) {
+            result = "Takeoff";
+        }
+        else if (state == AircraftState::Landing) {
+            result = "Landing";
+        }
+        else {
+            result = "Completed";
+        }
+        return result;
     }
 
     AircraftState fromStringToAircraftState(const std::string& stateStr) {
-        if (stateStr == "Idle") return AircraftState::Idle;
-        if (stateStr == "InFlight") return AircraftState::InFlight;
-        if (stateStr == "Takeoff") return AircraftState::Takeoff;
-        if (stateStr == "Landing") return AircraftState::Landing;
-        return AircraftState::Completed;
+        AircraftState state;
+        if (stateStr == "Idle") {
+            state = AircraftState::Idle;
+        }
+        else if (stateStr == "InFlight") {
+            state = AircraftState::InFlight;
+        }
+        else if (stateStr == "Takeoff") {
+            state = AircraftState::Takeoff;
+        }
+        else if (stateStr == "Landing") {
+            state = AircraftState::Landing;
+        }
+        else {
+            state = AircraftState::Completed;
+        }
+        return state;
     }
 
     std::string SystemStateToString(SystemState state) {
@@ -28,45 +51,105 @@ namespace aircraft {
     }
 
     std::string FlightTypeToString(FlightType type) {
-        if (type == FlightType::Cargo) return "Cargo";
-        if (type == FlightType::Commercial) return "Commercial";
-        return "Private";
+        std::string result;
+        if (type == FlightType::Cargo) {
+            result = "Cargo";
+        }
+        else if (type == FlightType::Commercial) {
+            result = "Commercial";
+        }
+        else {
+            result = "Private";
+        }
+        return result;
     }
 
     FlightType fromStringToFlightType(const std::string& typeStr) {
-        if (typeStr == "Cargo") return FlightType::Cargo;
-        if (typeStr == "Commercial") return FlightType::Commercial;
-        return FlightType::Private;
+        FlightType type;
+        if (typeStr == "Cargo") {
+            type = FlightType::Cargo;
+        }
+        else if (typeStr == "Commercial") {
+            type = FlightType::Commercial;
+        }
+        else {
+            type = FlightType::Private;
+        }
+        return type;
     }
 
     std::string CommunicationStateToString(CommunicationState state) {
-        if (state == CommunicationState::Closed) return "Closed";
-        if (state == CommunicationState::EstablishedConnection) return "EstablishedConnection";
-        if (state == CommunicationState::Sending) return "Sending";
-        return "Handoff";
+        std::string result;
+        if (state == CommunicationState::Closed) {
+            result = "Closed";
+        }
+        else if (state == CommunicationState::EstablishedConnection) {
+            result = "EstablishedConnection";
+        }
+        else if (state == CommunicationState::Sending) {
+            result = "Sending";
+        }
+        else {
+            result = "Handoff";
+        }
+        return result;
     }
 
     CommunicationState fromStringToCommunicationState(const std::string& stateStr) {
-        if (stateStr == "Closed") return CommunicationState::Closed;
-        if (stateStr == "EstablishedConnection") return CommunicationState::EstablishedConnection;
-        if (stateStr == "Sending") return CommunicationState::Sending;
-        return CommunicationState::Handoff;
+        CommunicationState state;
+        if (stateStr == "Closed") {
+            state = CommunicationState::Closed;
+        }
+        else if (stateStr == "EstablishedConnection") {
+            state = CommunicationState::EstablishedConnection;
+        }
+        else if (stateStr == "Sending") {
+            state = CommunicationState::Sending;
+        }
+        else {
+            state = CommunicationState::Handoff;
+        }
+        return state;
     }
 
     std::string AcarsFlagToString(ACARSFlag flag) {
-        if (flag == ACARSFlag::Handoff) return "Handoff";
-        if (flag == ACARSFlag::Data) return "Data";
-        if (flag == ACARSFlag::Message) return "Message";
-        if (flag == ACARSFlag::Acknowledge) return "Acknowledge";
-        return "Request";
+        std::string result;
+        if (flag == ACARSFlag::Handoff) {
+            result = "Handoff";
+        }
+        else if (flag == ACARSFlag::Data) {
+            result = "Data";
+        }
+        else if (flag == ACARSFlag::Message) {
+            result = "Message";
+        }
+        else if (flag == ACARSFlag::Acknowledge) {
+            result = "Acknowledge";
+        }
+        else {
+            result = "Request";
+        }
+        return result;
     }
 
     ACARSFlag fromStringToAcarsFlag(const std::string& flagStr) {
-        if (flagStr == "Handoff") return ACARSFlag::Handoff;
-        if (flagStr == "Data") return ACARSFlag::Data;
-        if (flagStr == "Message") return ACARSFlag::Message;
-        if (flagStr == "Acknowledge") return ACARSFlag::Acknowledge;
-        return ACARSFlag::Request;
+        ACARSFlag flag;
+        if (flagStr == "Handoff") {
+            flag = ACARSFlag::Handoff;
+        }
+        else if (flagStr == "Data") {
+            flag = ACARSFlag::Data;
+        }
+        else if (flagStr == "Message") {
+            flag = ACARSFlag::Message;
+        }
+        else if (flagStr == "Acknowledge") {
+            flag = ACARSFlag::Acknowledge;
+        }
+        else {
+            flag = ACARSFlag::Request;
+        }
+        return flag;
     }
 
     std::string CommunicationTypeToString(CommunicationType type) {
