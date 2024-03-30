@@ -5,6 +5,12 @@ int main()
 {
 	GroundControl::GroundControl gc;
 	SOCKET clientSocket;
+	
+
+	std::string tempFlag = "H";
+	std::string tempFreq = "127.0.0.15";
+	std::string tempChan = "VHF";
+	GroundControl::Handoff handoff(tempFlag, tempFreq, tempChan);
 
 	gc.Initialize();
 

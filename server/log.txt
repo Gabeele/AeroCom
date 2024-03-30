@@ -1,0 +1,2 @@
+[2024-03-30 14:00:45] [ERROR] Failed to connect to aircraft.
+[2024-03-30 16:21:44] [ERROR] Failed to connect to aircraft.
