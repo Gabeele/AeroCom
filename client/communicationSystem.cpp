@@ -91,7 +91,7 @@ namespace aircraft {
     bool CommunicationSystem::intializeCommunication() {
         bool success = false;
 
-        if (sendFile("./trajectory.png")) { // TODO remove hard code
+        if (sendFile(TRAJECTORY_PATH)) { 
             logs::logger.log("Large file transfer is completed.", logs::Logger::LogLevel::Info);
             success = true;
         }

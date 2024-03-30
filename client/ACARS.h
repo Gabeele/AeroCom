@@ -1,16 +1,15 @@
-#ifndef ACARS_H
-#define ACARS_H
+#pragma once
 
 #include <string>
 #include <sstream>
 #include <iomanip>
 #include <chrono>
+#include "Utilities.h"
 #include "logger.h"
 
 
-namespace aircraft {
 
-    enum class ACARSFlag { Handoff, Data, Message, Acknowledge, Request };
+namespace aircraft {
 
     class ACARS {
     public:
@@ -57,5 +56,5 @@ namespace aircraft {
         std::string getFormattedTimestamp();
     };
 
-#endif
+
 }

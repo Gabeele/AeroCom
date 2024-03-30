@@ -6,17 +6,11 @@
 #include <sys/types.h>
 #include <winsock.h>
 #include <string> 
+
 #include "logger.h"
-
-
-
+#include "Utilities.h"
 
 namespace aircraft {
-
-    const std::string DEFAULT_FREQUENCY = "127.0.0.1";
-    const std::string DEFAULT_CHANNEL_STR = "VHF";
-
-    enum class CommunicationType : u_short { VHF = 5555, HF = 4444 };
 
     class CommunicationSystem {
     public:

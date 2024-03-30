@@ -2,7 +2,6 @@
 
 namespace aircraft {
 
-    // Constructor
     Aircraft::Aircraft(const std::string& identifier) :
         identifier(identifier),
         state(AircraftState::InFlight),
@@ -12,15 +11,7 @@ namespace aircraft {
         flightTelemetry{ 0.0, 0.0, 0.0, 0.0, 0 } {
 
     }
-
-    Aircraft::Aircraft(const std::string& identifier, AircraftState state, SystemState commsState, SystemState acarsState,
-        unsigned int flightNumber, FlightType flightType, const std::string& departureAirport, const std::string& arrivalAirport,
-        float latitude, float longitude, float altitude, float speed, unsigned int heading)
-        : identifier(identifier), state(state), commsToggle(commsState), acarsToggle(acarsState),
-        flightInfo{ flightNumber, flightType, departureAirport, arrivalAirport },
-        flightTelemetry{ latitude, longitude, altitude, speed, heading } {
-    }
-
+   
     void Aircraft::updateAircraftState(AircraftState newState) {
         // Convert the newState enum to a descriptive string
         std::string newStateStr;

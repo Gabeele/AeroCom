@@ -1,6 +1,5 @@
 // This file is used to denote the aircraft functions and properties
-#ifndef AIRCRAFT_H
-#define AIRCRAFT_H
+#pragma once
 
 #include <string>
 #include <thread>
@@ -10,36 +9,89 @@
 #include "logger.h"
 #include "communicationSystem.h"
 #include "ACARS.h"
+#include "Utilities.h"
 
 
 namespace aircraft {
 
-    enum class AircraftState { Idle, InFlight, Takeoff, Landing, Completed };
-    enum class SystemState { ON, OFF };
-    enum class FlightType { Cargo, Commercial, Private };
-    enum class CommunicationState { Closed, EstablishedConnection, Sending, Handoff };
-
     class Aircraft {
     public:
+        /// <summary>
+        /// Constructor of aircraft.
+        /// </summary>
+        /// <param name="identifier">A string identifer</param>
         Aircraft(const std::string& identifier);
-        Aircraft(const std::string& identifier, AircraftState state, SystemState commsState, SystemState acarsState,unsigned int flightNumber, FlightType flightType, const std::string& departureAirport, const std::string& arrivalAirport,float latitude, float longitude, float altitude, float speed, unsigned int heading);
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="newState"></param>
         void updateAircraftState(AircraftState newState);
+
+        /// <summary>
+        /// 
+        /// </summary>
         void toggleCommunicationSystem();
+
+        /// <summary>
+        /// 
+        /// </summary>
         void toggleACARSSystem();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="filepath"></param>
         void loadFlightPlan(const std::string& filepath);
+
+        /// <summary>
+        /// 
+        /// </summary>
         void toggleSimulateTelemetry();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         AircraftState getAircraftState();
+
+        /// <summary>
+        /// 
+        /// </summary>
         void setFrequencyChannel(const std::string frequency, const std::string channel);
 
     private:
+        /// <summary>
+        /// 
+        /// </summary>
         void acarsOperation();
+
+        /// <summary>
+        /// 
+        /// </summary>
         void simulateTelemetryOperation();
+
+        /// <summary>
+        /// 
+        /// </summary>
         void listeningOperation();
-        void handoff();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
         std::string extractFrequency(const std::string& message);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
         std::string extractChannel(const std::string& message);
 
-        std::thread acarsThread;
+        std::thread acarsThread;                                    // Threading variables and atomic booleans
         std::atomic<bool> acarsActive{ false };
 
         std::thread simulateTelemetryThread;
@@ -48,18 +100,19 @@ namespace aircraft {
         std::thread listeningThread;
         std::atomic<bool> listeningActive{ false };
 
-        CommunicationSystem comms;
+        CommunicationSystem comms;          // The communication system
 
-        std::string identifier;
-        AircraftState state;
-        SystemState simulateState;
-        SystemState commsToggle;
-        SystemState acarsToggle;
-        CommunicationState commsState;
+        AircraftState state;                // Current state of the aircraft
+        SystemState simulateState;          // System state of the simulation (ON/OFF)
+        SystemState commsToggle;            // System state of the communcations 
+        SystemState acarsToggle;            // System state of ACARS
+        CommunicationState commsState;      // Current state of communications  (Connected/Disconnected/etc)
+            
+        bool flightPlanLoaded;          // Boolean for if the flight plan is loaded
+        bool communicationReady;        // Boolean for when communications are ready
 
-        bool flightPlanLoaded ;
-        bool communicationReady;
-
+        // Plane informaiton and details
+        std::string identifier;     
 
         struct flightInformation {
 
@@ -77,7 +130,5 @@ namespace aircraft {
             unsigned int heading;
         } flightTelemetry;
 
-
     };
 }
-#endif
