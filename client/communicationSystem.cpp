@@ -1,5 +1,6 @@
 #include "communicationSystem.h"
 
+
 namespace aircraft {
 
 #pragma comment(lib, "ws2_32.lib")
@@ -140,24 +141,55 @@ namespace aircraft {
 
         int bytesReceived = recv(socketFD, bufferPtr, bufferSize, 0);   // Receive from the socket
 
-        if (bytesReceived > 0) {  
-
+        if (bytesReceived > 0) {
             receivedMessage = std::string(bufferPtr, static_cast<std::string::size_type>(bytesReceived));
             logs::logger.log("Received message: " + receivedMessage, logs::Logger::LogLevel::Info);
         }
-        else if (bytesReceived == 0) {
-            logs::logger.log("Connection closed by the remote host.", logs::Logger::LogLevel::Warning);
-        }
         else {
-            int recvError = WSAGetLastError();
-            logs::logger.log("Receive failed with error code: " + std::to_string(recvError), logs::Logger::LogLevel::Error);
+            if (bytesReceived == 0) {
+                logs::logger.log("Connection closed by the remote host.", logs::Logger::LogLevel::Warning);
+                receivedMessage = "";
 
-            // TODO disconnect and attempt reconnecting with last known server
+            }
+            else {
+                int recvError = WSAGetLastError();
+                logs::logger.log("Receive failed with error code: " + std::to_string(recvError), logs::Logger::LogLevel::Error);
+                receivedMessage = "";
+            }
         }
 
         return receivedMessage;
     }
 
+    bool CommunicationSystem::reconnect() {
+        const unsigned int MAX_ATTEMPTS = 5;
+        bool isConnected = false;
+        unsigned int attemptCount = 0;
+
+        // While the system isn't connected and attempts is less than 5, it will disconnect from the current server (Cleaning up socket) and attemp to connect again
+        while (!isConnected && attemptCount < MAX_ATTEMPTS) {
+            logs::logger.log("Attempting to reconnect, attempt " + std::to_string(attemptCount + 1), logs::Logger::LogLevel::Warning);
+
+            if (disconnect()) {
+                isConnected = connect();
+            }
+
+            if (!isConnected) {
+                std::this_thread::sleep_for(std::chrono::seconds(2));
+            }
+
+            ++attemptCount;
+        }
+
+        if (!isConnected) {
+            logs::logger.log("Failed to reconnect after " + std::to_string(MAX_ATTEMPTS) + " attempts.", logs::Logger::LogLevel::Error);
+        }
+        else {
+            logs::logger.log("Reconnected to the server successfully.", logs::Logger::LogLevel::Info);
+        }
+
+        return isConnected; 
+    }
 
 
     bool CommunicationSystem::sendFile(const std::string& path) {

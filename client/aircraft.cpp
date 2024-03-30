@@ -332,6 +332,20 @@ namespace aircraft {
                     logs::logger.log("Handoff didn't work.", logs::Logger::LogLevel::Error);
                 }
             }
+
+            // If received no message then an error has occurred. The system will attempt a reconnect of the last known freq and chann
+            if (message == "") {
+                communicationReady = false;
+                
+                if (comms.reconnect()) {
+                    logs::logger.log("Connected back. Resuming operations.", logs::Logger::LogLevel::Info);
+                    communicationReady = true;
+
+                }
+                else {
+                    logs::logger.log("Reconnect failed. Use emergency backup communication systems.", logs::Logger::LogLevel::Error);
+                }
+            }
         }
     }
 

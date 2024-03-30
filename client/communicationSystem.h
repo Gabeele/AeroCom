@@ -6,6 +6,8 @@
 #include <sys/types.h>
 #include <winsock.h>
 #include <string> 
+#include <chrono>
+#include <thread>
 
 #include "logger.h"
 #include "Utilities.h"
@@ -95,6 +97,12 @@ namespace aircraft {
         /// <param name="path">The file path to the file that needs to be sent.</param>
         /// <returns>True if the file is sent successfully; false otherwise.</returns>
         bool sendFile(const std::string& path);
+
+        /// <summary>
+        /// When the client recives a packet of 0 bytes, the server has disconnects. The client will attempt to reconnect with the server. 
+        /// </summary>
+        /// <returns></returns>
+        bool reconnect();
 
 
     private:
