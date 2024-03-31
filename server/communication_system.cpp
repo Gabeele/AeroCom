@@ -118,7 +118,7 @@ namespace GroundControl {
         return clientSocket;
     }
 
-    std::string GroundControl::ReceiveMessage(SOCKET clientSocket)
+    void GroundControl::ReceiveMessage(SOCKET clientSocket)
     {
         char buffer[1024];
         int bytesReceived = recv(clientSocket, buffer, sizeof(buffer), 0);
@@ -126,22 +126,48 @@ namespace GroundControl {
         {
             std::cerr << "Receive failed with error: " << WSAGetLastError() << std::endl;
             closesocket(clientSocket);
-            return "";
+            return;
         }
-        buffer[bytesReceived] = '\0';
+
+        // check if the incoming file is an image or packet
+        // for image, search keyword "Filesize:"
+        // else it's a packet
+
         std::string receivedMessage(buffer);
+        if (strstr(buffer, "Filesize:"))
+        {
+            std::ofstream outfile("recv_trajectory.png", std::ios::binary);
 
-        // do something with the message, ig log it or parse for whatever use it has
-        // if from other GC get we can get ip and then tell the 
+            char imgbuffer[1024];
+            int inc_bytes;
 
-        // just couts the packet for now
-        PacketParsing(receivedMessage);
+            do {
+                inc_bytes = recv(clientSocket, imgbuffer, sizeof(imgbuffer), 0);
+                if (inc_bytes > 0) {
+                    outfile.write(imgbuffer, inc_bytes);
+                }
+                else if (inc_bytes == 0) {
+                    send(clientSocket, "akn", sizeof("akn"), 0);
+                }
+                else {
+                    std::cerr << "Receiving failed with error: " << WSAGetLastError() << std::endl;
+                }
+            } while (inc_bytes > 0);
 
-        //check checksum integrity
-        ChecksumCheck(receivedMessage);
+            outfile.close();
+            std::cout << "Image received successfully" << std::endl;
+            return;
+        }
+        else
+        {
+            buffer[bytesReceived] = '\0';
 
-        //closesocket(clientSocket);
-        return receivedMessage;
+            // just couts the packet for now
+            PacketParsing(receivedMessage);
+
+            //check checksum integrity
+            ChecksumCheck(receivedMessage);
+        }
     }
 
     void GroundControl::PacketParsing(std::string receivedMessage)
@@ -185,6 +211,10 @@ namespace GroundControl {
 
 
         aircraft::ACARS newAcars();
+    }
+
+    void GroundControl::HandleATCToAircraftHandoffRequest(GroundControl* targetServer, char* targetAircraft)
+    {
     }
 
     std::string GroundControl::generateChecksum(const std::string& packetContent) const {

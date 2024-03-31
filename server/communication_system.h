@@ -16,6 +16,7 @@ namespace GroundControl {
     const unsigned int DEFAULT_CHANNEL = 5555;
 
     enum class CommunicationType { VHF, HF };
+    enum class ServerState { CLOSED, IDLE, CONNECTED, HANDOFF, DISCONNECTED };
     // maybe some sort of channel for ground control to communicate over
 
     class GroundControl
@@ -26,10 +27,11 @@ namespace GroundControl {
 
         bool Initialize();
         bool Connect(int port);
-        std::string ReceiveMessage(SOCKET clientSocket);
+        void ReceiveMessage(SOCKET clientSocket);
         std::string generateChecksum(const std::string& packetContent) const;
         void PacketParsing(std::string recievedMessage);
         void ChecksumCheck(std::string receivedMessage);
+        void HandleATCToAircraftHandoffRequest(GroundControl* targetServer, char* targetAircraft);
         SOCKET AcceptConnection();
 
         int GetPort() const;

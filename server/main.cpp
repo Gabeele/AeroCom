@@ -14,7 +14,7 @@ int main()
 
 	gc.Initialize();
 
-	// first while toop keeps wsa open
+	// first while loop keeps wsa open
 	// second loops keeps recieving messages after it is connected to a client
 	while (true)
 	{
