@@ -143,20 +143,20 @@ namespace GroundControl {
 
             do {
                 inc_bytes = recv(clientSocket, imgbuffer, sizeof(imgbuffer), 0);
-                if (inc_bytes > 0) {
-                    outfile.write(imgbuffer, inc_bytes);
-                }
-                else if (inc_bytes == 0) {
+                if (strstr(imgbuffer, "EOF")) {
+                    outfile.close();
+                    std::cout << "Image received successfully" << std::endl;
+
                     send(clientSocket, "akn", sizeof("akn"), 0);
+                    return;
+                }
+                else if (inc_bytes > 0) {
+                    outfile.write(imgbuffer, inc_bytes);
                 }
                 else {
                     std::cerr << "Receiving failed with error: " << WSAGetLastError() << std::endl;
                 }
             } while (inc_bytes > 0);
-
-            outfile.close();
-            std::cout << "Image received successfully" << std::endl;
-            return;
         }
         else
         {

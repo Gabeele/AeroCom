@@ -186,8 +186,9 @@ namespace aircraft {
         }
 
         if (success) {
+            sendMessage("EOF");
             std::string ackMsg = receiveMessage();
-            if (ackMsg != "akn") { 
+            if (strcmp("akn", ackMsg.c_str())) {
                 logs::logger.log("Acknowledgment not received or not as expected.", logs::Logger::LogLevel::Warning);
                 success = false;
             }
