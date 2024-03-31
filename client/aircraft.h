@@ -12,9 +12,11 @@
 #include "Utilities.h"
 
 
+
 namespace aircraft {
 
     class Aircraft {
+
     public:
         /// <summary>
         /// Constructor of aircraft.
@@ -144,4 +146,5 @@ namespace aircraft {
         } flightTelemetry;
 
     };
+
 }

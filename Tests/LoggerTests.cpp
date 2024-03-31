@@ -31,6 +31,7 @@ namespace LoggerUnitTests
 			}
 		}
 
+
 		TEST_METHOD(LogInfoLevelMessageToFile)
 		{
 
