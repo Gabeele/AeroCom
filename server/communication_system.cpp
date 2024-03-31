@@ -170,16 +170,25 @@ namespace GroundControl {
         }
     }
 
-    void GroundControl::PacketParsing(std::string receivedMessage)
+    void GroundControl::PacketParsing(std::string msg)
     {
-        std::cout << receivedMessage << std::endl;
-
-        unsigned int tnum = atoi(receivedMessage.substr(33, 33 + sizeof(int)).c_str());
+        std::cout << msg << std::endl;
+        
+        int nl = msg.find('\n');
+        nl = msg.find('\n', nl + 1);
+        nl = msg.find('\n', nl + 1);
+        unsigned int tnum = atoi(msg.substr(msg.find("Transmission Number: ") + 21, nl - (msg.find("Transmission Number: ") + 21)).c_str());
+        nl = msg.find('\n', nl + 1);
+        
         bool priority = false;
-        if (receivedMessage.substr(52, receivedMessage.find('\n', 52)) == "Yes")
+        if (strcmp((msg.substr(msg.find("Message Priority: ") + 18, nl - (msg.find("Message Priority: ") + 18))).c_str(), "Yes") == 0)
+        {
             priority = true;
+        }
+        nl = msg.find('\n', nl + 1);
+
         aircraft::ACARSFlag flg;
-        switch (receivedMessage.substr(receivedMessage.find("Flag: ") + 6, receivedMessage.find("Flag: ") + 7)[0]) {
+        switch (msg.substr(msg.find("Flag: ") + 6, msg.find("Flag: ") + 7)[0]) {
         case 'H':
             flg = aircraft::ACARSFlag::Handoff;
             break;
@@ -196,19 +205,38 @@ namespace GroundControl {
             flg = aircraft::ACARSFlag::Request;
             break;
         }
-        std::string acID = receivedMessage.substr(receivedMessage.find("Aircraft ID: ") + 13, receivedMessage.find('\n'));
-        //this is not in the transmission right now
-        //std::string gsID = receivedMessage.substr(receivedMessage.find(""));
+        nl = msg.find('\n', nl + 1);
+        std::string acID = msg.substr(msg.find("Aircraft ID: ") + 13, nl - (msg.find("Aircraft ID: ") + 13));
+        nl = msg.find('\n', nl + 1);
+
+        std::string gsID = msg.substr(msg.find("Ground Station ID:") + 18, nl - (msg.find("Ground Station ID:") + 18));
+        nl = msg.find('\n', nl + 1);
+        nl = msg.find('\n', nl + 1);
 
         //flight information
-        std::string flNum = receivedMessage.substr(receivedMessage.find("Flight Number: ") + 15, receivedMessage.find('\n'));
-        std::string acType = receivedMessage.substr(receivedMessage.find("Aircraft Type: ") + 15, receivedMessage.find('\n'));
-        std::string depAirport = receivedMessage.substr(receivedMessage.find("Departure Airport: ") + 19, receivedMessage.find('\n'));
-        std::string destAirport = receivedMessage.substr(receivedMessage.find("Destination Airport: ") + 21, receivedMessage.find('\n'));
+        std::string flNum = msg.substr(msg.find("Flight Number: ") + 15, nl - (msg.find("Flight Number: ") + 15));
+        nl = msg.find('\n', nl + 1);
+        std::string acType = msg.substr(msg.find("Aircraft Type: ") + 15, nl - (msg.find("Aircraft Type: ") + 15));
+        nl = msg.find('\n', nl + 1);
+        std::string depAirport = msg.substr(msg.find("Departure Airport: ") + 19, nl - (msg.find("Departure Airport: ") + 19));
+        nl = msg.find('\n', nl + 1);
+        std::string destAirport = msg.substr(msg.find("Destination Airport: ") + 21, nl - (msg.find("Destination Airport: ") + 21));
+        nl = msg.find('\n', nl + 1);
+        nl = msg.find('\n', nl + 1);
 
-        //rn there's an issue cutting off at the wrong place
-        // finish the rest of the parsing ...
+        // location details
+        std::string lat = msg.substr(msg.find("Latitude: ") + 10, nl - (msg.find("Latitude: ") + 10));
+        nl = msg.find('\n', nl + 1);
+        std::string lon = msg.substr(msg.find("Longitude: ") + 11, nl - (msg.find("Longitude: ") + 11));
+        nl = msg.find('\n', nl + 1);
+        std::string alt = msg.substr(msg.find("Altitude: ") + 10, nl - (msg.find("Altitude: ") + 10));
+        nl = msg.find('\n', nl + 1);
+        std::string speed = msg.substr(msg.find("Speed: ") + 7, nl - (msg.find("Speed: ") + 7));
+        nl = msg.find('\n', nl + 1);
+        std::string heading = msg.substr(msg.find("Heading: ") + 9, nl - (msg.find("Heading: ") + 9));
+        nl = msg.find('\n', nl + 1);
 
+        std::string tmstmp = msg.substr(msg.find("Time Stamp:") + 11, nl - (msg.find("Time Stamp:") + 11));
 
         aircraft::ACARS newAcars();
     }
