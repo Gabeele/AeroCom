@@ -174,9 +174,11 @@ namespace GroundControl {
     {
         std::cout << msg << std::endl;
         
+        // finds new line character and skips the first 2 lines of the packet
         int nl = msg.find('\n');
         nl = msg.find('\n', nl + 1);
         nl = msg.find('\n', nl + 1);
+
         unsigned int tnum = atoi(msg.substr(msg.find("Transmission Number: ") + 21, nl - (msg.find("Transmission Number: ") + 21)).c_str());
         nl = msg.find('\n', nl + 1);
         
