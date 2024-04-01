@@ -14,15 +14,14 @@ namespace ACARSTests
 
         TEST_METHOD(SerializePacketCorrectly)
         {
-            // Initialize ACARS object with test data
             ACARS acars(1, true, ACARSFlag::Data, "AID123", "GID123",
                 "FL123", "A320", "JFK", "LAX", 40.7128f, -74.0060f,
                 30000.0f, 500.0f, 180);
 
-            // Call serializePacket() to generate the packet string
+            
             std::string packet = acars.serializePacket();
 
-            // Assertions to verify the packet contains expected static values
+           
             std::string expectedStart = "START";
             std::string expectedPriority = "Message Priority: Yes";
             std::string expectedFlag = "Flag: D";
@@ -32,7 +31,7 @@ namespace ACARSTests
             std::string expectedFlightNumber = "\tFlight Number: FL123";
             std::string expectedMessageTerminator = "Message Terminator: END";
 
-            std::string expectedTimestampFormat = "Time Stamp:"; // Simplified check since time is changing
+            std::string expectedTimestampFormat = "Time Stamp:"; 
 
             Assert::IsTrue(packet.find(expectedStart) != std::string::npos);
             Assert::IsTrue(packet.find(expectedPriority) != std::string::npos);
@@ -47,7 +46,7 @@ namespace ACARSTests
 
         TEST_METHOD(GenerateChecksum)
         {
-            ACARS acars; // Default constructor
+            ACARS acars; 
             std::string content = "Test Content";
             std::string checksum = acars.generateChecksum(content);
 
@@ -60,7 +59,7 @@ namespace ACARSTests
             ACARS acars;
             acars.setTransmissionNumber(42);
 
-            // Assuming serializePacket includes the transmission number
+
             std::string packet = acars.serializePacket();
             Assert::IsTrue(packet.find("Transmission Number: 42") != std::string::npos);
         }
@@ -70,7 +69,6 @@ namespace ACARSTests
             ACARS acars;
             acars.setIsPriority(true);
 
-            // Assuming serializePacket reflects the priority flag
             std::string packet = acars.serializePacket();
             Assert::IsTrue(packet.find("Message Priority: Yes") != std::string::npos);
         }
@@ -82,9 +80,9 @@ namespace ACARSTests
 
             std::string packet = acars.serializePacket();
             Assert::IsTrue(packet.find("Latitude: 40.7128") != std::string::npos);
-            // Continue for other telemetry data checks
+
         }
 
-        // Additional tests can be added here to cover more functionalities
+
     };
 }
