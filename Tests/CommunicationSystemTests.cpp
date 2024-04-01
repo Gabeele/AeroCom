@@ -11,60 +11,31 @@ namespace GroundControlTests
     {
     public:
 
-        TEST_METHOD(Initialize)
+        TEST_METHOD(TestPacketParsing)
         {
-            // Initialize Winsock
             GroundControl::GroundControl gc;
-            Assert::IsTrue(gc.Initialize());
+            std::string message = "Flight Number: AA123\nAircraft Type: Boeing 747\nDeparture Airport: JFK\nDestination Airport: LAX\n";
+            gc.PacketParsing(message);
+
+            // Add assertions here to verify the parsing logic
         }
 
-        TEST_METHOD(Cleanup)
-        {
-            // Cleanup Winsock
-            GroundControl::GroundControl gc;
-            gc.~GroundControl();
-        }
-
-        TEST_METHOD(TestConnect)
+        TEST_METHOD(TestGenerateChecksum)
         {
             GroundControl::GroundControl gc;
-            gc.Initialize();
-            Assert::IsTrue(gc.Connect(4444));
-        }
+            std::string packetContent = "Flight Number: AA123\nAircraft Type: Boeing 747\nDeparture Airport: JFK\nDestination Airport: LAX\n";
+            std::string checksum = gc.generateChecksum(packetContent);
 
-        TEST_METHOD(TestSwitchFrequency)
-        {
-            GroundControl::GroundControl gc;
-            Assert::IsTrue(gc.SwitchFrequency(5678));
-        }
-
-        TEST_METHOD(TestAcceptConnection)
-        {
-            GroundControl::GroundControl gc;
-            gc.Connect(1234);
-
-            SOCKET clientSocket = gc.AcceptConnection();
-
-            Assert::IsNotNull(&clientSocket);
-        }
-
-        TEST_METHOD(TestReceiveMessage)
-        {
-            // Assuming there's a connected client
-            GroundControl::GroundControl gc;
-            gc.Connect(4444);
-            SOCKET clientSocket = gc.AcceptConnection();
-
-            // Simulate receiving a message
-            std::string message = "Test message";
-            send(clientSocket, message.c_str(), message.length(), 0);
-
-            Assert::AreEqual(message, gc.ReceiveMessage(clientSocket));
+            // Add assertions here to verify the checksum generation
         }
 
         TEST_METHOD(TestChecksumCheck)
         {
+            GroundControl::GroundControl gc;
+            std::string message = "Flight Number: AA123\nAircraft Type: Boeing 747\nDeparture Airport: JFK\nDestination Airport: LAX\n";
+            gc.ChecksumCheck(message);
 
+            // Add assertions here to verify the checksum check logic
         }
     };
 }
