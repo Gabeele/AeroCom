@@ -82,7 +82,7 @@ namespace aircraft {
 
         // Generate and append checksum
         std::string packetContent = packet.str();
-        packet << "Checksum: " << generateChecksum(packetContent) << "\n";
+        packet << "Checksum: " << generateChecksum(packetContent) << "\n" << '\0';
 
         return packet.str();
     }

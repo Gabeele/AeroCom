@@ -7,12 +7,14 @@ namespace GroundControl {
 
 #pragma comment(lib, "ws2_32.lib")
 
-    GroundControl::GroundControl()
+    GroundControl::GroundControl() :
+        state(ServerState::Closed)
     {
     }
 
     GroundControl::~GroundControl()
     {
+        updateServerState(ServerState::Disconnected);
         if (listenSocket_ != INVALID_SOCKET)
         {
             closesocket(listenSocket_);
@@ -23,6 +25,7 @@ namespace GroundControl {
     bool GroundControl::Initialize()
     {
         WSADATA wsaData;
+        updateServerState(ServerState::Idle);
         int result = WSAStartup(MAKEWORD(2, 2), &wsaData);
         if (result != 0)
         {
@@ -34,6 +37,7 @@ namespace GroundControl {
 
     bool GroundControl::Connect(int port) // connecting based on a port allows for us to specify the simualed frequency for the commuinication channel
     {
+        updateServerState(ServerState::Idle);
         listenSocket_ = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
         if (listenSocket_ == INVALID_SOCKET)
         {
@@ -118,7 +122,7 @@ namespace GroundControl {
         return clientSocket;
     }
 
-    std::string GroundControl::ReceiveMessage(SOCKET clientSocket)
+    bool GroundControl::ReceiveMessage(SOCKET clientSocket)
     {
         char buffer[1024];
         int bytesReceived = recv(clientSocket, buffer, sizeof(buffer), 0);
@@ -126,34 +130,75 @@ namespace GroundControl {
         {
             std::cerr << "Receive failed with error: " << WSAGetLastError() << std::endl;
             closesocket(clientSocket);
-            return "";
+            return false;
         }
-        buffer[bytesReceived] = '\0';
+        else if (bytesReceived == 0)
+        {
+            return false;
+        }
+
+        // check if the incoming file is an image or packet
+        // for image, search keyword "Filesize:"
+        // else it's a packet
+
         std::string receivedMessage(buffer);
+        if (strstr(buffer, "Filesize:"))
+        {
+            std::ofstream outfile("recv_trajectory.png", std::ios::binary);
 
-        // do something with the message, ig log it or parse for whatever use it has
-        // if from other GC get we can get ip and then tell the 
+            char imgbuffer[1024];
+            int inc_bytes;
 
-        // just couts the packet for now
-        PacketParsing(receivedMessage);
+            do {
+                inc_bytes = recv(clientSocket, imgbuffer, sizeof(imgbuffer), 0);
+                if (strstr(imgbuffer, "EOF")) {
+                    outfile.close();
 
-        //check checksum integrity
-        ChecksumCheck(receivedMessage);
+                    logs::logger.log("Image received successfully", logs::Logger::LogLevel::Info);
 
-        //closesocket(clientSocket);
-        return receivedMessage;
+                    send(clientSocket, "akn", sizeof("akn"), 0);
+                    return true;
+                }
+                else if (inc_bytes > 0) {
+                    outfile.write(imgbuffer, inc_bytes);
+                }
+                else {
+                    std::cerr << "Receiving failed with error: " << WSAGetLastError() << std::endl;
+                }
+            } while (inc_bytes > 0);
+        }
+        else
+        {
+            buffer[bytesReceived] = '\0';
+
+            PacketParsing(receivedMessage);
+
+            //check checksum integrity
+            ChecksumCheck(receivedMessage);
+
+            return true;
+        }
     }
 
-    void GroundControl::PacketParsing(std::string receivedMessage)
+    void GroundControl::PacketParsing(std::string msg)
     {
-        std::cout << receivedMessage << std::endl;
+        // finds new line character and skips the first 2 lines of the packet
+        int nl = msg.find('\n');
+        nl = msg.find('\n', nl + 1);
+        nl = msg.find('\n', nl + 1);
 
-        unsigned int tnum = atoi(receivedMessage.substr(33, 33 + sizeof(int)).c_str());
+        unsigned int tnum = atoi(msg.substr(msg.find("Transmission Number: ") + 21, nl - (msg.find("Transmission Number: ") + 21)).c_str());
+        nl = msg.find('\n', nl + 1);
+        
         bool priority = false;
-        if (receivedMessage.substr(52, receivedMessage.find('\n', 52)) == "Yes")
+        if (strcmp((msg.substr(msg.find("Message Priority: ") + 18, nl - (msg.find("Message Priority: ") + 18))).c_str(), "Yes") == 0)
+        {
             priority = true;
+        }
+        nl = msg.find('\n', nl + 1);
+
         aircraft::ACARSFlag flg;
-        switch (receivedMessage.substr(receivedMessage.find("Flag: ") + 6, receivedMessage.find("Flag: ") + 7)[0]) {
+        switch (msg.substr(msg.find("Flag: ") + 6, msg.find("Flag: ") + 7)[0]) {
         case 'H':
             flg = aircraft::ACARSFlag::Handoff;
             break;
@@ -170,21 +215,48 @@ namespace GroundControl {
             flg = aircraft::ACARSFlag::Request;
             break;
         }
-        std::string acID = receivedMessage.substr(receivedMessage.find("Aircraft ID: ") + 13, receivedMessage.find('\n'));
-        //this is not in the transmission right now
-        //std::string gsID = receivedMessage.substr(receivedMessage.find(""));
+        nl = msg.find('\n', nl + 1);
+        std::string acID = msg.substr(msg.find("Aircraft ID: ") + 13, nl - (msg.find("Aircraft ID: ") + 13));
+        nl = msg.find('\n', nl + 1);
+
+        std::string gsID = msg.substr(msg.find("Ground Station ID:") + 18, nl - (msg.find("Ground Station ID:") + 18));
+        nl = msg.find('\n', nl + 1);
+        nl = msg.find('\n', nl + 1);
 
         //flight information
-        std::string flNum = receivedMessage.substr(receivedMessage.find("Flight Number: ") + 15, receivedMessage.find('\n'));
-        std::string acType = receivedMessage.substr(receivedMessage.find("Aircraft Type: ") + 15, receivedMessage.find('\n'));
-        std::string depAirport = receivedMessage.substr(receivedMessage.find("Departure Airport: ") + 19, receivedMessage.find('\n'));
-        std::string destAirport = receivedMessage.substr(receivedMessage.find("Destination Airport: ") + 21, receivedMessage.find('\n'));
+        std::string flNum = msg.substr(msg.find("Flight Number: ") + 15, nl - (msg.find("Flight Number: ") + 15));
+        nl = msg.find('\n', nl + 1);
+        std::string acType = msg.substr(msg.find("Aircraft Type: ") + 15, nl - (msg.find("Aircraft Type: ") + 15));
+        nl = msg.find('\n', nl + 1);
+        std::string depAirport = msg.substr(msg.find("Departure Airport: ") + 19, nl - (msg.find("Departure Airport: ") + 19));
+        nl = msg.find('\n', nl + 1);
+        std::string destAirport = msg.substr(msg.find("Destination Airport: ") + 21, nl - (msg.find("Destination Airport: ") + 21));
+        nl = msg.find('\n', nl + 1);
+        nl = msg.find('\n', nl + 1);
 
-        //rn there's an issue cutting off at the wrong place
-        // finish the rest of the parsing ...
+        // location details
+        std::string lat = msg.substr(msg.find("Latitude: ") + 10, nl - (msg.find("Latitude: ") + 10));
+        nl = msg.find('\n', nl + 1);
+        std::string lon = msg.substr(msg.find("Longitude: ") + 11, nl - (msg.find("Longitude: ") + 11));
+        nl = msg.find('\n', nl + 1);
+        std::string alt = msg.substr(msg.find("Altitude: ") + 10, nl - (msg.find("Altitude: ") + 10));
+        nl = msg.find('\n', nl + 1);
+        std::string speed = msg.substr(msg.find("Speed: ") + 7, nl - (msg.find("Speed: ") + 7));
+        nl = msg.find('\n', nl + 1);
+        std::string heading = msg.substr(msg.find("Heading: ") + 9, nl - (msg.find("Heading: ") + 9));
+        nl = msg.find('\n', nl + 1);
 
+        std::string tmstmp = msg.substr(msg.find("Time Stamp:") + 11, nl - (msg.find("Time Stamp:") + 11));
+
+        logs::logger.log("Packet " + std::to_string(tnum) + " received from " + acID + 
+            "\n\tDeparture: " + depAirport + "\n\tDestination: " + destAirport,
+            logs::Logger::LogLevel::Info);
 
         aircraft::ACARS newAcars();
+    }
+
+    void GroundControl::HandleATCToAircraftHandoffRequest(GroundControl* targetServer, char* targetAircraft)
+    {
     }
 
     std::string GroundControl::generateChecksum(const std::string& packetContent) const {
@@ -209,6 +281,42 @@ namespace GroundControl {
             logs::logger.log("Lost packet info", logs::Logger::LogLevel::Error);
 
         }
+    }
+
+    void GroundControl::updateServerState(ServerState newState) {
+
+        if (newState == state)
+        {
+            return;
+        }
+
+        // Convert the newState enum to a descriptive string
+        std::string newStateStr;
+        switch (newState) {
+        case ServerState::Idle:
+            newStateStr = "Idle";
+            break;
+        case ServerState::Closed:
+            newStateStr = "Closed";
+            break;
+        case ServerState::Connected:
+            newStateStr = "Connected";
+            break;
+        case ServerState::Handoff:
+            newStateStr = "Handoff";
+            break;
+        case ServerState::Disconnected:
+            newStateStr = "Disconnected";
+            break;
+        default:
+            newStateStr = "Unknown State";
+            break;
+        }
+
+        logs::logger.log("Updated Server state to: " + newStateStr, logs::Logger::LogLevel::Info);
+
+
+        state = newState;
     }
 
     int GroundControl::GetPort() const
@@ -239,7 +347,7 @@ namespace GroundControl {
             {
                 std::cout << "Handoff message sent to aircraft successfully." << std::endl;
             }
-
+            updateServerState(ServerState::Handoff);
             closesocket(CurrentGroundToAir);
     }
 

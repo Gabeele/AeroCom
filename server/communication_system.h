@@ -7,6 +7,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <chrono>
 #include "Handoff.h"
 
 namespace GroundControl {
@@ -16,6 +17,7 @@ namespace GroundControl {
     const unsigned int DEFAULT_CHANNEL = 5555;
 
     enum class CommunicationType { VHF, HF };
+    enum class ServerState { Closed, Idle, Connected, Handoff, Disconnected };
     // maybe some sort of channel for ground control to communicate over
 
     class GroundControl
@@ -26,10 +28,12 @@ namespace GroundControl {
 
         bool Initialize();
         bool Connect(int port);
-        std::string ReceiveMessage(SOCKET clientSocket);
+        bool ReceiveMessage(SOCKET clientSocket);
         std::string generateChecksum(const std::string& packetContent) const;
         void PacketParsing(std::string recievedMessage);
         void ChecksumCheck(std::string receivedMessage);
+        void updateServerState(ServerState newState);
+        void HandleATCToAircraftHandoffRequest(GroundControl* targetServer, char* targetAircraft);
         SOCKET AcceptConnection();
 
         int GetPort() const;
@@ -43,6 +47,7 @@ namespace GroundControl {
         int port_;
         char* ip;
         SOCKET listenSocket_;
+        ServerState state;
         std::vector<GroundControl*> connectedATCServers;
         std::vector<char*> connectedAircrafts; // this will be an ip that represents each of the aircrafts in flight
     };
