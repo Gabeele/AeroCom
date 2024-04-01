@@ -1,3 +1,9 @@
+/// CSCN74000 - Software Safety and Reliability 
+/// Group Project 
+/// Group 1  - Lisa, Gavin, Thomas 
+/// 
+/// AeroCom - Simulation of auotmated handoff between two ATC systems
+
 #include <iostream>
 #include "aircraft.h"
 #include "logger.h"
@@ -23,23 +29,23 @@ int main() {
     ac.toggleSimulateTelemetry();
 
 
+    // Keeps the system alive until the aircraft has completed it's trip via the simulation
     logs::logger.log("Starting simulation...", logs::Logger::LogLevel::Info);
     while (ac.getAircraftState() != aircraft::AircraftState::Completed) {
         std::this_thread::sleep_for(std::chrono::seconds(3));
     }
 
+
     logs::logger.log("Simulation ended. Aircraft completed it's flight.", logs::Logger::LogLevel::Info);
 
+    // Toggel simulation to deactive
     ac.toggleSimulateTelemetry();
 
+    // Toggle ACARS system to deactive
     ac.toggleACARSSystem();
 
+    // Toggle communication system to deactive
     ac.toggleCommunicationSystem();
-
-    //aircraft::Aircraft ac("WC1234");
-
-    //ac.loadFlightPlan("./FlightPlan.txt");
-    //ac.toggleCommunicationSystem();
 
     return 0;
 }
