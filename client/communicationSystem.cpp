@@ -113,6 +113,7 @@ namespace aircraft {
 
         // Receive an aknowledgement packet
         if (success) {
+            sendMessage("EOF");
             std::string ackMsg = receiveMessage();
 
             if (ackMsg.find(aknowledgeFlag) == std::string::npos) {
@@ -245,21 +246,6 @@ namespace aircraft {
                     break; 
                 }
             }
-        }
-
-        if (success) {
-            sendMessage("EOF");
-            std::string ackMsg = receiveMessage();
-            if (strcmp("akn", ackMsg.c_str())) {
-                logs::logger.log("Acknowledgment not received or not as expected.", logs::Logger::LogLevel::Warning);
-                success = false;
-            }
-            else {
-                logs::logger.log("File transmission acknowledged.", logs::Logger::LogLevel::Info);
-            }
-        }
-        else {
-            logs::logger.log("Skipping acknowledgment check due to previous errors.", logs::Logger::LogLevel::Info);
         }
 
         return success;

@@ -156,7 +156,7 @@ namespace GroundControl {
 
                     logs::logger.log("Image received successfully", logs::Logger::LogLevel::Info);
 
-                    send(clientSocket, "akn", sizeof("akn"), 0);
+                    send(clientSocket, "Flag: A", sizeof("Flag: A"), 0);
                     return true;
                 }
                 else if (inc_bytes > 0) {
