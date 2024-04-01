@@ -7,12 +7,14 @@ namespace GroundControl {
 
 #pragma comment(lib, "ws2_32.lib")
 
-    GroundControl::GroundControl()
+    GroundControl::GroundControl() :
+        state(ServerState::Closed)
     {
     }
 
     GroundControl::~GroundControl()
     {
+        updateServerState(ServerState::Disconnected);
         if (listenSocket_ != INVALID_SOCKET)
         {
             closesocket(listenSocket_);
@@ -23,6 +25,7 @@ namespace GroundControl {
     bool GroundControl::Initialize()
     {
         WSADATA wsaData;
+        updateServerState(ServerState::Idle);
         int result = WSAStartup(MAKEWORD(2, 2), &wsaData);
         if (result != 0)
         {
@@ -34,6 +37,7 @@ namespace GroundControl {
 
     bool GroundControl::Connect(int port) // connecting based on a port allows for us to specify the simualed frequency for the commuinication channel
     {
+        updateServerState(ServerState::Idle);
         listenSocket_ = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
         if (listenSocket_ == INVALID_SOCKET)
         {
@@ -118,7 +122,7 @@ namespace GroundControl {
         return clientSocket;
     }
 
-    void GroundControl::ReceiveMessage(SOCKET clientSocket)
+    bool GroundControl::ReceiveMessage(SOCKET clientSocket)
     {
         char buffer[1024];
         int bytesReceived = recv(clientSocket, buffer, sizeof(buffer), 0);
@@ -126,7 +130,11 @@ namespace GroundControl {
         {
             std::cerr << "Receive failed with error: " << WSAGetLastError() << std::endl;
             closesocket(clientSocket);
-            return;
+            return false;
+        }
+        else if (bytesReceived == 0)
+        {
+            return false;
         }
 
         // check if the incoming file is an image or packet
@@ -145,10 +153,11 @@ namespace GroundControl {
                 inc_bytes = recv(clientSocket, imgbuffer, sizeof(imgbuffer), 0);
                 if (strstr(imgbuffer, "EOF")) {
                     outfile.close();
-                    std::cout << "Image received successfully" << std::endl;
+
+                    logs::logger.log("Image received successfully", logs::Logger::LogLevel::Info);
 
                     send(clientSocket, "akn", sizeof("akn"), 0);
-                    return;
+                    return true;
                 }
                 else if (inc_bytes > 0) {
                     outfile.write(imgbuffer, inc_bytes);
@@ -162,18 +171,17 @@ namespace GroundControl {
         {
             buffer[bytesReceived] = '\0';
 
-            // just couts the packet for now
             PacketParsing(receivedMessage);
 
             //check checksum integrity
             ChecksumCheck(receivedMessage);
+
+            return true;
         }
     }
 
     void GroundControl::PacketParsing(std::string msg)
     {
-        std::cout << msg << std::endl;
-        
         // finds new line character and skips the first 2 lines of the packet
         int nl = msg.find('\n');
         nl = msg.find('\n', nl + 1);
@@ -240,6 +248,10 @@ namespace GroundControl {
 
         std::string tmstmp = msg.substr(msg.find("Time Stamp:") + 11, nl - (msg.find("Time Stamp:") + 11));
 
+        logs::logger.log("Packet " + std::to_string(tnum) + " received from " + acID + 
+            "\n\tDeparture: " + depAirport + "\n\tDestination: " + destAirport,
+            logs::Logger::LogLevel::Info);
+
         aircraft::ACARS newAcars();
     }
 
@@ -271,6 +283,42 @@ namespace GroundControl {
         }
     }
 
+    void GroundControl::updateServerState(ServerState newState) {
+
+        if (newState == state)
+        {
+            return;
+        }
+
+        // Convert the newState enum to a descriptive string
+        std::string newStateStr;
+        switch (newState) {
+        case ServerState::Idle:
+            newStateStr = "Idle";
+            break;
+        case ServerState::Closed:
+            newStateStr = "Closed";
+            break;
+        case ServerState::Connected:
+            newStateStr = "Connected";
+            break;
+        case ServerState::Handoff:
+            newStateStr = "Handoff";
+            break;
+        case ServerState::Disconnected:
+            newStateStr = "Disconnected";
+            break;
+        default:
+            newStateStr = "Unknown State";
+            break;
+        }
+
+        logs::logger.log("Updated Server state to: " + newStateStr, logs::Logger::LogLevel::Info);
+
+
+        state = newState;
+    }
+
     int GroundControl::GetPort() const
     {
         return port_;
@@ -299,7 +347,7 @@ namespace GroundControl {
             {
                 std::cout << "Handoff message sent to aircraft successfully." << std::endl;
             }
-
+            updateServerState(ServerState::Handoff);
             closesocket(CurrentGroundToAir);
     }
 
