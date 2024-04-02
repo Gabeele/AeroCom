@@ -17,7 +17,7 @@ int main() {
         return 0;
     }
 
-    //ac.setFrequencyChannel("192.168.1.33", "HF");
+    //ac.setFrequencyChannel("10.144.127.13", "VHF");
 
     // Toggle the communication system to active
     ac.toggleCommunicationSystem();

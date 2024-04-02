@@ -267,10 +267,10 @@ namespace aircraft {
             std::chrono::duration<float> elapsed = currentTime - startTime;
             float elapsedTime = elapsed.count();
 
-            const float ascentDuration = 15.0; // Ascent duration in seconds
-            const float cruisingStartTime = 30.0; // When cruising starts in seconds
-            const float descentStartTime = 45.0; // When descent starts in seconds
-            const float totalDuration = 55.0; // Total flight duration in seconds
+            const float ascentDuration = 60.0; // Ascent duration in seconds
+            const float cruisingStartTime = 60.0; // When cruising starts in seconds
+            const float descentStartTime = 90.0; // When descent starts in seconds
+            const float totalDuration = 120.0; // Total flight duration in seconds
 
             // Calculate the phase of the flight
             if (elapsedTime <= ascentDuration) {
