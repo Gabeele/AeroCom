@@ -23,9 +23,20 @@ namespace GroundControl {
     class GroundControl
     {
     public:
-        GroundControl(); // constructor wit da parameters
-        ~GroundControl(); // deconstructor
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        GroundControl();
+        /// <summary>
+        /// Deconstructor
+        /// </summary>
+        ~GroundControl();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns> </returns>
         bool Initialize();
         bool Connect(int port);
         bool ReceiveMessage(SOCKET clientSocket);

@@ -17,26 +17,28 @@ namespace GroundControl {
         updateServerState(ServerState::Disconnected);
         if (listenSocket_ != INVALID_SOCKET)
         {
-            closesocket(listenSocket_);
+            (void)closesocket(listenSocket_);
         }
-        WSACleanup();
+        (void)WSACleanup();
     }
 
     bool GroundControl::Initialize()
     {
         WSADATA wsaData;
         updateServerState(ServerState::Idle);
+        bool ret = true;
         int result = WSAStartup(MAKEWORD(2, 2), &wsaData);
         if (result != 0)
         {
             logs::logger.log("WSA Startup has an issue. Result is non-zero.", logs::Logger::LogLevel::Error);
-            return false;
+            ret = false;
         }
-        return true;
+        return ret;
     }
 
     bool GroundControl::Connect(int port) // connecting based on a port allows for us to specify the simualed frequency for the commuinication channel
     {
+        bool ret = true;
         updateServerState(ServerState::Idle);
         listenSocket_ = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
         if (listenSocket_ == INVALID_SOCKET)
@@ -52,23 +54,24 @@ namespace GroundControl {
 
         if (bind(listenSocket_, reinterpret_cast<sockaddr*>(&serverAddr), sizeof(serverAddr)) == SOCKET_ERROR)
         {
-            std::cerr << "Bind failed with error: " << WSAGetLastError() << std::endl;
-            closesocket(listenSocket_);
+            //std::cerr << "Bind failed with error: " << WSAGetLastError() << std::endl;
+            (void)closesocket(listenSocket_);
             return false;
         }
 
         if (listen(listenSocket_, SOMAXCONN) == SOCKET_ERROR)
         {
-            std::cerr << "Listen failed with error: " << WSAGetLastError() << std::endl;
-            closesocket(listenSocket_);
+            //std::cerr << "Listen failed with error: " << WSAGetLastError() << std::endl;
+            (void)closesocket(listenSocket_);
             return false;
         }
 
-        return true;
+        return ret;
     }
 
     bool GroundControl::SwitchFrequency(int newPort) // should take a port number which can be changed to the HF or VHF enum to change between port 4444 or 5555 this can also be an enum probably
     {
+        bool ret = true;
         SOCKET newSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
         if (newSocket == INVALID_SOCKET)
         {
@@ -86,20 +89,20 @@ namespace GroundControl {
         if (bind(newSocket, reinterpret_cast<sockaddr*>(&serverAddr), sizeof(serverAddr)) == SOCKET_ERROR)
         {
             std::cerr << "Bind failed with error: " << WSAGetLastError() << std::endl;
-            closesocket(newSocket);
+            (void)closesocket(newSocket);
             return false;
         }
 
         if (listen(newSocket, SOMAXCONN) == SOCKET_ERROR)
         {
             std::cerr << "Listen failed with error: " << WSAGetLastError() << std::endl;
-            closesocket(newSocket);
+            (void)closesocket(newSocket);
             return false;
         }
 
         if (listenSocket_ != INVALID_SOCKET)
         {
-            closesocket(listenSocket_);
+            (void)closesocket(listenSocket_);
         }
 
         // Assign the new socket to the client socket member variable
@@ -154,7 +157,7 @@ namespace GroundControl {
                 if (strstr(imgbuffer, "EOF")) {
                     outfile.close();
 
-                    logs::logger.log("Image received successfully", logs::Logger::LogLevel::Info);
+                    logs::logger.log("Trajectory received successfully", logs::Logger::LogLevel::Info);
 
                     send(clientSocket, "Flag: A", sizeof("Flag: A"), 0);
                     return true;
