@@ -1,0 +1,1474 @@
+[2024-04-02 08:44:29] [INFO] Channel set to VHF with port VHF
+[2024-04-02 08:44:29] [INFO] Loading flight plan...
+[2024-04-02 08:44:29] [INFO] Flight plan is loaded.
+[2024-04-02 08:44:31] [ERROR] Failed to connect to the server.
+[2024-04-02 08:44:31] [ERROR] Failed to send message.
+[2024-04-02 08:44:31] [ERROR] Failed to send file size.
+[2024-04-02 08:44:31] [ERROR] Failed to connect communication system.
+[2024-04-02 08:44:31] [INFO] Communication state set to: Closed
+[2024-04-02 08:44:31] [INFO] Communication toggled: ON
+[2024-04-02 08:44:31] [INFO] Starting simulation...
+[2024-04-02 08:44:31] [INFO] Updated aircraft state to: Idle
+[2024-04-02 08:44:31] [INFO] Communication state set to: Sending
+[2024-04-02 08:44:31] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:44:32] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:44:33] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:44:34] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:44:35] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:44:36] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:44:37] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:44:38] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:44:56] [INFO] Channel set to VHF with port VHF
+[2024-04-02 08:44:56] [INFO] Loading flight plan...
+[2024-04-02 08:44:56] [INFO] Flight plan is loaded.
+[2024-04-02 08:44:57] [INFO] Connected to the server.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Large file sent.
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:57] [INFO] Received message: Flag: A
+[2024-04-02 08:44:57] [INFO] File transmission acknowledged.
+[2024-04-02 08:44:57] [INFO] Communication state set to: EstablishedConnection
+[2024-04-02 08:44:57] [INFO] Communication toggled: ON
+[2024-04-02 08:44:57] [INFO] Starting simulation...
+[2024-04-02 08:44:57] [INFO] Communication state set to: Sending
+[2024-04-02 08:44:57] [INFO] Updated aircraft state to: Idle
+[2024-04-02 08:44:57] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:44:57] [INFO] Message sent successfully.
+[2024-04-02 08:44:58] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:44:58] [INFO] Message sent successfully.
+[2024-04-02 08:44:59] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:44:59] [INFO] Message sent successfully.
+[2024-04-02 08:45:00] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:00] [INFO] Message sent successfully.
+[2024-04-02 08:45:01] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:01] [INFO] Message sent successfully.
+[2024-04-02 08:45:02] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:02] [INFO] Message sent successfully.
+[2024-04-02 08:45:03] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:03] [INFO] Message sent successfully.
+[2024-04-02 08:45:04] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:04] [INFO] Message sent successfully.
+[2024-04-02 08:45:05] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:05] [INFO] Message sent successfully.
+[2024-04-02 08:45:06] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:06] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Received message: Flag: H Frequency: 127.0.0.15 Channel: VHF
+[2024-04-02 08:45:07] [INFO] Channel set to VHF with port VHF
+[2024-04-02 08:45:07] [INFO] Disconnected from server.
+[2024-04-02 08:45:07] [INFO] Connected to the server.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Large file sent.
+[2024-04-02 08:45:07] [INFO] Message sent successfully.
+[2024-04-02 08:45:07] [INFO] Received message: Flag: A
+[2024-04-02 08:45:07] [INFO] File transmission acknowledged.
+[2024-04-02 08:45:07] [INFO] Handoff completed. Connected to new server.
+[2024-04-02 08:45:08] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:08] [INFO] Message sent successfully.
+[2024-04-02 08:45:09] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:09] [INFO] Message sent successfully.
+[2024-04-02 08:45:10] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:10] [INFO] Message sent successfully.
+[2024-04-02 08:45:11] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:11] [INFO] Message sent successfully.
+[2024-04-02 08:45:12] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:12] [INFO] Message sent successfully.
+[2024-04-02 08:45:13] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:13] [INFO] Message sent successfully.
+[2024-04-02 08:45:14] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:14] [INFO] Message sent successfully.
+[2024-04-02 08:45:15] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:15] [INFO] Message sent successfully.
+[2024-04-02 08:45:16] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:16] [INFO] Message sent successfully.
+[2024-04-02 08:45:17] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:17] [INFO] Message sent successfully.
+[2024-04-02 08:45:18] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:18] [INFO] Message sent successfully.
+[2024-04-02 08:45:19] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:19] [INFO] Message sent successfully.
+[2024-04-02 08:45:20] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:20] [INFO] Message sent successfully.
+[2024-04-02 08:45:21] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:21] [INFO] Message sent successfully.
+[2024-04-02 08:45:22] [ERROR] Receive failed with error code: 10054
+[2024-04-02 08:45:22] [WARNING] Attempting to reconnect, attempt 1
+[2024-04-02 08:45:22] [INFO] Disconnected from server.
+[2024-04-02 08:45:22] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:50] [INFO] Channel set to VHF with port VHF
+[2024-04-02 08:45:50] [INFO] Loading flight plan...
+[2024-04-02 08:45:50] [INFO] Flight plan is loaded.
+[2024-04-02 08:45:51] [INFO] Connected to the server.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Large file sent.
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:51] [INFO] Received message: Flag: A
+[2024-04-02 08:45:51] [INFO] File transmission acknowledged.
+[2024-04-02 08:45:51] [INFO] Communication state set to: EstablishedConnection
+[2024-04-02 08:45:51] [INFO] Communication toggled: ON
+[2024-04-02 08:45:51] [INFO] Starting simulation...
+[2024-04-02 08:45:51] [INFO] Communication state set to: Sending
+[2024-04-02 08:45:51] [INFO] Updated aircraft state to: Idle
+[2024-04-02 08:45:51] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:51] [INFO] Message sent successfully.
+[2024-04-02 08:45:52] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:52] [INFO] Message sent successfully.
+[2024-04-02 08:45:53] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:53] [INFO] Message sent successfully.
+[2024-04-02 08:45:54] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:54] [INFO] Message sent successfully.
+[2024-04-02 08:45:55] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:55] [INFO] Message sent successfully.
+[2024-04-02 08:45:56] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:56] [INFO] Message sent successfully.
+[2024-04-02 08:45:57] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:57] [INFO] Message sent successfully.
+[2024-04-02 08:45:58] [INFO] Message sent successfully.
+[2024-04-02 08:45:58] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:45:59] [INFO] Message sent successfully.
+[2024-04-02 08:45:59] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:00] [INFO] Message sent successfully.
+[2024-04-02 08:46:00] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Received message: Flag: H Frequency: 127.0.0.15 Channel: VHF
+[2024-04-02 08:46:01] [INFO] Channel set to VHF with port VHF
+[2024-04-02 08:46:01] [INFO] Disconnected from server.
+[2024-04-02 08:46:01] [INFO] Connected to the server.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Large file sent.
+[2024-04-02 08:46:01] [INFO] Message sent successfully.
+[2024-04-02 08:46:01] [INFO] Received message: Flag: A
+[2024-04-02 08:46:01] [INFO] File transmission acknowledged.
+[2024-04-02 08:46:01] [INFO] Handoff completed. Connected to new server.
+[2024-04-02 08:46:02] [INFO] Message sent successfully.
+[2024-04-02 08:46:02] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:03] [INFO] Message sent successfully.
+[2024-04-02 08:46:03] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:04] [INFO] Message sent successfully.
+[2024-04-02 08:46:04] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:05] [INFO] Message sent successfully.
+[2024-04-02 08:46:05] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:06] [INFO] Message sent successfully.
+[2024-04-02 08:46:06] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:07] [INFO] Message sent successfully.
+[2024-04-02 08:46:07] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:08] [INFO] Message sent successfully.
+[2024-04-02 08:46:08] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:09] [INFO] Message sent successfully.
+[2024-04-02 08:46:09] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:10] [INFO] Message sent successfully.
+[2024-04-02 08:46:10] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:11] [INFO] Message sent successfully.
+[2024-04-02 08:46:11] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:12] [INFO] Message sent successfully.
+[2024-04-02 08:46:12] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:13] [INFO] Message sent successfully.
+[2024-04-02 08:46:13] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:14] [INFO] Message sent successfully.
+[2024-04-02 08:46:14] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:15] [INFO] Message sent successfully.
+[2024-04-02 08:46:15] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:16] [INFO] Message sent successfully.
+[2024-04-02 08:46:16] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:17] [INFO] Message sent successfully.
+[2024-04-02 08:46:17] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:18] [INFO] Message sent successfully.
+[2024-04-02 08:46:18] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:19] [INFO] Message sent successfully.
+[2024-04-02 08:46:19] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:20] [INFO] Message sent successfully.
+[2024-04-02 08:46:20] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:21] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:21] [INFO] Message sent successfully.
+[2024-04-02 08:46:22] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:22] [INFO] Message sent successfully.
+[2024-04-02 08:46:23] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:23] [INFO] Message sent successfully.
+[2024-04-02 08:46:24] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:24] [INFO] Message sent successfully.
+[2024-04-02 08:46:25] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:25] [INFO] Message sent successfully.
+[2024-04-02 08:46:26] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:26] [INFO] Message sent successfully.
+[2024-04-02 08:46:27] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:27] [INFO] Message sent successfully.
+[2024-04-02 08:46:28] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:28] [INFO] Message sent successfully.
+[2024-04-02 08:46:29] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:29] [INFO] Message sent successfully.
+[2024-04-02 08:46:30] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:30] [INFO] Message sent successfully.
+[2024-04-02 08:46:31] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:31] [INFO] Message sent successfully.
+[2024-04-02 08:46:32] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:32] [INFO] Message sent successfully.
+[2024-04-02 08:46:33] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:33] [INFO] Message sent successfully.
+[2024-04-02 08:46:34] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:34] [INFO] Message sent successfully.
+[2024-04-02 08:46:35] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:35] [INFO] Message sent successfully.
+[2024-04-02 08:46:36] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:36] [INFO] Message sent successfully.
+[2024-04-02 08:46:37] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:37] [INFO] Message sent successfully.
+[2024-04-02 08:46:38] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:38] [INFO] Message sent successfully.
+[2024-04-02 08:46:39] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:39] [INFO] Message sent successfully.
+[2024-04-02 08:46:40] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:40] [INFO] Message sent successfully.
+[2024-04-02 08:46:42] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:42] [INFO] Message sent successfully.
+[2024-04-02 08:46:43] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:43] [INFO] Message sent successfully.
+[2024-04-02 08:46:44] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:44] [INFO] Message sent successfully.
+[2024-04-02 08:46:45] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:45] [INFO] Message sent successfully.
+[2024-04-02 08:46:46] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:46] [INFO] Message sent successfully.
+[2024-04-02 08:46:47] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:47] [INFO] Message sent successfully.
+[2024-04-02 08:46:48] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:48] [INFO] Message sent successfully.
+[2024-04-02 08:46:49] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:49] [INFO] Message sent successfully.
+[2024-04-02 08:46:50] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:50] [INFO] Message sent successfully.
+[2024-04-02 08:46:51] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:46:51] [INFO] Message sent successfully.
+[2024-04-02 08:46:52] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:46:52] [INFO] Message sent successfully.
+[2024-04-02 08:46:53] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:46:53] [INFO] Message sent successfully.
+[2024-04-02 08:46:54] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:46:54] [INFO] Message sent successfully.
+[2024-04-02 08:46:55] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:46:55] [INFO] Message sent successfully.
+[2024-04-02 08:46:56] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:46:56] [INFO] Message sent successfully.
+[2024-04-02 08:47:04] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:04] [INFO] Message sent successfully.
+[2024-04-02 08:47:05] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:05] [INFO] Message sent successfully.
+[2024-04-02 08:47:06] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:06] [INFO] Message sent successfully.
+[2024-04-02 08:47:08] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:08] [INFO] Message sent successfully.
+[2024-04-02 08:47:09] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:09] [INFO] Message sent successfully.
+[2024-04-02 08:47:10] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:10] [INFO] Message sent successfully.
+[2024-04-02 08:47:11] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:11] [INFO] Message sent successfully.
+[2024-04-02 08:47:12] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:12] [INFO] Message sent successfully.
+[2024-04-02 08:47:13] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:13] [INFO] Message sent successfully.
+[2024-04-02 08:47:14] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:14] [INFO] Message sent successfully.
+[2024-04-02 08:47:15] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:15] [INFO] Message sent successfully.
+[2024-04-02 08:47:16] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:16] [INFO] Message sent successfully.
+[2024-04-02 08:47:17] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:17] [INFO] Message sent successfully.
+[2024-04-02 08:47:18] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:18] [INFO] Message sent successfully.
+[2024-04-02 08:47:19] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:19] [INFO] Message sent successfully.
+[2024-04-02 08:47:20] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:20] [INFO] Message sent successfully.
+[2024-04-02 08:47:21] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:47:21] [INFO] Message sent successfully.
+[2024-04-02 08:47:22] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:22] [INFO] Message sent successfully.
+[2024-04-02 08:47:23] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:23] [INFO] Message sent successfully.
+[2024-04-02 08:47:24] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:24] [INFO] Message sent successfully.
+[2024-04-02 08:47:25] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:25] [INFO] Message sent successfully.
+[2024-04-02 08:47:26] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:26] [INFO] Message sent successfully.
+[2024-04-02 08:47:27] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:27] [INFO] Message sent successfully.
+[2024-04-02 08:47:28] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:28] [INFO] Message sent successfully.
+[2024-04-02 08:47:29] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:29] [INFO] Message sent successfully.
+[2024-04-02 08:47:30] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:30] [INFO] Message sent successfully.
+[2024-04-02 08:47:31] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:31] [INFO] Message sent successfully.
+[2024-04-02 08:47:32] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:32] [INFO] Message sent successfully.
+[2024-04-02 08:47:33] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:33] [INFO] Message sent successfully.
+[2024-04-02 08:47:34] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:34] [INFO] Message sent successfully.
+[2024-04-02 08:47:35] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:35] [INFO] Message sent successfully.
+[2024-04-02 08:47:36] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:36] [INFO] Message sent successfully.
+[2024-04-02 08:47:37] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:37] [INFO] Message sent successfully.
+[2024-04-02 08:47:38] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:38] [INFO] Message sent successfully.
+[2024-04-02 08:47:39] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:39] [INFO] Message sent successfully.
+[2024-04-02 08:47:40] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:40] [INFO] Message sent successfully.
+[2024-04-02 08:47:41] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:41] [INFO] Message sent successfully.
+[2024-04-02 08:47:42] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:42] [INFO] Message sent successfully.
+[2024-04-02 08:47:43] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:43] [INFO] Message sent successfully.
+[2024-04-02 08:47:44] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:44] [INFO] Message sent successfully.
+[2024-04-02 08:47:45] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:45] [INFO] Message sent successfully.
+[2024-04-02 08:47:46] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:46] [INFO] Message sent successfully.
+[2024-04-02 08:47:47] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:47] [INFO] Message sent successfully.
+[2024-04-02 08:47:48] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:48] [INFO] Message sent successfully.
+[2024-04-02 08:47:49] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:49] [INFO] Message sent successfully.
+[2024-04-02 08:47:50] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:50] [INFO] Message sent successfully.
+[2024-04-02 08:47:51] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:47:51] [INFO] Message sent successfully.
+[2024-04-02 08:47:52] [INFO] Updated aircraft state to: Completed
+[2024-04-02 08:47:52] [INFO] Message sent successfully.
+[2024-04-02 08:47:53] [INFO] Updated aircraft state to: Completed
+[2024-04-02 08:47:53] [INFO] Message sent successfully.
+[2024-04-02 08:47:54] [INFO] Updated aircraft state to: Completed
+[2024-04-02 08:47:54] [INFO] Message sent successfully.
+[2024-04-02 08:47:54] [INFO] Simulation ended. Aircraft completed it's flight.
+[2024-04-02 08:47:55] [INFO] Disconnected from server.[2024-04-02 08:47:55] [ERROR] Receive failed with error code: 10053
+
+[2024-04-02 08:47:55] [INFO] Communication state set to: Closed
+[2024-04-02 08:47:55] [INFO] Communication toggled: OFF
+[2024-04-02 08:48:44] [INFO] Channel set to VHF with port VHF
+[2024-04-02 08:48:44] [INFO] Loading flight plan...
+[2024-04-02 08:48:44] [INFO] Flight plan is loaded.
+[2024-04-02 08:48:45] [INFO] Connected to the server.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Large file sent.
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:45] [INFO] Received message: Flag: A
+[2024-04-02 08:48:45] [INFO] File transmission acknowledged.
+[2024-04-02 08:48:45] [INFO] Communication state set to: EstablishedConnection
+[2024-04-02 08:48:45] [INFO] Communication toggled: ON
+[2024-04-02 08:48:45] [INFO] Starting simulation...
+[2024-04-02 08:48:45] [INFO] Communication state set to: Sending
+[2024-04-02 08:48:45] [INFO] Updated aircraft state to: Idle
+[2024-04-02 08:48:45] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:45] [INFO] Message sent successfully.
+[2024-04-02 08:48:46] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:46] [INFO] Message sent successfully.
+[2024-04-02 08:48:47] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:47] [INFO] Message sent successfully.
+[2024-04-02 08:48:48] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:48] [INFO] Message sent successfully.
+[2024-04-02 08:48:49] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:49] [INFO] Message sent successfully.
+[2024-04-02 08:48:50] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:50] [INFO] Message sent successfully.
+[2024-04-02 08:48:51] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:51] [INFO] Message sent successfully.
+[2024-04-02 08:48:52] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:52] [INFO] Message sent successfully.
+[2024-04-02 08:48:53] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:53] [INFO] Message sent successfully.
+[2024-04-02 08:48:54] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:54] [INFO] Message sent successfully.
+[2024-04-02 08:48:55] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:55] [INFO] Message sent successfully.
+[2024-04-02 08:48:56] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:56] [INFO] Message sent successfully.
+[2024-04-02 08:48:57] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:57] [INFO] Message sent successfully.
+[2024-04-02 08:48:58] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:58] [INFO] Message sent successfully.
+[2024-04-02 08:48:59] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:48:59] [INFO] Message sent successfully.
+[2024-04-02 08:49:00] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:00] [INFO] Message sent successfully.
+[2024-04-02 08:49:01] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:01] [INFO] Message sent successfully.
+[2024-04-02 08:49:02] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:02] [INFO] Message sent successfully.
+[2024-04-02 08:49:03] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:03] [INFO] Message sent successfully.
+[2024-04-02 08:49:04] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:04] [INFO] Message sent successfully.
+[2024-04-02 08:49:05] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:05] [INFO] Message sent successfully.
+[2024-04-02 08:49:06] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:06] [INFO] Message sent successfully.
+[2024-04-02 08:49:07] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:07] [INFO] Message sent successfully.
+[2024-04-02 08:49:08] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:08] [INFO] Message sent successfully.
+[2024-04-02 08:49:09] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:09] [INFO] Message sent successfully.
+[2024-04-02 08:49:10] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:10] [INFO] Message sent successfully.
+[2024-04-02 08:49:11] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:11] [INFO] Message sent successfully.
+[2024-04-02 08:49:12] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:12] [INFO] Message sent successfully.
+[2024-04-02 08:49:13] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:13] [INFO] Message sent successfully.
+[2024-04-02 08:49:14] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:14] [INFO] Message sent successfully.
+[2024-04-02 08:49:15] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:15] [INFO] Message sent successfully.
+[2024-04-02 08:49:16] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:16] [INFO] Message sent successfully.
+[2024-04-02 08:49:17] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:17] [INFO] Message sent successfully.
+[2024-04-02 08:49:18] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:18] [INFO] Message sent successfully.
+[2024-04-02 08:49:19] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:19] [INFO] Message sent successfully.
+[2024-04-02 08:49:20] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:20] [INFO] Message sent successfully.
+[2024-04-02 08:49:21] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:21] [INFO] Message sent successfully.
+[2024-04-02 08:49:22] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:22] [INFO] Message sent successfully.
+[2024-04-02 08:49:23] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:23] [INFO] Message sent successfully.
+[2024-04-02 08:49:24] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:24] [INFO] Message sent successfully.
+[2024-04-02 08:49:25] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:25] [INFO] Message sent successfully.
+[2024-04-02 08:49:26] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:26] [INFO] Message sent successfully.
+[2024-04-02 08:49:27] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:27] [INFO] Message sent successfully.
+[2024-04-02 08:49:28] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:28] [INFO] Message sent successfully.
+[2024-04-02 08:49:29] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:29] [INFO] Message sent successfully.
+[2024-04-02 08:49:30] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:30] [INFO] Message sent successfully.
+[2024-04-02 08:49:31] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:31] [INFO] Message sent successfully.
+[2024-04-02 08:49:32] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:32] [INFO] Message sent successfully.
+[2024-04-02 08:49:33] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:33] [INFO] Message sent successfully.
+[2024-04-02 08:49:34] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:34] [INFO] Message sent successfully.
+[2024-04-02 08:49:35] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:35] [INFO] Message sent successfully.
+[2024-04-02 08:49:36] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:36] [INFO] Message sent successfully.
+[2024-04-02 08:49:37] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:37] [INFO] Message sent successfully.
+[2024-04-02 08:49:38] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:38] [INFO] Message sent successfully.
+[2024-04-02 08:49:39] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:39] [INFO] Message sent successfully.
+[2024-04-02 08:49:40] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:40] [INFO] Message sent successfully.
+[2024-04-02 08:49:41] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:41] [INFO] Message sent successfully.
+[2024-04-02 08:49:42] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:42] [INFO] Message sent successfully.
+[2024-04-02 08:49:43] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:43] [INFO] Message sent successfully.
+[2024-04-02 08:49:44] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:49:44] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Received message: Flag: H Frequency: 127.0.0.15 Channel: VHF
+[2024-04-02 08:49:45] [INFO] Channel set to VHF with port VHF
+[2024-04-02 08:49:45] [INFO] Disconnected from server.
+[2024-04-02 08:49:45] [INFO] Connected to the server.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Large file sent.
+[2024-04-02 08:49:45] [INFO] Message sent successfully.
+[2024-04-02 08:49:45] [INFO] Received message: Flag: A
+[2024-04-02 08:49:45] [INFO] File transmission acknowledged.
+[2024-04-02 08:49:45] [INFO] Handoff completed. Connected to new server.
+[2024-04-02 08:49:46] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:46] [INFO] Message sent successfully.
+[2024-04-02 08:49:47] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:47] [INFO] Message sent successfully.
+[2024-04-02 08:49:48] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:48] [INFO] Message sent successfully.
+[2024-04-02 08:49:49] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:49] [INFO] Message sent successfully.
+[2024-04-02 08:49:50] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:50] [INFO] Message sent successfully.
+[2024-04-02 08:49:51] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:51] [INFO] Message sent successfully.
+[2024-04-02 08:49:52] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:52] [INFO] Message sent successfully.
+[2024-04-02 08:49:53] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:53] [INFO] Message sent successfully.
+[2024-04-02 08:49:54] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:54] [INFO] Message sent successfully.
+[2024-04-02 08:49:55] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:55] [INFO] Message sent successfully.
+[2024-04-02 08:49:56] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:56] [INFO] Message sent successfully.
+[2024-04-02 08:49:57] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:57] [INFO] Message sent successfully.
+[2024-04-02 08:49:58] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:58] [INFO] Message sent successfully.
+[2024-04-02 08:49:59] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:49:59] [INFO] Message sent successfully.
+[2024-04-02 08:50:00] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:00] [INFO] Message sent successfully.
+[2024-04-02 08:50:01] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:01] [INFO] Message sent successfully.
+[2024-04-02 08:50:02] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:02] [INFO] Message sent successfully.
+[2024-04-02 08:50:03] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:03] [INFO] Message sent successfully.
+[2024-04-02 08:50:04] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:04] [INFO] Message sent successfully.
+[2024-04-02 08:50:05] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:05] [INFO] Message sent successfully.
+[2024-04-02 08:50:06] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:06] [INFO] Message sent successfully.
+[2024-04-02 08:50:07] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:07] [INFO] Message sent successfully.
+[2024-04-02 08:50:08] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:08] [INFO] Message sent successfully.
+[2024-04-02 08:50:09] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:09] [INFO] Message sent successfully.
+[2024-04-02 08:50:10] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:10] [INFO] Message sent successfully.
+[2024-04-02 08:50:11] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:11] [INFO] Message sent successfully.
+[2024-04-02 08:50:12] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:12] [INFO] Message sent successfully.
+[2024-04-02 08:50:13] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:13] [INFO] Message sent successfully.
+[2024-04-02 08:50:14] [INFO] Updated aircraft state to: InFlight
+[2024-04-02 08:50:14] [INFO] Message sent successfully.
+[2024-04-02 08:50:15] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:15] [INFO] Message sent successfully.
+[2024-04-02 08:50:16] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:16] [INFO] Message sent successfully.
+[2024-04-02 08:50:17] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:18] [INFO] Message sent successfully.
+[2024-04-02 08:50:18] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:19] [INFO] Message sent successfully.
+[2024-04-02 08:50:19] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:20] [INFO] Message sent successfully.
+[2024-04-02 08:50:21] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:21] [INFO] Message sent successfully.
+[2024-04-02 08:50:22] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:22] [INFO] Message sent successfully.
+[2024-04-02 08:50:23] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:23] [INFO] Message sent successfully.
+[2024-04-02 08:50:24] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:24] [INFO] Message sent successfully.
+[2024-04-02 08:50:25] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:25] [INFO] Message sent successfully.
+[2024-04-02 08:50:26] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:26] [INFO] Message sent successfully.
+[2024-04-02 08:50:27] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:27] [INFO] Message sent successfully.
+[2024-04-02 08:50:28] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:28] [INFO] Message sent successfully.
+[2024-04-02 08:50:29] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:29] [INFO] Message sent successfully.
+[2024-04-02 08:50:30] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:30] [INFO] Message sent successfully.
+[2024-04-02 08:50:31] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:31] [INFO] Message sent successfully.
+[2024-04-02 08:50:32] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:32] [INFO] Message sent successfully.
+[2024-04-02 08:50:33] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:33] [INFO] Message sent successfully.
+[2024-04-02 08:50:34] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:34] [INFO] Message sent successfully.
+[2024-04-02 08:50:35] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:35] [INFO] Message sent successfully.
+[2024-04-02 08:50:36] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:36] [INFO] Message sent successfully.
+[2024-04-02 08:50:37] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:37] [INFO] Message sent successfully.
+[2024-04-02 08:50:38] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:38] [INFO] Message sent successfully.
+[2024-04-02 08:50:39] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:39] [INFO] Message sent successfully.
+[2024-04-02 08:50:40] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:40] [INFO] Message sent successfully.
+[2024-04-02 08:50:41] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:41] [INFO] Message sent successfully.
+[2024-04-02 08:50:42] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:42] [INFO] Message sent successfully.
+[2024-04-02 08:50:43] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:43] [INFO] Message sent successfully.
+[2024-04-02 08:50:44] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:50:44] [INFO] Message sent successfully.
+[2024-04-02 08:50:45] [INFO] Updated aircraft state to: Completed
+[2024-04-02 08:50:45] [INFO] Message sent successfully.
+[2024-04-02 08:50:45] [INFO] Simulation ended. Aircraft completed it's flight.
+[2024-04-02 08:50:46] [ERROR] Receive failed with error code: 10053[2024-04-02 08:50:46] [INFO] Disconnected from server.
+
+[2024-04-02 08:50:46] [INFO] Communication state set to: Closed
+[2024-04-02 08:50:46] [INFO] Communication toggled: OFF
+[2024-04-02 08:55:00] [INFO] Channel set to VHF with port VHF
+[2024-04-02 08:55:00] [INFO] Loading flight plan...
+[2024-04-02 08:55:00] [INFO] Flight plan is loaded.
+[2024-04-02 08:55:00] [INFO] Connected to the server.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Large file sent.
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:00] [INFO] Received message: Flag: A
+[2024-04-02 08:55:00] [INFO] File transmission acknowledged.
+[2024-04-02 08:55:00] [INFO] Communication state set to: EstablishedConnection
+[2024-04-02 08:55:00] [INFO] Communication toggled: ON
+[2024-04-02 08:55:00] [INFO] Starting simulation...
+[2024-04-02 08:55:00] [INFO] Communication state set to: Sending
+[2024-04-02 08:55:00] [INFO] Updated aircraft state to: Idle
+[2024-04-02 08:55:00] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:00] [INFO] Message sent successfully.
+[2024-04-02 08:55:01] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:01] [INFO] Message sent successfully.
+[2024-04-02 08:55:02] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:02] [INFO] Message sent successfully.
+[2024-04-02 08:55:03] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:03] [INFO] Message sent successfully.
+[2024-04-02 08:55:04] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:04] [INFO] Message sent successfully.
+[2024-04-02 08:55:05] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:05] [INFO] Message sent successfully.
+[2024-04-02 08:55:06] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:06] [INFO] Message sent successfully.
+[2024-04-02 08:55:07] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:07] [INFO] Message sent successfully.
+[2024-04-02 08:55:08] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:08] [INFO] Message sent successfully.
+[2024-04-02 08:55:09] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:09] [INFO] Message sent successfully.
+[2024-04-02 08:55:10] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:10] [INFO] Message sent successfully.
+[2024-04-02 08:55:10] [INFO] Received message: Flag: H Frequency: 127.0.0.15 Channel: VHF
+[2024-04-02 08:55:10] [INFO] Channel set to VHF with port VHF
+[2024-04-02 08:55:11] [INFO] Disconnected from server.
+[2024-04-02 08:55:11] [INFO] Connected to the server.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Large file sent.
+[2024-04-02 08:55:11] [INFO] Message sent successfully.
+[2024-04-02 08:55:11] [INFO] Received message: Flag: A
+[2024-04-02 08:55:11] [INFO] File transmission acknowledged.
+[2024-04-02 08:55:11] [INFO] Handoff completed. Connected to new server.
+[2024-04-02 08:55:11] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:12] [INFO] Message sent successfully.
+[2024-04-02 08:55:13] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:13] [INFO] Message sent successfully.
+[2024-04-02 08:55:14] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:14] [INFO] Message sent successfully.
+[2024-04-02 08:55:15] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:15] [INFO] Message sent successfully.
+[2024-04-02 08:55:16] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:16] [INFO] Message sent successfully.
+[2024-04-02 08:55:17] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:17] [INFO] Message sent successfully.
+[2024-04-02 08:55:18] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:18] [INFO] Message sent successfully.
+[2024-04-02 08:55:19] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:19] [INFO] Message sent successfully.
+[2024-04-02 08:55:20] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:20] [INFO] Message sent successfully.
+[2024-04-02 08:55:21] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:21] [INFO] Message sent successfully.
+[2024-04-02 08:55:22] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:22] [INFO] Message sent successfully.
+[2024-04-02 08:55:23] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:23] [INFO] Message sent successfully.
+[2024-04-02 08:55:24] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:24] [INFO] Message sent successfully.
+[2024-04-02 08:55:25] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:25] [INFO] Message sent successfully.
+[2024-04-02 08:55:26] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:26] [INFO] Message sent successfully.
+[2024-04-02 08:55:27] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:27] [INFO] Message sent successfully.
+[2024-04-02 08:55:28] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:28] [INFO] Message sent successfully.
+[2024-04-02 08:55:29] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:29] [INFO] Message sent successfully.
+[2024-04-02 08:55:30] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:30] [INFO] Message sent successfully.
+[2024-04-02 08:55:31] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:55:31] [INFO] Message sent successfully.
+[2024-04-02 08:56:15] [INFO] Channel set to VHF with port VHF
+[2024-04-02 08:56:15] [INFO] Loading flight plan...
+[2024-04-02 08:56:15] [INFO] Flight plan is loaded.
+[2024-04-02 08:56:16] [INFO] Connected to the server.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Large file sent.
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Received message: Flag: A
+[2024-04-02 08:56:16] [INFO] File transmission acknowledged.
+[2024-04-02 08:56:16] [INFO] Communication state set to: EstablishedConnection
+[2024-04-02 08:56:16] [INFO] Communication toggled: ON
+[2024-04-02 08:56:16] [INFO] Starting simulation...
+[2024-04-02 08:56:16] [INFO] Communication state set to: Sending
+[2024-04-02 08:56:16] [INFO] Updated aircraft state to: Idle
+[2024-04-02 08:56:16] [INFO] Message sent successfully.
+[2024-04-02 08:56:16] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:56:17] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:56:17] [INFO] Message sent successfully.
+[2024-04-02 08:56:18] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:56:18] [INFO] Message sent successfully.
+[2024-04-02 08:56:19] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:56:19] [INFO] Message sent successfully.
+[2024-04-02 08:56:20] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:56:20] [INFO] Message sent successfully.
+[2024-04-02 08:56:21] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:56:21] [INFO] Message sent successfully.
+[2024-04-02 08:56:22] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:56:22] [INFO] Message sent successfully.
+[2024-04-02 08:56:23] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:56:23] [INFO] Message sent successfully.
+[2024-04-02 08:56:24] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:56:24] [INFO] Message sent successfully.
+[2024-04-02 08:56:25] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:56:25] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Received message: Flag: H Frequency: 127.0.0.15 Channel: VHF
+[2024-04-02 08:56:26] [INFO] Channel set to VHF with port VHF
+[2024-04-02 08:56:26] [INFO] Disconnected from server.
+[2024-04-02 08:56:26] [INFO] Connected to the server.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Large file sent.
+[2024-04-02 08:56:26] [INFO] Message sent successfully.
+[2024-04-02 08:56:26] [INFO] Received message: Flag: A
+[2024-04-02 08:56:26] [INFO] File transmission acknowledged.
+[2024-04-02 08:56:26] [INFO] Handoff completed. Connected to new server.
+[2024-04-02 08:56:27] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:27] [INFO] Message sent successfully.
+[2024-04-02 08:56:28] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:28] [INFO] Message sent successfully.
+[2024-04-02 08:56:29] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:29] [INFO] Message sent successfully.
+[2024-04-02 08:56:30] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:30] [INFO] Message sent successfully.
+[2024-04-02 08:56:31] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:31] [INFO] Message sent successfully.
+[2024-04-02 08:56:32] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:32] [INFO] Message sent successfully.
+[2024-04-02 08:56:33] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:33] [INFO] Message sent successfully.
+[2024-04-02 08:56:34] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:34] [INFO] Message sent successfully.
+[2024-04-02 08:56:35] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:35] [INFO] Message sent successfully.
+[2024-04-02 08:56:36] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:36] [INFO] Message sent successfully.
+[2024-04-02 08:56:37] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:37] [INFO] Message sent successfully.
+[2024-04-02 08:56:38] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:38] [INFO] Message sent successfully.
+[2024-04-02 08:56:39] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:39] [INFO] Message sent successfully.
+[2024-04-02 08:56:40] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:40] [INFO] Message sent successfully.
+[2024-04-02 08:56:41] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:41] [INFO] Message sent successfully.
+[2024-04-02 08:56:42] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:42] [INFO] Message sent successfully.
+[2024-04-02 08:56:43] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:43] [INFO] Message sent successfully.
+[2024-04-02 08:56:44] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:44] [INFO] Message sent successfully.
+[2024-04-02 08:56:45] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:45] [INFO] Message sent successfully.
+[2024-04-02 08:56:46] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:46] [INFO] Message sent successfully.
+[2024-04-02 08:56:48] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:48] [INFO] Message sent successfully.
+[2024-04-02 08:56:49] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:49] [INFO] Message sent successfully.
+[2024-04-02 08:56:50] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:50] [INFO] Message sent successfully.
+[2024-04-02 08:56:51] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:51] [INFO] Message sent successfully.
+[2024-04-02 08:56:52] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:52] [INFO] Message sent successfully.
+[2024-04-02 08:56:53] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:53] [INFO] Message sent successfully.
+[2024-04-02 08:56:54] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:54] [INFO] Message sent successfully.
+[2024-04-02 08:56:55] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:55] [INFO] Message sent successfully.
+[2024-04-02 08:56:56] [INFO] Updated aircraft state to: Landing
+[2024-04-02 08:56:56] [INFO] Message sent successfully.
+[2024-04-02 08:56:57] [INFO] Updated aircraft state to: Completed
+[2024-04-02 08:56:57] [INFO] Message sent successfully.
+[2024-04-02 08:56:58] [INFO] Updated aircraft state to: Completed
+[2024-04-02 08:56:58] [INFO] Message sent successfully.
+[2024-04-02 08:56:58] [INFO] Simulation ended. Aircraft completed it's flight.
+[2024-04-02 08:56:59] [INFO] Message sent successfully.
+[2024-04-02 08:57:00] [INFO] Disconnected from server.
+[2024-04-02 08:57:00] [ERROR] Receive failed with error code: 10053
+[2024-04-02 08:57:00] [INFO] Communication state set to: Closed
+[2024-04-02 08:57:00] [INFO] Communication toggled: OFF
+[2024-04-02 08:57:29] [INFO] Channel set to VHF with port VHF
+[2024-04-02 08:57:29] [INFO] Loading flight plan...
+[2024-04-02 08:57:29] [INFO] Flight plan is loaded.
+[2024-04-02 08:57:29] [INFO] Connected to the server.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Large file sent.
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Received message: Flag: A
+[2024-04-02 08:57:29] [INFO] File transmission acknowledged.
+[2024-04-02 08:57:29] [INFO] Communication state set to: EstablishedConnection
+[2024-04-02 08:57:29] [INFO] Communication toggled: ON
+[2024-04-02 08:57:29] [INFO] Starting simulation...
+[2024-04-02 08:57:29] [INFO] Communication state set to: Sending
+[2024-04-02 08:57:29] [INFO] Updated aircraft state to: Idle
+[2024-04-02 08:57:29] [INFO] Message sent successfully.
+[2024-04-02 08:57:29] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:30] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:30] [INFO] Message sent successfully.
+[2024-04-02 08:57:31] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:31] [INFO] Message sent successfully.
+[2024-04-02 08:57:32] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:32] [INFO] Message sent successfully.
+[2024-04-02 08:57:33] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:33] [INFO] Message sent successfully.
+[2024-04-02 08:57:34] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:34] [INFO] Message sent successfully.
+[2024-04-02 08:57:35] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:35] [INFO] Message sent successfully.
+[2024-04-02 08:57:36] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:36] [INFO] Message sent successfully.
+[2024-04-02 08:57:37] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:37] [INFO] Message sent successfully.
+[2024-04-02 08:57:38] [ERROR] Receive failed with error code: 10054
+[2024-04-02 08:57:38] [WARNING] Attempting to reconnect, attempt 1
+[2024-04-02 08:57:38] [INFO] Disconnected from server.
+[2024-04-02 08:57:38] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:39] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:40] [ERROR] Failed to connect to the server.
+[2024-04-02 08:57:40] [ERROR] Failed to send message.
+[2024-04-02 08:57:40] [ERROR] Failed to send file size.
+[2024-04-02 08:57:40] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:41] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:42] [WARNING] Attempting to reconnect, attempt 2
+[2024-04-02 08:57:42] [ERROR] Failed to close socket.
+[2024-04-02 08:57:42] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:43] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:44] [WARNING] Attempting to reconnect, attempt 3
+[2024-04-02 08:57:44] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:45] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:46] [WARNING] Attempting to reconnect, attempt 4
+[2024-04-02 08:57:46] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:47] [INFO] Updated aircraft state to: Takeoff
+[2024-04-02 08:57:48] [WARNING] Attempting to reconnect, attempt 5
+[2024-04-02 08:57:48] [INFO] Updated aircraft state to: Takeoff

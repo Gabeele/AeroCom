@@ -1,3 +1,5 @@
+// File to denote the handoff functions and properties
+
 #include <string>
 #include <sstream>
 #include "logger.h"
