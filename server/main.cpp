@@ -16,7 +16,7 @@ int main()
 	std::string tempChan = "VHF";
 	GroundControl::Handoff handoff(tempFlag, tempFreq, tempChan);
 
-	gc.Initialize();
+	(void)gc.Initialize();
 
 	// first while loop keeps wsa open
 	// second loops keeps recieving messages after it is connected to a client

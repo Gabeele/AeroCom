@@ -13,8 +13,8 @@
 namespace GroundControl {
 
     const std::string DEFAULT_FREQUENCY = "127.0.0.1";
-
     const unsigned int DEFAULT_CHANNEL = 5555;
+    const size_t BUFFER_SIZE = 1024;
 
     enum class CommunicationType { VHF, HF };
     enum class ServerState { Closed, Idle, Connected, Handoff, Disconnected };
@@ -41,7 +41,7 @@ namespace GroundControl {
         bool Connect(int port);
         bool ReceiveMessage(SOCKET clientSocket);
         std::string generateChecksum(const std::string& packetContent) const;
-        void PacketParsing(std::string recievedMessage);
+        void PacketParsing(const std::string& msg);
         void ChecksumCheck(std::string receivedMessage);
         void updateServerState(ServerState newState);
         void HandleATCToAircraftHandoffRequest(GroundControl* targetServer, char* targetAircraft);
