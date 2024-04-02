@@ -10,32 +10,16 @@ namespace GroundControlTests
     TEST_CLASS(GroundControlTests)
     {
     public:
-
-        TEST_METHOD(TestPacketParsing)
-        {
-            GroundControl::GroundControl gc;
-            std::string message = "Flight Number: AA123\nAircraft Type: Boeing 747\nDeparture Airport: JFK\nDestination Airport: LAX\n";
-            gc.PacketParsing(message);
-
-            // Add assertions here to verify the parsing logic
-        }
-
         TEST_METHOD(TestGenerateChecksum)
         {
             GroundControl::GroundControl gc;
-            std::string packetContent = "Flight Number: AA123\nAircraft Type: Boeing 747\nDeparture Airport: JFK\nDestination Airport: LAX\n";
-            std::string checksum = gc.generateChecksum(packetContent);
+            std::string message = "Flight Number: AA123\nAircraft Type: Boeing 747\nDeparture Airport: JFK\nDestination Airport: LAX\nChecksum: 1f83\n";
+
+            std::string actual = gc.generateChecksum(message);
+            std::string expected = "1f83";
 
             // Add assertions here to verify the checksum generation
-        }
-
-        TEST_METHOD(TestChecksumCheck)
-        {
-            GroundControl::GroundControl gc;
-            std::string message = "Flight Number: AA123\nAircraft Type: Boeing 747\nDeparture Airport: JFK\nDestination Airport: LAX\n";
-            gc.ChecksumCheck(message);
-
-            // Add assertions here to verify the checksum check logic
+            Assert::AreEqual(expected, actual);
         }
     };
 }
