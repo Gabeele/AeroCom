@@ -29,12 +29,11 @@ int main() {
     ac.toggleSimulateTelemetry();
 
 
-    // Keeps the system alive until the aircraft has completed it's trip via the simulation
+    //// Keeps the system alive until the aircraft has completed it's trip via the simulation
     logs::logger.log("Starting simulation...", logs::Logger::LogLevel::Info);
     while (ac.getAircraftState() != aircraft::AircraftState::Completed) {
         std::this_thread::sleep_for(std::chrono::seconds(3));
     }
-
 
     logs::logger.log("Simulation ended. Aircraft completed it's flight.", logs::Logger::LogLevel::Info);
 

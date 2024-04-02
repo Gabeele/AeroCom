@@ -36,15 +36,19 @@ namespace aircraft {
             commsToggle = SystemState::OFF;     // Toggle off
 
             this->listeningActive = false;    // Set listen to false
+            this->communicationReady = false;
 
-            if (listeningThread.joinable()) {   // Join the threads
-                listeningThread.join();
-            }
             if (comms.disconnect()) {      // Attempt to disconnect
 
                 setCommState(CommunicationState::Closed);   // Close the comm state
 
             }
+
+            if (listeningThread.joinable() ) {   // Join the threads
+
+                listeningThread.join();
+            }
+
 
         }
         else {
@@ -315,7 +319,7 @@ namespace aircraft {
     void Aircraft::listeningOperation() {
         std::string handoffFlag = "Flag: H";    // Flag patter for handoff request
 
-        while (listeningActive) {
+        while (this->listeningActive && this->communicationReady) {
 
             std::string message = comms.receiveMessage();   // Listen for receive 
 
@@ -334,7 +338,7 @@ namespace aircraft {
             }
 
             // If received no message then an error has occurred. The system will attempt a reconnect of the last known freq and chann
-            if (message == "") {
+            if (message == "" && this->listeningActive && this->communicationReady) {
                 communicationReady = false;
                 
                 if (comms.reconnect()) {
@@ -342,9 +346,7 @@ namespace aircraft {
                     communicationReady = true;
 
                 }
-                else {
-                    logs::logger.log("Reconnect failed. Use emergency backup communication systems.", logs::Logger::LogLevel::Error);
-                }
+
             }
         }
     }
