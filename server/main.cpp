@@ -44,7 +44,7 @@ int main()
 				std::chrono::duration<float> elapsed = currentTime - startTime;
 				float elapsedTime = elapsed.count();
 				// handoff after 60s
-				if (elapsedTime >= 60.0)
+				if (elapsedTime >= 10.0)
 				{
 					// handoff the client to new ATC and close connnection
 					// end loop and wait for new client to connect

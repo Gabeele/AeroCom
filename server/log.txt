@@ -1,2 +1,377 @@
 [2024-03-30 14:00:45] [ERROR] Failed to connect to aircraft.
 [2024-03-30 16:21:44] [ERROR] Failed to connect to aircraft.
+[2024-04-02 08:44:56] [INFO] Updated Server state to: Idle
+[2024-04-02 08:44:57] [INFO] Updated Server state to: Connected
+[2024-04-02 08:44:57] [INFO] Trajectory received successfully
+[2024-04-02 08:44:57] [INFO] Packet 1 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:44:58] [INFO] Packet 2 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:44:59] [INFO] Packet 3 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:00] [INFO] Packet 4 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:01] [INFO] Packet 5 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:02] [INFO] Packet 6 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:03] [INFO] Packet 7 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:04] [INFO] Packet 8 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:05] [INFO] Packet 9 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:06] [INFO] Packet 10 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:07] [INFO] Packet 11 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:07] [INFO] Updated Server state to: Handoff
+[2024-04-02 08:45:07] [INFO] Updated Server state to: Disconnected
+[2024-04-02 08:45:07] [INFO] Updated Server state to: Idle
+[2024-04-02 08:45:50] [INFO] Updated Server state to: Idle
+[2024-04-02 08:45:51] [INFO] Updated Server state to: Connected
+[2024-04-02 08:45:51] [INFO] Trajectory received successfully
+[2024-04-02 08:45:51] [INFO] Packet 1 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:52] [INFO] Packet 2 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:53] [INFO] Packet 3 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:54] [INFO] Packet 4 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:55] [INFO] Packet 5 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:56] [INFO] Packet 6 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:57] [INFO] Packet 7 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:58] [INFO] Packet 8 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:45:59] [INFO] Packet 9 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:46:00] [INFO] Packet 10 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:46:01] [INFO] Packet 11 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:46:01] [INFO] Updated Server state to: Handoff
+[2024-04-02 08:46:01] [INFO] Updated Server state to: Disconnected
+[2024-04-02 08:46:01] [INFO] Updated Server state to: Idle
+[2024-04-02 08:48:44] [INFO] Updated Server state to: Idle
+[2024-04-02 08:48:45] [INFO] Updated Server state to: Connected
+[2024-04-02 08:48:45] [INFO] Trajectory received successfully
+[2024-04-02 08:48:45] [INFO] Packet 1 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:46] [INFO] Packet 2 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:47] [INFO] Packet 3 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:48] [INFO] Packet 4 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:49] [INFO] Packet 5 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:50] [INFO] Packet 6 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:51] [INFO] Packet 7 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:52] [INFO] Packet 8 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:53] [INFO] Packet 9 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:54] [INFO] Packet 10 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:55] [INFO] Packet 11 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:56] [INFO] Packet 12 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:57] [INFO] Packet 13 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:58] [INFO] Packet 14 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:48:59] [INFO] Packet 15 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:00] [INFO] Packet 16 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:01] [INFO] Packet 17 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:02] [INFO] Packet 18 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:03] [INFO] Packet 19 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:04] [INFO] Packet 20 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:05] [INFO] Packet 21 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:06] [INFO] Packet 22 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:07] [INFO] Packet 23 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:08] [INFO] Packet 24 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:09] [INFO] Packet 25 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:10] [INFO] Packet 26 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:11] [INFO] Packet 27 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:12] [INFO] Packet 28 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:13] [INFO] Packet 29 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:14] [INFO] Packet 30 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:15] [INFO] Packet 31 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:16] [INFO] Packet 32 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:17] [INFO] Packet 33 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:18] [INFO] Packet 34 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:19] [INFO] Packet 35 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:20] [INFO] Packet 36 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:21] [INFO] Packet 37 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:22] [INFO] Packet 38 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:23] [INFO] Packet 39 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:24] [INFO] Packet 40 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:25] [INFO] Packet 41 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:26] [INFO] Packet 42 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:27] [INFO] Packet 43 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:28] [INFO] Packet 44 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:29] [INFO] Packet 45 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:30] [INFO] Packet 46 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:31] [INFO] Packet 47 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:32] [INFO] Packet 48 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:33] [INFO] Packet 49 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:34] [INFO] Packet 50 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:35] [INFO] Packet 51 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:36] [INFO] Packet 52 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:37] [INFO] Packet 53 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:38] [INFO] Packet 54 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:39] [INFO] Packet 55 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:40] [INFO] Packet 56 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:41] [INFO] Packet 57 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:42] [INFO] Packet 58 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:43] [INFO] Packet 59 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:44] [INFO] Packet 60 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:45] [INFO] Packet 61 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:49:45] [INFO] Updated Server state to: Handoff
+[2024-04-02 08:49:45] [INFO] Updated Server state to: Disconnected
+[2024-04-02 08:49:45] [INFO] Updated Server state to: Idle
+[2024-04-02 08:55:00] [INFO] Updated Server state to: Idle
+[2024-04-02 08:55:00] [INFO] Updated Server state to: Connected
+[2024-04-02 08:55:00] [INFO] Trajectory received successfully
+[2024-04-02 08:55:00] [INFO] Packet 1 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:55:01] [INFO] Packet 2 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:55:02] [INFO] Packet 3 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:55:03] [INFO] Packet 4 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:55:04] [INFO] Packet 5 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:55:05] [INFO] Packet 6 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:55:06] [INFO] Packet 7 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:55:07] [INFO] Packet 8 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:55:08] [INFO] Packet 9 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:55:09] [INFO] Packet 10 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:55:10] [INFO] Packet 11 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:55:10] [INFO] Updated Server state to: Handoff
+[2024-04-02 08:55:10] [INFO] Updated Server state to: Disconnected
+[2024-04-02 08:55:10] [INFO] Updated Server state to: Idle
+[2024-04-02 08:56:15] [INFO] Updated Server state to: Idle
+[2024-04-02 08:56:16] [INFO] Updated Server state to: Connected
+[2024-04-02 08:56:16] [INFO] Trajectory received successfully
+[2024-04-02 08:56:16] [INFO] Packet 1 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:56:17] [INFO] Packet 2 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:56:18] [INFO] Packet 3 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:56:19] [INFO] Packet 4 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:56:20] [INFO] Packet 5 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:56:21] [INFO] Packet 6 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:56:22] [INFO] Packet 7 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:56:23] [INFO] Packet 8 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:56:24] [INFO] Packet 9 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:56:25] [INFO] Packet 10 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:56:26] [INFO] Packet 11 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:56:26] [INFO] Updated Server state to: Handoff
+[2024-04-02 08:56:26] [INFO] Updated Server state to: Disconnected
+[2024-04-02 08:56:26] [INFO] Updated Server state to: Idle
+[2024-04-02 08:57:29] [INFO] Updated Server state to: Idle
+[2024-04-02 08:57:29] [INFO] Updated Server state to: Connected
+[2024-04-02 08:57:29] [INFO] Trajectory received successfully
+[2024-04-02 08:57:29] [INFO] Packet 1 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:57:30] [INFO] Packet 2 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:57:31] [INFO] Packet 3 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:57:32] [INFO] Packet 4 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:57:33] [INFO] Packet 5 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:57:34] [INFO] Packet 6 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:57:35] [INFO] Packet 7 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:57:36] [INFO] Packet 8 received from N12345
+	Departure: JFK
+	Destination: LAX
+[2024-04-02 08:57:37] [INFO] Packet 9 received from N12345
+	Departure: JFK
+	Destination: LAX

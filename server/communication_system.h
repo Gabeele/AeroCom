@@ -1,3 +1,5 @@
+// File to denote the communication functions and properties
+
 #ifndef SOCKET_H
 #define SOCKET_H
 

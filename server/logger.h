@@ -1,3 +1,5 @@
+// This file is used to denote the headers for logger
+
 #ifndef LOGGER_H
 #define LOGGER_H
 
