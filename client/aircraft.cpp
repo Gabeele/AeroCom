@@ -242,6 +242,9 @@ namespace aircraft {
 
     void Aircraft::simulateTelemetryOperation() {
 
+        // These values are hard coded for the purpose of simulating the plane. These are not consts within the code because we didn't want to take away from how the actually works or what is avaliable on a global level. 
+        // Although it is bad practice, this function would be swapped out for actual pulling of sensor data rather than simulated. 
+
         const double PI = 3.14159265358979323846;
 
         // Coordinates for JFK and LAX
@@ -264,10 +267,10 @@ namespace aircraft {
             std::chrono::duration<float> elapsed = currentTime - startTime;
             float elapsedTime = elapsed.count();
 
-            const float ascentDuration = 60.0; // Ascent duration in seconds
-            const float cruisingStartTime = 60.0; // When cruising starts in seconds
-            const float descentStartTime = 90.0; // When descent starts in seconds
-            const float totalDuration = 120.0; // Total flight duration in seconds
+            const float ascentDuration = 15.0; // Ascent duration in seconds
+            const float cruisingStartTime = 30.0; // When cruising starts in seconds
+            const float descentStartTime = 45.0; // When descent starts in seconds
+            const float totalDuration = 55.0; // Total flight duration in seconds
 
             // Calculate the phase of the flight
             if (elapsedTime <= ascentDuration) {

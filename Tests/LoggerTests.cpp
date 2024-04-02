@@ -46,8 +46,7 @@ namespace LoggerUnitTests
 			// Assert that the logged content contains the message
 			Assert::IsTrue(loggedContent.find("Test INFO message") != std::string::npos, L"INFO level message was not logged correctly.");
 
-			// Cleanup
-			//remove(logPath.c_str());
+			remove(logPath.c_str());
 		}
 	};
 }
